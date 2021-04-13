@@ -19,6 +19,29 @@ A place to begin.
 * ATO documentation
 * Service levels
 
+## How we work
+
+### Working hours
+
+Our team has folks working across different time zones in the continental United States.
+We work across Eastern, Central, and Pacific time zones.
+Each team member works approximately 9am - 5pm in their home time zone.
+
+The team's overlap time is from **12pm to 5pm eastern** and we will strive to schedule most meetings during this time.
+
+If we need to have a one-off important meeting outside of these hours, that's okay, just be respectful.
+
+Important points:
+
+* Recurring meetings should be scheduled between 12pm - 5pm Eastern.
+* Occasional important OHS meetings will be scheduled before Pacific working hours.
+* **Scheduled maitenence windows** outside of core working hours occur once a month, every **3rd Thursday of the month at 8pm EST**.
+* Critical requests, such as infrastructure outages, should be addressed as soon as possible even if it is outside of core business hours.
+
+### Definition of Done
+
+
+
 ## Getting Started
 
 Before beginning, it is assumed you have:
