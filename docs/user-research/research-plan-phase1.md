@@ -19,7 +19,7 @@ The ECLKC hosting infrastructure is hosted in AWS and serves the following appli
 
 We believe there are modificiations to technology and practice that can allow for self-service of the application deployments while maintaining ATO.
 
-This is also our pilot to see if we can defin practice and standards for tchnical teams working with OHS outside of the ECLKC infrastructure.
+This is also our pilot to see if we can define practice and standards for technical teams working with OHS outside of the ECLKC infrastructure.
 
 ## Goals
 
