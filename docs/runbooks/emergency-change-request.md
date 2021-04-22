@@ -8,6 +8,10 @@ __Note:__ As we make more an more of these operations automated we will evaluate
 
 ## Step 0: Evaluate the need for an off-cycle change
 
+Is there an active ongoing incident? (Are users unable to access sites? Is performance siginificantly degraded?)
+
+If "yes": please proceed.
+
 Does this change address immediate security or quality needs of the application?
 
 If "yes": please proceed.
@@ -33,7 +37,7 @@ __Note:__ The Development team should have access to make changes in staging but
 
 ## Step 3: Fill out the emergency change request form
 
-1. Fill out the form????
+1. Fill out the form.
 
 TODOS: Add links to forms to use and any notes or clarifications.
 
@@ -41,8 +45,9 @@ TODOS: Add links to forms to use and any notes or clarifications.
 
 1. Hosting team evaluates the submitted form for security or performance risks and makes adjustments to operation plan.
 1. Headstart hosting team will submit the emergency change request form to Elizabeth and Alana for approval. CC the dev/affected teams.
-
-TODOS: Do we just send to Elizabeth and Alana? Where should we store this for record? Do we also forward to ACF?
+    * If one of the CORs is out of office, approval of just one will suffice.
+    * If the emergency change is related to a security fix/incident, CC our ACF OCIO ISSO.
+1. Save a copy of the form to the ECLKC Box folder.
 
 ## Step 5: Apply changes to production
 
