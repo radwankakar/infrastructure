@@ -26,7 +26,7 @@ The Headstart Hosting team works on a two week sprint cadence with the following
 * Sprint wrap/planning
 * Daily Standups
 * Demo
-* Retrospective (if necessary)
+* Retrospective
 
 Our sprints start every other Monday.
 

@@ -32,9 +32,10 @@ For this repository, we'll use the utility [nix](https://nixos.org/manual/nix/st
 
 ### /docs
 
-__/docs/adr__ this is where we'll be storing architectural decisions records
-
-__/docs/runbooks__ this is where we'll be storing runbooks for operations
+* [/docs/adr](./docs/adr/README.md) - This is where we'll be storing architectural decisions records.
+* [/docs/how-we-work](./docs/how-we-work/README.md) - This is where we'll store information on how we do work.
+* [/docs/runbooks](./docs/runbooks/README.md) - This is where we'll be storing runbooks for operations.
+* [DevOps Strategy Doc](./docs/strategy.md) - This is where we'll document our ongoing DevOps strategy.
 
 ### /scripts
 
