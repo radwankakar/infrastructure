@@ -1,6 +1,6 @@
 # DevOps Strategy
 
-Last updated by Eady on April 19, 2021
+Last updated by Eady on April 27, 2021
 
 This is a living document. We will review and update this strategy every other month.
 
@@ -8,19 +8,25 @@ We will take into account any user feedback along the way.
 
 ## Context
 
-DevOps is a philosophy.
-In order to deliver high quality secure software consistently...
-
 Software development is a creative process and thus may take variable time to produce.
 However, the process of testing and deploying that software should be consistent and predictable much like an assembly line in a factory.
+DevOps is a philosophy.
+A workflow that implements DevOps practice aims to deliver high quality secure software consistently.
 
 Key features of a DevOps enabled workflow are:
 
-* Flow - ease of delivery of development work to our customers
+* Flow - ease and consistency in delivery of development work to our customers
 * Feedback - ability to understand changes to a system and if there is a defect to correct
 * Continual Learning and experimentation - safely sharing well thought through hypotheses in our system
 
-This team aims to create a platform to allow enable DevOps workflows for development teams.
+This team aims to create a platform to enable DevOps workflows for development teams.
+
+Some common practices we will implement follow:
+
+* Continuous Integration
+* Infrastructure as code
+* Immutable infrastructure
+* Continuous Monitoring and Alerting
 
 ## I. Get Daily Operations Under Control and Automated
 

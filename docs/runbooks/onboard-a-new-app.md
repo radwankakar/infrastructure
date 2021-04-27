@@ -2,7 +2,6 @@
 
 Last updated by Eady on April 22, 2021
 
-
 __Note:__ This is the proposed workflow with questions to help facilitate onboarding and expectations setting.
 
 ## Onboarding todos
