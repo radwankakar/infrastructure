@@ -16,31 +16,8 @@ A place to begin.
 * Roadmap
 * Philosophy
 * How to do user research
-* ATO documentation
+* Where to host ATO documentation
 * Service levels
-
-## How we work
-
-### Working hours
-
-Our team has folks working across different time zones in the continental United States.
-We work across Eastern, Central, and Pacific time zones.
-Each team member works approximately 9am - 5pm in their home time zone.
-
-The team's overlap time is from **12pm to 5pm eastern** and we will strive to schedule most meetings during this time.
-
-If we need to have a one-off important meeting outside of these hours, that's okay, just be respectful.
-
-Important points:
-
-* Recurring meetings should be scheduled between 12pm - 5pm Eastern.
-* Occasional important OHS meetings will be scheduled before Pacific working hours.
-* **Scheduled maitenence windows** outside of core working hours occur once a month, every **3rd Thursday of the month at 8pm EST**.
-* Critical requests, such as infrastructure outages, should be addressed as soon as possible even if it is outside of core business hours.
-
-### Definition of Done
-
-
 
 ## Getting Started
 
@@ -55,9 +32,10 @@ For this repository, we'll use the utility [nix](https://nixos.org/manual/nix/st
 
 ### /docs
 
-__/docs/adr__ this is where we'll be storing architectural decisions records
-
-__/docs/runbooks__ this is where we'll be storing runbooks for operations
+* [/docs/adr](./docs/adr/README.md) - This is where we'll be storing architectural decisions records.
+* [/docs/how-we-work](./docs/how-we-work/README.md) - This is where we'll store information on how we do work.
+* [/docs/runbooks](./docs/runbooks/README.md) - This is where we'll be storing runbooks for operations.
+* [DevOps Strategy Doc](./docs/strategy.md) - This is where we'll document our ongoing DevOps strategy.
 
 ### /scripts
 
@@ -85,3 +63,4 @@ Referencing the documented [QASP](https://app.box.com/file/793368311372) define 
 * [USER Metrics](https://medium.com/vmwaredesign/user-metrics-fd8e56914321)
 * [18F's User Research Plan Documentation](https://ux-guide.18f.gov/research/plan/)
 * [Google Cloud: 4 measures of devops performance](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance) TL;DR accelerate metrics
+* [Historical Context Trello Board](https://trello.com/b/lPASAkHB/eclkc-web-hosting-agile-team-contract-no-gs00q17gwd2236-order-no-hhsp233201800062w) - You'll need to get access by talking to Eady(?).
