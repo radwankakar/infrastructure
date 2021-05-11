@@ -4,8 +4,6 @@ This log lists the architectural decisions for Truss infrastructure.
 
 <!-- adrlog -->
 
-
-
 <!-- adrlogstop -->
 
 For new ADRs, please use [template.md](template.md).
