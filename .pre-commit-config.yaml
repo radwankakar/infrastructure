@@ -27,3 +27,4 @@ repos:
     hooks:
       - id: gen-docs
         args: ["docs/adr"]
+      - id: markdown-toc

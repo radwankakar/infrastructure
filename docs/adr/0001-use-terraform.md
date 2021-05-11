@@ -6,6 +6,7 @@
 * Date: 2021-05-11
 
 ## Table of Contents
+
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
@@ -15,10 +16,10 @@
   * [Positive Consequences](#positive-consequences-)
   * [Negative Consequences](#negative-consequences-)
 * [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
-  * [[option 1]](#option-1)
-  * [[option 2]](#option-2)
-  * [[option 3]](#option-3)
-* [Links](#links-)
+  * [Option 1: Continue using AWS Console](#option-1-continue-using-aws-console)
+  * [Option 2: Automation using Cloudformation](#option-2-automation-using-cloudformation)
+  * [Option 3: Automation using Terraform](#option-3-automation-using-terraform)
+  * [Option 4: Custom Automation Tooling](#option-4-custom-automation-tooling)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 

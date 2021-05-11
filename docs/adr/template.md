@@ -9,6 +9,7 @@
 Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Table of Contents
+
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
