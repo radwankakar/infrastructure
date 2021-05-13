@@ -32,7 +32,7 @@ The team has kept these servers running and up to date by executing ansible scri
 
 * Consistency of servers being stood up.
 * Repeatability of server creation.
-* Future scalability of serers and applications we host.
+* Future scalability of servers and applications we host.
 * Enabling dev teams to have more ownership of what is installed on their servers.
 
 ## Considered Options
