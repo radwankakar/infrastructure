@@ -15,10 +15,6 @@ Technical Story: <https://github.com/OHS-Hosting-Infrastructure/environment-conf
 * [Decision Outcome](#decision-outcome)
   * [Positive Consequences](#positive-consequences-)
   * [Negative Consequences](#negative-consequences-)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
-  * [[option 1]](#option-1)
-  * [[option 2]](#option-2)
-  * [[option 3]](#option-3)
 * [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -58,4 +54,4 @@ Chosen option: Use Terracognita to create as much pre-written Terraform as it ca
 
 ## Links
 
-* [Terracognita Repo/Docs] <https://github.com/cycloidio/terracognita>
+* [Terracognita Repo/Docs](<https://github.com/cycloidio/terracognita>)
