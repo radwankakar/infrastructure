@@ -1,12 +1,11 @@
-# [short title of solved problem and solution]
+# Use Terracognita to turn existing AWS Infrastructure into Terraform code
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: [proposed | rejected | accepted | deprecated | … | superseded by
-  [ADR-0005](0005-example.md)] <!-- optional -->
-* Deciders: [list everyone involved in the decision] <!-- optional -->
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Status: proposed
+* Deciders: @eeeady
+* Date: 2021-05-17
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
+Technical Story: <https://github.com/OHS-Hosting-Infrastructure/environment-configuration/issues/3>
 
 <!-- toc -->
 
@@ -28,70 +27,35 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Context and Problem Statement
 
-[Describe the context and problem statement, e.g., in free form using two to
-three sentences. You may want to articulate the problem in form of a question.]
+Taking existing AWS infrastructure and putting it under management of Terraform, as is, can be an incredibly tedious task. As it requires the engineer to go through each resource and translate its existing settings in the AWS console into pieces of interconnected Terraform. The toil of such a task only increasing as the complexity and size of the aforementioned existing infrastructure increases. Taking time away from other tasks and leaving room for unnecessary errors.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
-* [driver 1, e.g., a force, facing concern, …]
-* [driver 2, e.g., a force, facing concern, …]
-* … <!-- numbers of drivers can vary -->
+* Reducing the toil of creating new Terraform based on existing AWS infrastructure.
+* Cut down on errors inherent in the process of translation.
+* Cut down on time spent placing existing AWS infrastructure under Terraform management.
 
 ## Considered Options
 
-* [option 1]
-* [option 2]
-* [option 3]
-* … <!-- numbers of options can vary -->
+* Have a tool/service, in this case Terracognita, read existing AWS resources and create Terraform that reflects said resources.
+* Continue to do such things by hand.
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which
-meets k.o. criterion decision driver | which resolves force force | … | comes
-out best (see below)].
+Chosen option: Use Terracognita to create as much pre-written Terraform as it can on any given project. Editing and rearranging the output as is needed.
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions
-  required, …]
-* …
+* Dramatically reduces the amount of time spent transferring every resource by hand.
+* Reduces the number of mistakes/typos made during the move.
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+* Less time spent writing the Terraform code could lead to less of a grasp on what's happening under the hood.
+* Depending on the project not every resource will be grabbed by/accessible to Terracognitta. Leading to gaps.
+* Terracognita creates its own randomly generated names for resources, requiring the need to rename the imported resources and references to them by hand.
 
-## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+## Links
 
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 2]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-### [option 3]
-
-[example | description | pointer to more information | …] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
-
-## Links <!-- optional -->
-
-* [Link type] [Link to ADR] <!-- example:
-* Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+* [Terracognita Repo/Docs] <https://github.com/cycloidio/terracognita>
