@@ -44,6 +44,7 @@ Chosen option: Use Terracognita to create as much pre-written Terraform as it ca
 
 * Dramatically reduces the amount of time spent transferring every resource by hand.
 * Reduces the number of mistakes/typos made during the move.
+* Generates a list of resources needed to port into terraform to refer back to.
 
 ### Negative Consequences
 
