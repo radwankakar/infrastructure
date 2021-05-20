@@ -6,23 +6,54 @@
 
 #### Create a Certificate request (macOS instructions)
 
-1. Keychain Access
-1. Certificate Assistent
-1. Request a Certificate from a Certificate Authority
-1. CN should be `<<USERNAME>>.vpn.eclkc.info`
-1. Save to disk
+1. Open the Keychain Access utility
+1. Click "Keychain Access" in the menu bar
+1. Choose "Certificate Assistant" then "Request a Certificate from a Certificate Authority"
+1. Enter your email and use the following for Common Name: `<<USERNAME>>.vpn.eclkc.info`
+1. You do not need to fill out the CA Email Address
+1. Save to disk (you may want to make a new directory to group this file and files from the following steps)
 
 TODO: add instructions for generating CSR on windows
 
-#### Send CSR file to Hosting team
+#### Send Certificate Signing Request file to Hosting team
 
-Email the CSR to `<<INSERT EMAIL>>`
+Email the Certificate Signing Request file to the hosting team: `<<INSERT EMAIL>>`
 
 #### Export and Transform private key
 
-1. Export the generated private key from Keychain Access as a p12 file.
-1. Transform to `.key` file in Terminal: `openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<FILE_NAME>>.key -nocerts`
+1. In Keychain Access, locate "login" on the lefthand side and then select "keys".
+1. Locate the keys which share the name of the certificate you just created
+1. Right click on the generated private key and select "Export" with the private key name. Export it as a `.p12` file.
+1. Select a password for your private key
+1. Open the terminal and transform your new `.p12` file to a `.key` file:
 
+```bash
+openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<FILE_NAME>>.key -nocerts
+```
+
+#### Set up VPN
+
+1. You should receive several files from the Hosting team:
+    - `ca.crt`
+    - `<<username>>.west.crt`
+    - `<<username>>.east.crt`
+    - `eclkc_centos_id_rsa` (may be sent separately and named differently)
+1. Create two files: `east.ovpn` and `west.ovpn`.
+    - Copy in the text for the files found in the [Hosting team](#hosting-team) instructions
+    - Change `<<USERNAME>>` to match the `.crt` files you were sent
+
+#### Log into VPN (macOS instructions)
+
+1. Install Tunnelblick with `brew install --cask tunnelblick`
+1. The Tunnelblick icon will appear in your top menu. Click "VPN Details"
+1. Drag `east.ovpn` and `west.ovpn` into the Configurations bar on the left
+1. Connect!
+
+#### SSH
+
+1. From the AWS instances dashboard, note the private IP you would like to access
+1. Change the file permissions: `chmod 600 eclkc_centos_id_rsa`
+1. `ssh -i eclkc_centos_id_rsa centos@<<PRIVATE_IP>>`
 
 ### Hosting team
 
