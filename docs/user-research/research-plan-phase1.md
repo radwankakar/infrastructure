@@ -17,15 +17,20 @@ The ECLKC hosting infrastructure is hosted in AWS and serves the following appli
 * National Centers
   * iDP Learning Management System
   * Coaching Companion
-  * Early Educator Central
   * iLookOut
-  * Mobile Applications
-    * ELOF 2 Go
-    * ELOF 2 Go Spanish
-    * ELOF@Home
-    * Headstart Talks
-    * Ready-DLL
-  * HSICC
+* HSICC
+
+Ultimately, there's hope to include these applications as well:
+
+* National Centers
+   * Early Educator Central
+   * Mobile Applications
+   * ELOF 2 Go
+   * ELOF 2 Go Spanish
+   * ELOF@Home
+   * Headstart Talks
+   * Ready-DLL
+
 
 We believe there are modificiations to technology and practice that can allow for self-service of the application deployments while maintaining ATO.
 
