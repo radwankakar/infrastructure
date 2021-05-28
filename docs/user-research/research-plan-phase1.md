@@ -11,25 +11,20 @@ These are the goals for this project as defined by OHS:
 * **3.0**	Consultation with product teams on infrastructure-related tasks, and with OHS leadership on technical strategies.
 * **4.0**	The management and configuration of shared services such as central authentication tools and internal data APIs.
 
-The ECLKC hosting infrastructure is hosted in AWS and serves the following applications:
+The ECLKC hosting infrastructure is hosted in AWS and serves the following applications/teams:
 
 * ECLKC
-* National Centers
-  * iDP Learning Management System
-  * Coaching Companion
-  * iLookOut
 * HSICC
-
-Ultimately, there's hope to include these applications as well:
-
 * National Centers
-   * Early Educator Central
-   * Mobile Applications
-   * ELOF 2 Go
-   * ELOF 2 Go Spanish
-   * ELOF@Home
-   * Headstart Talks
-   * Ready-DLL
+  * iDP Learning Management System (includes iLookOut)
+  * Coaching Companion
+  * Early Educator Central
+  * Mobile Applications
+  * ELOF 2 Go
+  * ELOF 2 Go Spanish
+  * ELOF@Home
+  * Headstart Talks
+  * Ready-DLL
 
 
 We believe there are modificiations to technology and practice that can allow for self-service of the application deployments while maintaining ATO.
@@ -178,7 +173,7 @@ Any questions? Let’s begin! [start recording]
 
 We have already conducted the stakeholder mapping excercise (available [here](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359393677819&cot=14)).
 
-We will be completing a Process download workshop with at least the HSICC team and likely the Coaching Companion and iLookOut teams. An example of that workshop is available [here](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237068&cot=14). We'll update this plan with links to the workshops as they are completed.
+We will be completing a Process download workshop with at least the HSICC team and likely the Coaching Companion and iPD teams. An example of that workshop is available [here](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237068&cot=14). We'll update this plan with links to the workshops as they are completed.
 
 We will then conduct a series of single-subject interviews. We will use a subset of the questions detailed above as appropriate to the interviewee.
 
@@ -210,11 +205,11 @@ Given the size of our team, we'll likely have no observers in favor of keeping s
 
 ## Participants and recruiting
 
-We expect to work closely with members of the HSICC team, Coaching Companion, iLookOut team. The last we'll specifically be focusing on issues around the shared Central Authentication Service (CAS). Alana Buroff, Information Systems and Communications Team lead, completed a stakeholder exercise and identified who we should speak to for the first round. She will be sending the introduction emails to stakeholder/users targeted in this user research plan. We will then follow up with the teams.
+We expect to work closely with members of the HSICC team, Coaching Companion, iPD team. With the last team we'll specifically be focusing on issues around the shared Central Authentication Service (CAS). Alana Buroff, Information Systems and Communications Team lead, completed a stakeholder exercise and identified who we should speak to for the first round. She will be sending the introduction emails to stakeholder/users targeted in this user research plan. We will then follow up with the teams.
 
 ## Ethics considerations
 
-We will be recording all these conversations via Zoom and sharing them with our partners at OHS and 18F. 
+With their knowledge and consent, we will be recording all these conversations via Zoom and sharing them with our partners at OHS and 18F. 
 
 ## Expected outcomes
 
