@@ -28,7 +28,7 @@ Email the Certificate Signing Request file to the hosting team: `<<INSERT EMAIL>
 1. Open the terminal and transform your new `.p12` file to a `.key` file:
 
 ```bash
-openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<FILE_NAME>>.key -nocerts
+openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 ```
 
 #### Set up VPN
