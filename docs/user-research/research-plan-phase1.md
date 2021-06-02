@@ -20,11 +20,12 @@ The ECLKC hosting infrastructure is hosted in AWS and serves the following appli
   * Coaching Companion
   * Early Educator Central
   * Mobile Applications
-  * ELOF 2 Go
-  * ELOF 2 Go Spanish
-  * ELOF@Home
-  * Headstart Talks
-  * Ready-DLL
+    * ELOF 2 Go
+    * ELOF 2 Go Spanish
+    * ELOF@Home
+    * Head Start Talks
+    * Ready-DLL
+    * Head Start Resources
 
 
 We believe there are modificiations to technology and practice that can allow for self-service of the application deployments while maintaining ATO.
@@ -45,7 +46,7 @@ We have the following goals for the initial round of research:
 
 ### Intro
 
-Thank you for joining us today. My name is XXX and I’m an XXX [add your name and position] for Truss Works. We’re contracting with OHS to help manage and configure infrastructure for the apps under the OHS umbrella, support automation where possible, and to engender an internal devsecops community of practice. We wanted to have a conversation with you today to better understand your role, the challenges you face, and your experiences with current tools, as well as your day-to-day work. The information you provide will inform what we may build. 
+Thank you for joining us today. My name is XXX and I’m an XXX [add your name and position] for Truss Works. We’re contracting with OHS to help manage and configure infrastructure for the apps under the OHS umbrella, support automation where possible, and to engender an internal devsecops community of practice--essentially, building security, infrastructure, and operations concerns into your apps as part of development. We wanted to have a conversation with you today to better understand your role, the challenges you face, and your experiences with current tools, as well as your day-to-day work. The information you provide will inform what we may build.
 
 Before we begin, I’d like to take a moment for the rest of my team to quickly introduce themselves… [beach ball to each other: name, role @Truss, and why you’re here (taking notes, etc.)]
 
@@ -89,7 +90,9 @@ Any questions? Let’s begin! [start recording]
     * Follow up: Is any of this data media content submitted by end users?
 1. What user data do you manage, if any?
     * Is any of this data PII?
-1. What happens if or when you lose data? Do you know when you have inconsistent data?
+1. How much standardization is there with user submitted data?
+1. Are there any APIs or export processes for sharing data with other systems or people?
+1. What happens if you lose data? Do you know when you have inconsistent data?
 
 ### Testing
 
@@ -171,9 +174,9 @@ Any questions? Let’s begin! [start recording]
 
 ## Method(s)
 
-We have already conducted the stakeholder mapping excercise (available [here](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359393677819&cot=14)).
+We have already conducted the [stakeholder mapping excercise](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359393677819&cot=14)).
 
-We will be completing a Process download workshop with at least the HSICC team and likely the Coaching Companion and iPD teams. An example of that workshop is available [here](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237068&cot=14). We'll update this plan with links to the workshops as they are completed.
+We will be completing a Process download workshop with at least the HSICC team and likely the Coaching Companion and iPD teams. [An example of that workshop is available](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237068&cot=14). We'll update this plan with links to the workshops as they are completed.
 
 We will then conduct a series of single-subject interviews. We will use a subset of the questions detailed above as appropriate to the interviewee.
 
@@ -217,10 +220,10 @@ At the end of this research round, we should have:
  * a stakeholder map,
  * multiple process download diagrams,
  * basic architecture diagrams for at least the HSICC team,
- * user research synthesis, and
- * part of a product roadmap.
+ * user research synthesis,
+ * list of problems/needs to prioritize in product roadmap, and
+ * a completed bang for your buck exercise to guide the creation of an actual roadmap.
 
 We may also have:
- * a deployment ridealong diagram, 
- * system attribute prioritization, and
- * a completed bang for your buck exercise.
+ * a deployment ridealong diagram and
+ * a system attribute prioritization diagram.
