@@ -16,7 +16,7 @@ The ECLKC hosting infrastructure is hosted in AWS and serves the following appli
 * ECLKC
 * HSICC
 * National Centers
-  * iDP Learning Management System (includes iLookOut)
+  * iPD Learning Management System (includes iLookOut)
   * Coaching Companion
   * Early Educator Central
   * Mobile Applications
