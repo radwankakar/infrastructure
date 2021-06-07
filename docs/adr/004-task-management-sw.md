@@ -92,7 +92,7 @@ out best (see below)].
 [example | description | pointer to more information | …] <!-- optional -->
 
 * Good, because it's FedRAMP authorized
-* Good, because [argument b]
+* Good, because they have Agile workflow as well as DevOps workflows
 * Bad, because [argument c]
 * … <!-- numbers of pros and cons can vary -->
 
