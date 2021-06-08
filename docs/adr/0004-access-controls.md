@@ -20,9 +20,31 @@ We anticipate the following environments in our system:
  * Staging
  * Production
 
-### Current roles and privileges associated with them
+### Current groups and permissions associated with them
 
-TK
+* dba (Unused)
+    * AmazonEC2ReadOnlyAccess
+    * CloudWatchFullAccess
+    * MFA
+* Developers
+    * ELB and ELB v2 Full Access
+    * EC2 List, Read Access
+    * MFA
+* DevStagingOnly (Unused)
+    * EC2 List, Read, Write for ECLKCDev and Stage1 instances
+* HHSAccountManager
+    * Billing
+* Read-Only (Unused)
+    * ReadOnlyAccess
+* S3_Access
+    * AmazonS3FullAccess
+* SupportAccessOnly (Unused)
+    * AWSSupportAccess
+* Sysadmins
+    * IAMUserChangePassword
+    * Allow ALL on ALL
+* TMSC
+    * permissions to describe and alter codecommit on cleverex and drupaldev resource
 
 ## Decision Drivers
 
@@ -58,14 +80,13 @@ Engineer role:
 * Read information about ECS clusters, services, tasks, and task definitions in all environments.
 * Stop tasks and update ECS services in Staging and Development/Experimental.
 * Run and start ECS tasks in Development/Experimental and Staging.
-* Deny any modifications to any of prod s3 buckets.
 * Modify event rules for ECS Scheduled Tasks in Staging or Development/Experimental.
 * Modify IAM roles for ECS Scheduled Tasks in Staging or Development/Experimental.
 * Full access to AWS Support, AWS Health.
 * Read only access to SES, WAF, ECR, RDS, Route53, EC2, ALB, CloudWatch.
-* Cannot modify and S3 buckets in Production environment.
-* Can modify S3 buckets in Development/Experimental.
 * Can modify SSM parameter store variables in Development/Experimental and Staging environments.
+* Can modify S3 buckets in Development/Experimental.
+* Cannot modify any S3 buckets in Production environment.
 
 Auditor/Business role:
 
