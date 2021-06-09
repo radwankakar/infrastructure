@@ -4,6 +4,10 @@ This research plan uses the [18F research plan template](https://github.com/18F/
 
 ## Background
 
+The Office of Head Start (OHS) owns and operates a set of IT infrastructure that is being used for multiple purposes, one of which is the system called the Early Childhood Learning Knowledge Center (ECLKC). ECLKC hosts multiple applications, including the ECLKC website as well as some companion apps.
+
+OHS has brought in TRUSS to help them both operate the hosting infrastructure and improve both software and processes as it relates to the hosting infrastructure and related teams.
+
 These are the goals for this project as defined by OHS:
 
 *  **1.0**	The management and configuration of cloud hosting tools such as Infrastructure-as-a-Service providers and Platform-as-a-Service providers.
@@ -34,7 +38,9 @@ This is also our pilot to see if we can define practice and standards for techni
 
 ## Goals
 
-We have the following goals for the initial round of research:
+The initial phase of our research is both [Foundational and Generative](https://ux-guide.18f.gov/research/clarify-the-basics/#research-types).
+
+Therefore, we have the following goals for this phase:
 
 * Identify and evaluate current processes for development workflows
 * Determine developers' painpoints for doing their work
@@ -178,7 +184,7 @@ We have already conducted the [stakeholder mapping excercise](https://miro.com/a
 
 We will be completing a Process download workshop with at least the HSICC team and likely the Coaching Companion and iPD teams. [An example of that workshop is available](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237068&cot=14). We'll update this plan with links to the workshops as they are completed.
 
-We will then conduct a series of single-subject interviews. We will use a subset of the questions detailed above as appropriate to the interviewee.
+We will then conduct a series of single-subject user interviews. We will use a subset of the questions detailed above as appropriate to the interviewee.
 
 ## Research roles
 
@@ -199,7 +205,9 @@ Given the size of our team, we'll likely have no observers in favor of keeping s
 | ----------- | ----------- |
 | Study design      |  1 week |
 | Recruiting   |  3 days |
-| Data collection (e.g., interviews) |  2 weeks |
+| Process Download Sessions | 2 weeks |
+| User Interview Design | 1 week |
+| User Interviews | 2 weeks |
 | Top-line synthesis   |  4 days |
 | Collaborative analysis   |  3 days |
 | Collaborative synthesis   |  3 days |
@@ -219,9 +227,9 @@ With their knowledge and consent, we will be recording all these conversations v
 At the end of this research round, we should have:
  * a stakeholder map,
  * multiple process download diagrams,
- * basic architecture diagrams for at least the HSICC team,
+ * basic architecture diagrams, at least the HSICC team,
  * user research synthesis,
- * list of problems/needs to prioritize in product roadmap, and
+ * list of problems/needs to prioritize in product roadmap including those from the different product teams, and
  * a completed bang for your buck exercise to guide the creation of an actual roadmap.
 
 We may also have:
