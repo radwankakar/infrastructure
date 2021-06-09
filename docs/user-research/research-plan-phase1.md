@@ -222,7 +222,9 @@ We expect to work closely with members of the HSICC team, Coaching Companion, iP
 
 With their knowledge and consent, we will be recording all these conversations via Zoom and sharing them with our partners at OHS and 18F. 
 
-## Expected outcomes
+## Expected outputs and outcomes
+
+### Outputs
 
 At the end of this research round, we should have:
  * a stakeholder map,
@@ -235,3 +237,9 @@ At the end of this research round, we should have:
 We may also have:
  * a deployment ridealong diagram and
  * a system attribute prioritization diagram.
+
+### Outcomes
+
+* Hosting team is able to work on prioritized work to address product teams' needs while aligning with project goals
+* Hosting team has identified needs for follow up research if any and is able to construct plan
+* Hosting team is able to construct research plan for all of OHS hosting needs 
