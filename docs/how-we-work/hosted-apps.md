@@ -3,8 +3,7 @@
 Up to date as of 06/21
 This is a list of all the applications we host and their associated team names. It was derived from all the EC2 instances running in AWS.
 
-instance id and reservation id associated
-then examine the reservation
+All of these instances are running On Demand rather than as Reserved Instances. [You can find an up to date report via the AWS Billing console](https://console.aws.amazon.com/billing/home?#/bills?year=2021&month=6).
 
 | Name                    | Instance ID         | Instance Type | Environment     | Team               | Notes                                                                  |
 |-------------------------|---------------------|---------------|-----------------|--------------------|------------------------------------------------------------------------|
