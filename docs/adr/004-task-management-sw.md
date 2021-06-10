@@ -1,9 +1,8 @@
 # [short title of solved problem and solution]
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: [proposed | rejected | accepted | deprecated | … | superseded by
-  [ADR-0005](0005-example.md)] <!-- optional -->
-* Deciders: [list everyone involved in the decision] <!-- optional -->
+* Status: proposed
+* Deciders: Eady, Sanjay, Rebecca, and Jerel
 * Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
 
 Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/issues/31
@@ -19,9 +18,11 @@ Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/is
   * [Positive Consequences](#positive-consequences-)
   * [Negative Consequences](#negative-consequences-)
 * [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
-  * [[option 1]](#option-1)
-  * [[option 2]](#option-2)
-  * [[option 3]](#option-3)
+  * [GitHub Projects](#github-projects)
+  * [Trello](#trello)
+  * [ServiceNow](#servicenow)
+  * [SmartSheets](#smartsheets)
+  * [JIRA](#jira)
 * [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -69,48 +70,55 @@ out best (see below)].
 
 ### GitHub Projects
 
-[example | description | pointer to more information | …] <!-- optional -->
+[GitHub Projects Documentation](https://docs.github.com/en/issues/organizing-your-work-with-project-boards)
 
-* Good, because it's already in use and has ATO?
+* Good, because it's already in use and has ATO
 * Good, because it's part of team's source control system
 * Bad, because it is too simple to use effectively
-* Bad, because it is not possible to provide visibility without having access (?)
-* Bad, because it is not possible to 
-* … <!-- numbers of pros and cons can vary -->
 
 ### Trello
 
-[example | description | pointer to more information | …] <!-- optional -->
+[Trello](https://trello.com/home)
 
 * Good, because it's FedRAMP authorized
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Good, because it's simple to use and set up
+* Good, because it has Slack integration
+* Bad, because it requires lots of add-ons and API integration to meet our requirements
+* Bad, because it doesn't have ATO already
 
 ### ServiceNow
 
-[example | description | pointer to more information | …] <!-- optional -->
+A platform on which there are different apps providing different workflows.
+
+[ServiceNow](https://www.servicenow.com/)
+* [Agile Development](https://www.servicenow.com/products/agile-development.html)
+* [DevOps](https://www.servicenow.com/products/devops.html)
 
 * Good, because it's FedRAMP authorized
 * Good, because they have Agile workflow as well as DevOps workflows
-* Bad, because [argument c]
+* Good, because it meets all our requirements
+* Bad, because it's a complex product that requires lots of configuration
+* Bad, because it doesn't have ATO yet
 * … <!-- numbers of pros and cons can vary -->
 
 ### SmartSheet
 
-[example | description | pointer to more information | …] <!-- optional -->
+[SmartSheet](https://www.smartsheet.com/)
 
 * Good, because it's FedRAMP authorized
-* Good, because [argument b]
-* Bad, because [argument c]
+* Good, because it's flexible enough that it can be made to accommodate any workflow we want
+* Good, because it meets all our requirements
+* Bad, because it requires configuration effort to accommodate our workflow
+* Bad, because it doesn't have ATO
 * … <!-- numbers of pros and cons can vary -->
 
 ### JIRA
 
-[example | description | pointer to more information | …] <!-- optional -->
+Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 
-* Good, because [argument a]
-* Good, because [argument b]
+* Good, because people know how to use it already
+* Good, because it's already being used by other teams so should be easier to integrate with
+* Good, because it meets all our requirements
 * Bad, because it's not FedRAMP authorized so it will take longer for an ATO
 * … <!-- numbers of pros and cons can vary -->
 
