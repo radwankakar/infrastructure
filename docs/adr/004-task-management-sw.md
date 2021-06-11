@@ -122,3 +122,5 @@ Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 * … <!-- numbers of pros and cons can vary -->
 
 ## Links <!-- optional -->
+
+* [SW Feature Matrix](https://docs.google.com/spreadsheets/d/19Tv-CcI9svw0OBFES4NbV76Tjr1eTWDntfK-KLKW4x4/edit?usp=sharing)
