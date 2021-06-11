@@ -1,4 +1,4 @@
-# [short title of solved problem and solution]
+# JIRA as the task management software tool of choice for Hosting team
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
 * Status: proposed
@@ -51,20 +51,19 @@ The TRUSS team as part of the Headstart project needs to use a task management s
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which
-meets k.o. criterion decision driver | which resolves force force | … | comes
-out best (see below)].
+Chosen option: "JIRA", because it meets all requirements plus is familiar to most, other teams are already using it.
 
 ### Positive Consequences <!-- optional -->
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions
-  required, …]
-* …
+* Able to manage our work effectively
+* Product teams are able to submit tickets to hosting team and maintain visibility to status and communicate back and forth
+* Client stakeholders are able to view progress of project
+* Team is able to continually monitor and improve
 
 ### Negative Consequences <!-- optional -->
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+* JIRA can get overly complicated easily so need to be deliberate when configuring
+* Price?
 
 ## Pros and Cons of the Options <!-- optional -->
 
@@ -123,7 +122,3 @@ Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 * … <!-- numbers of pros and cons can vary -->
 
 ## Links <!-- optional -->
-
-* [Link type] [Link to ADR] <!-- example:
-* Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
