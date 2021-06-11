@@ -3,7 +3,7 @@
 
 * Status: proposed
 * Deciders: Eady, Sanjay, Rebecca, and Jerel
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Date: 2021-06-11 <!-- optional -->
 
 Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/issues/31
 
