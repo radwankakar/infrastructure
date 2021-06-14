@@ -23,6 +23,7 @@ Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/is
   * [ServiceNow](#servicenow)
   * [SmartSheets](#smartsheets)
   * [JIRA](#jira)
+  * [PivotalTracker](#PivotalTracker)
 * [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -47,6 +48,7 @@ The TRUSS team as part of the Headstart project needs to use a task management s
 * ServiceNow
 * SmartSheet
 * JIRA
+* PivotalTracker
 * … <!-- numbers of options can vary -->
 
 ## Decision Outcome
@@ -120,6 +122,16 @@ Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 * Good, because it meets all our requirements
 * Bad, because it's not FedRAMP authorized so it will take longer for an ATO
 * … <!-- numbers of pros and cons can vary -->
+
+### PivotalTracker
+
+Out of the box solution for agile teams. [PivotalTracker](https://www.pivotaltracker.com/)
+
+* Good, because it's TRUSS's task management tool of record
+* Good, because the built-in workflows accommodate the basic workflows team would need
+* Good, because it has integrations to GitHub, JIRA, Bitbucket, Slack
+* Bad, because it does not have flexibility to accommodate changes in workflow or additional properties in tickets
+* Bad, because it does not seem to have built-in time line or planning functions
 
 ## Links <!-- optional -->
 
