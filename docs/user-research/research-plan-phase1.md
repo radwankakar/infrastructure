@@ -52,7 +52,7 @@ Therefore, we have the following goals for this phase:
 
 These questions we intend to answer via a number of workshops and interviews. They are separated here by the venue in which they will be asked.
 
-### Stakeholder mapping
+### 1. Stakeholder mapping
 (complete)
 
 1. Can you introduce yourself?
@@ -64,7 +64,7 @@ These questions we intend to answer via a number of workshops and interviews. Th
 ![Image of Stakeholder Mapping exercise](../images/stakeholder-mapping.png)
 [View an up to date version of this exercise on Miro](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359393677819&cot=14)
 
-### Tooling Survey
+### 2. Tooling Survey
 (complete)
 
 1. Do you or your team have preferred tools for the following tasks?
@@ -78,7 +78,7 @@ These questions we intend to answer via a number of workshops and interviews. Th
 
 [View an up to date version of this survey on Google Sheets](https://docs.google.com/spreadsheets/d/1PK7PY9JJKgAEAyE1UmTiBADxf7iQYt7IdrqHpmSSpNk/edit?resourcekey#gid=1978168714)
 
-### Process Download
+### 3. Process Download
 
 #### Deployment and Process
 
@@ -134,7 +134,7 @@ These questions we intend to answer via a number of workshops and interviews. Th
 
 [View an up to date version of the HSICC team's Process Download](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457359402237070&cot=14)
 
-### System Mapping
+### 4. System Mapping
 
 1. Please describe your architecture.
 1. Please describe the authentication flow of your users.
@@ -145,7 +145,7 @@ These questions we intend to answer via a number of workshops and interviews. Th
 
 [View the inherited system map on Miro](https://miro.com/app/board/o9J_lCdf5Iw=/?moveToWidget=3074457360147104894&cot=14)
 
-### User interviews
+### 5. User interviews
 
 #### Intro
 
@@ -258,10 +258,12 @@ Given the size of our team, we'll likely have no observers in favor of keeping s
 | ----------- | ----------- |
 | Study design      |  1 week |
 | Recruiting   |  3 days |
-| Process Download Sessions | 2 weeks |
-| System Mapping Sessions | 2 weeks |
+| 1. Stakeholder Mapping | 2 days |
+| 2. Tooling Survey | 4 days |
+| 3. Process Download Sessions | 2 weeks |
+| 4. System Mapping Sessions | 2 weeks |
 | User Interview Design | 1 week |
-| User Interviews | 2 weeks |
+| 5. User Interviews | 2 weeks |
 | Top-line synthesis   |  4 days |
 | Collaborative analysis   |  3 days |
 | Collaborative synthesis   |  3 days |
