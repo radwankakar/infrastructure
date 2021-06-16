@@ -22,7 +22,7 @@ All of these instances are running On Demand rather than as Reserved Instances. 
 | CoachingCompanion       | i-0c6c089d0f7800dcf | m4.large      | Prod            | Coaching Companion | Coaching companion production server                                   |
 | CoachingCompanion-Dev   | i-01d2c4a49ffea98a2 | t2.micro      | Staging         | Coaching Companion | Coaching companion staging server                                      |
 | VPN                     | i-0d1afc4a953659c60 | m3.medium     | misc            | Hosting            | OpenVPN                                                                |
-| ECLKCDev                | i-0847e3f510888f9bf | m4.2xlarge    | Dev             | Hosting            | ECLKC Drupal development integration and staging server                |
+| ECLKCDev                | i-0847e3f510888f9bf | m4.2xlarge    | Dev             | HSICC            | ECLKC Drupal development integration and staging server                |
 | DrupalDemo1             | i-01a7d791df7fa5b13 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo2             | i-075faea7f1608b0e6 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo3             | i-03ab1e383dd0d7768 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
