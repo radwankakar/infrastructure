@@ -49,7 +49,6 @@ The TRUSS team as part of the Headstart project needs to use a task management s
 * SmartSheet
 * JIRA
 * PivotalTracker
-* … <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
@@ -100,7 +99,6 @@ A platform on which there are different apps providing different workflows.
 * Good, because it meets all our requirements
 * Bad, because it's a complex product that requires lots of configuration
 * Bad, because it doesn't have ATO yet
-* … <!-- numbers of pros and cons can vary -->
 
 ### SmartSheet
 
@@ -111,7 +109,6 @@ A platform on which there are different apps providing different workflows.
 * Good, because it meets all our requirements
 * Bad, because it requires configuration effort to accommodate our workflow
 * Bad, because it doesn't have ATO
-* … <!-- numbers of pros and cons can vary -->
 
 ### JIRA
 
@@ -121,7 +118,7 @@ Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 * Good, because it's already being used by other teams so should be easier to integrate with
 * Good, because it meets all our requirements
 * Bad, because it's not FedRAMP authorized so it will take longer for an ATO
-* … <!-- numbers of pros and cons can vary -->
+* Bad, because it can be complicated to configure if we need anything not out of the box
 
 ### PivotalTracker
 
