@@ -114,6 +114,8 @@ A platform on which there are different apps providing different workflows.
 
 Solution made for agile teams. [JIRA](https://www.atlassian.com/software/jira)
 
+These comments are referring to the JIRA Cloud instance, not self-hosted.
+
 * Good, because people know how to use it already
 * Good, because it's already being used by other teams so should be easier to integrate with
 * Good, because it meets all our requirements
