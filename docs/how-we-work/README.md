@@ -33,7 +33,7 @@ Important points:
    * If any item is estimated as 5, needs to be broken down
    * 1: Well-understood and can be completed without requiring interaction between teams in less 1-2 work hours
    * 2: Well-understood and can be completed with little to no interaction between teams within half a day of concentrated work
-   * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion
+   * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion, likely would take 1 full work day
  * Point estimates are put in parenthesis at end of ticket title
   * All team members vote on points, whether or not they're in a technical role. 
   * Epics or high level initiative name is put in square brackets at beginning of ticket title
