@@ -29,31 +29,44 @@ Important points:
    * Documentation: when a ticket is only for documentation
    * Maintenance: when a ticket is to manage a maintenance window
    * etc.
- * Items are estimated using Fibonnaci points of 1, 2, 3, and 5
-   * If any item is estimated as 5, needs to be broken down
-   * 1: Well-understood and can be completed without requiring interaction between teams in less 1-2 work hours
-   * 2: Well-understood and can be completed with little to no interaction between teams within half a day of concentrated work
-   * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion, likely would take 1 full work day
- * Point estimates are put in parenthesis at end of ticket title
-  * All team members vote on points, whether or not they're in a technical role. 
-  * Epics or high level initiative name is put in square brackets at beginning of ticket title
+ * Ticket estimation:
+   * Items are estimated using Fibonnaci points of 1, 2, 3, and 5
+     * If any item is estimated as 5, needs to be broken down
+     * 1: Well-understood and can be completed without requiring interaction between teams in less 1-2 work hours
+     * 2: Well-understood and can be completed with little to no interaction between teams within half a day of concentrated work
+     * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion, likely would take 1 full work day
+   * Point estimates are put in parenthesis at end of ticket title
+   * All team members vote on points, whether or not they're in a technical role 
+ * Epics or high level initiative name is put in square brackets at beginning of ticket title
  * Tickets that are blocked by other tickets are identified in description with link to blocking ticket
  * Bugs are not estimated nor are maintenance window items
 
 ## Sprint structure
 
-The Headstart Hosting team works on a two week sprint cadence with the following structure:
+The Headstart Hosting team works on a one week sprint cadence with the following structure:
 
 * Sprint wrap/planning
+* Sprint grooming
 * Daily Standups
 * Demo
 * Retrospective
 
-Our sprints start every other Monday.
+Our sprints start every Tuesday after Sprint Planning.
 
 TODO: Note the next few sprint starts.
 
 ## Meetings
+
+### __Sprint Grooming__
+
+This meeting will occur once a sprint.
+
+We will groom tickets in the backlog to make sure they are ready to review for sprint planning.
+
+Grooming activities include:
+* Adjusting placement of tickets in backlog based on priority
+* Ticket clarification ensuring that Acceptance Criteria is clear
+* Estimation of tickets and splitting of tickets if needed
 
 ### __Sprint Planning__
 
@@ -115,6 +128,9 @@ TODO: Add more details about retrospectives.
 * OHS Tech talks
   * This meeting happens once a week. It is an opportunity to share and teach new technologies and techniques with the wider OHS IT organization.
 
+## Definition of Ready
+
+TODO: Add here
 
 ## Definition of Done
 
