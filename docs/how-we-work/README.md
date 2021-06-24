@@ -35,7 +35,8 @@ Important points:
    * 2: Well-understood and can be completed with little to no interaction between teams in a few days
    * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion
  * Point estimates are put in parenthesis at end of ticket title
- * Epics or high level initiative name is put in square brackets at beginning of ticket title
+  * All team members vote on points, whether or not they're in a technical role. 
+  * Epics or high level initiative name is put in square brackets at beginning of ticket title
  * Tickets that are blocked by other tickets are identified in description with link to blocking ticket
  * Bugs are not estimated nor are maintenance window items
 
