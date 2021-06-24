@@ -19,6 +19,26 @@ Important points:
 * **Scheduled maitenence windows** outside of core working hours occur once a month, every **3rd Thursday of the month at 8pm EST**.
 * Critical requests, such as infrastructure outages, should be addressed as soon as possible even if it is outside of core business hours.
 
+## Conventions
+
+* Use labels to identify type of ticket
+  * Bug: defect that needs to be fixed
+  * Task: change that delivers value to client (i.e. application team or end user)
+  * Chore: change that delivers value to team, but not a direct value to client (i.e. lets team work better or easier)
+ * Use additional labels for categorization
+   * Documentation: when a ticket is only for documentation
+   * Maintenance: when a ticket is to manage a maintenance window
+   * etc.
+ * Items are estimated using Fibonnaci points of 1, 2, 3, and 5
+   * If any item is estimated as 5, needs to be broken down
+   * 1: Well-understood and can be completed without requiring interaction between teams within 1 day
+   * 2: Well-understood and can be completed with little to no interaction between teams in a few days
+   * 3: Some ambiguity or well understood but requires interaction with other teams that may delay completion
+ * Point estimates are put in parenthesis at end of ticket title
+ * Epics or high level initiative name is put in square brackets at beginning of ticket title
+ * Tickets that are blocked by other tickets are identified in description with link to blocking ticket
+ * Bugs are not estimated nor are maintenance window items
+
 ## Sprint structure
 
 The Headstart Hosting team works on a two week sprint cadence with the following structure:
@@ -47,6 +67,8 @@ In reviewing work for the coming week we will incorporate:
 
 * Feedback from user research sessions
 * Feedback from operational issues
+* Deadlines for compliance requirements
+* Requests from application teams
 
 A digest of the meeting will be provided to stakeholders as necessary.
 
