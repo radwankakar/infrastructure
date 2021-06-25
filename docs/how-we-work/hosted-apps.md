@@ -10,7 +10,7 @@ All of these instances are running On Demand rather than as Reserved Instances. 
 | NAT                     | i-bb37664b          | m3.medium     | Prod            | Hosting            | Network address translation for private subnets                        |
 | Tomcat1                 | i-2129e5f6          | m4.xlarge     | Prod            | HSICC              | Tomcat applications, CAS, and user management                          |
 | Tomcat2                 | i-569c4881          | m4.xlarge     | Prod            | HSICC              | Tomcat applications                                                    |
-| LDAP                    | i-aa7ea47d          | m3.medium     | Prod            | Hosting            | LDAP production server                                                 |
+| LDAP                    | i-aa7ea47d          | m3.medium     | Prod            | HSICC              | LDAP production server                                                 |
 | LifeboatDB              | i-280ab0ff          | t2.medium     | Prod            | Maybe Hosting      | MariaDB server for Lifeboat                                            |
 | Lifeboat                | i-59e72a8f          | c4.xlarge     | Prod            | Maybe Hosting      | Read-only failover server                                              |
 | MobileApp-Locator       | i-bf790f16          | c4.large      | Prod            | Zero to Three      | Locator Server for Mobile App (older versions)                         |
@@ -26,7 +26,7 @@ All of these instances are running On Demand rather than as Reserved Instances. 
 | DrupalDemo1             | i-01a7d791df7fa5b13 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo2             | i-075faea7f1608b0e6 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo3             | i-03ab1e383dd0d7768 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
-| Mail                    | i-020e9ef07298c8b0e | m4.large      |                 | Hosting            | Mail production server                                                 |
+| Mail                    | i-020e9ef07298c8b0e | m4.large      |                 | HSICC              | Mail production server                                                 |
 | Jenkins                 | i-039a5a550d221c88f | c4.large      |                 | HSICC              | Jenkins server for automated tasks                                     |
 | SFTP                    | i-090980b098659acfc | t2.micro      |                 | Hosting            | SFTP server for developer access to Drupal-related files               |
 | Ansible-Nagios          | i-0a4fdf046f3f65f40 | t2.medium     |                 | Hosting            | Ansible configuration management and Nagios monitoring                 |
@@ -42,7 +42,7 @@ All of these instances are running On Demand rather than as Reserved Instances. 
 | EEC                     | i-09818b71f995f1e80 | t2.medium     | Prod            | Zero to Three      | Early educator central production server (Low usage)                   |
 | EEC-Dev                 | i-0475cb18a2c1cdf34 | t2.small      | Dev             | Zero to Three      | Early educator central staging server (Low usage)                      |
 | IDS-Logs                | i-0aa24513d73ac3500 | c4.xlarge     |                 |                    | Intrusion detection and log server (deprecated)                        |
-| MariaDB                 | i-0d8b2df4c9861788f | m4.xlarge     |                 | HSICC              | Production MariaDB server                                              |
+| MariaDB                 | i-0d8b2df4c9861788f | m4.xlarge     | Prod            | HSICC              | Production MariaDB server                                              |
 | Stage                   | i-080d1086bcdb454cd | m4.large      |                 | HSICC              | Staging CAS and Tomcat Apps                                            |
 | Stage1                  | i-051e015f378cf0090 | m4.large      |                 | HSICC              | Staging frontend server (Drupal)                                       |
 | Stage2                  | i-088b46ff602644bdd | m4.large      |                 | HSICC              | Staging frontend server (Drupal)                                       |
