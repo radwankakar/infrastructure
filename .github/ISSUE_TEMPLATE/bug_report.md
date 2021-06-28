@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a ticket to help us investigate and fix your problem
 title: "[User Submitted] <Problem seen>"
-labels: bug, to-triage
+labels: state:to-triage, type:bug
 assignees: eeeady, jerels, kilbergr, ssatagopan
 
 ---

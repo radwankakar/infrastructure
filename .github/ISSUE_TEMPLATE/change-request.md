@@ -2,7 +2,7 @@
 name: Change request
 about: Request a change to your system hosted in Headstart Hosting
 title: "[User Request] <Change title>"
-labels: enhancement, to-triage
+labels: state:to-triage, type:request
 assignees: eeeady, ssatagopan
 
 ---
