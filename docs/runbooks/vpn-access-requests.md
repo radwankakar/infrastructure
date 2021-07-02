@@ -27,9 +27,9 @@
    - Under the "General" tab, add a "Friendly name" `<<USERNAME>>.vpn.eclkc.info` is suggested but optional.
    - Under the "Subject" tab, in the "Subject name" section, add "Type" "Common name" in the drop down with a "Value" `<<USERNAME>>.vpn.eclkc.info` and click the "Add >" button to move the value into the list on the left.
    - Under the "Private Key" tab, expand the "Key options" section and select "2048" from the dropdown for "Key size" and check the box "Make private key exportable".
-1. Click the "Apply" button then the "OK" button. Thsi will close the "Certificate Properties" window.
+1. Click the "Apply" button then the "OK" button. This will close the "Certificate Properties" window.
 1. Back in the "Certificate Enrollment" wizard, you'll still see the "Certificate Information" menu. Click "Next".
-1. In the menu 'Where do you want to ssave the offline request?" save to a file of your chosing but select the "File format" "Base 64". Click "Finish" to generate your certificate request.
+1. In the menu 'Where do you want to save the offline request?" save to a file of your choosing but select the "File format" "Base 64". Click "Finish" to generate your certificate request.
 
 #### Send Certificate Signing Request file to Hosting team
 
@@ -70,7 +70,7 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 1. A "Certificate Export Wizard" will pop up. On the "Welcome to the Certificate Export Wizard" menu Click the "Next" button.
 1. In the "Export Private Key" menu, select "Yes, export the private key". Click the "Next" button.
 1. In the "Export File Format" menu, select the "Personal Information Exchange" radial and check "Include all certificates in the certification path if possible" and "Enable certificate privacy". Click the "Next" button.
-1. In the "Security" menu, check the "Password" box and input a password of your choosingand then select "AES256-SHA256" in the "Encryption" dropdown. Click the "Next" button.
+1. In the "Security" menu, check the "Password" box and input a password of your choosing and then select "AES256-SHA256" in the "Encryption" dropdown. Click the "Next" button.
 1. In the "File to Export" menu, select file to export to. Click the "Next" button.
 1. In the "Completing the Certificate Export Wizard" menu, validate your configuration choices. Click the "Finish" button.
 
