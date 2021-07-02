@@ -30,3 +30,7 @@ Who does this impact? (i.e. Developers, application administrators, application 
 
 ## Timeline
 Is there a deadline or any other timing considerations for this change?
+
+## Acceptance Criteria
+* [ ] Acceptance Criteria 1
+* [ ] ...
