@@ -40,7 +40,7 @@ Sensitive | Sensitive information such as medical, financial, or legal informati
 Not-Sensitive PII | "Neutral" information, such as name, facial photos, or work address
 Not PII | Information that does not refer to any specific user
 
-* Prioritiy
+* Priority
 
 Impact/Urgency | Extensive | Significant | Moderate | Minor
 -------------- | --------- | ----------- | -------- | -----
@@ -82,10 +82,13 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
 2. Once a new issue is reported, if ticket is not already opened in GitHub, open ticket with as much information as provided
 3. Assess Priority of issue based on Impact and Urgency
 4. If the reported issue is P0 or P1, start a thread in Slack, link ticket in thread, and do some immediate investigation to assess whether issue is actual and whether there is any possibility of PII exposure and whether this issue is security related. Include your findings in the thread and in the ticket.
-   1. If the issue doesn't seem actual, send an email response to the reported with your findings and verify with them that you can close ticket.
+   1. If the issue doesn't seem actual, send an email response to the reporter with your findings and verify with them that you can close ticket.
       1. If reporter responds with their acceptance, close ticket with your findings in comments
       2. If reporter responds that they see it as an issue, obtain more information as needed to investigate further, whether over email or a zoom session.
-   2. If the issue is actual AND ( there is a possibility of PII exposure OR it could be security related), contact OCC through their primary contact info in the On Call Rotation schedule
+   2. If the issue is:
+     * actual AND 
+     * there is a possibility of PII exposure OR it could be security related:
+    contact OCC through their primary contact info in the On Call Rotation schedule
       1. OCC needs to send a notification via email ⌛ **within 1 hour** to ACF_IRT@acf.hhs.gov, ISSO, System Owner, 18F advisors, Truss CSM, reporter, and app teams, and include:
          1. Headline summary of issue
          2. Description

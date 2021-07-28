@@ -56,16 +56,16 @@ Set up monitors in AWS - need a ticket to implement
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### Option 1: 
+### Option 1: Sign up for Uptime Robot to monitor different URLs
 
 * PRO: Simple
 * PRO: Supports up to 50 monitors
 * PRO: Free
 * CON: Only monitors public sites, not supporting systems
-* CON: Yet another system to use
+* CON: Yet another service to use
 * CON: Only supports email notifications for free
 
-### Option 2: 
+### Option 2: Set up monitors in AWS
 
 * PRO: Part of AWS ecosystem
 * PRO: Can monitor all components
