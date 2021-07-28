@@ -16,9 +16,9 @@ The on-call communicator is the person that will be on-call responder in two wee
 ## Schedule
 Wednesday to Tuesday (aligning with every sprint)
 
-| Week | Person | Contact Info (Preferred first) 
+| Week | Person | Preferred Contact Method 
 ------ | ------ | ------------
-1 | Sanjay | 678-481-7097 (c), sanjay@truss.works
-2 | Jerel | jerel@truss.works
-3 | Rebecca | rebecca@truss.works
-4 | Eady | 510-755-2653 (c), eeeady@truss.works
+1 | Sanjay | Text
+2 | Jerel | Text
+3 | Rebecca | Text
+4 | Eady | Text
