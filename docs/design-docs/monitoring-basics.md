@@ -8,7 +8,7 @@ Rebecca Kilberg
 
 Reference ADR 7, [Initial Monitoring Setup](../adr/0007-initial-monitoring-setup.md) for more information about why we are starting with such basic monitoring.
 
-The expectation is to monitor for abnormal behavior on all websites (Coaching Companion, iPD, and ECLKC), load balancers, and Route53.
+The expectation is to monitor for abnormal behavior on all websites (Coaching Companion, iPD, Early Educator Central, and ECLKC), load balancers, and Route53.
 
 ## Route53
 

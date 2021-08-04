@@ -134,4 +134,12 @@ TODO: Add here
 
 ## Definition of Done
 
-TODO: Add here
+* All Acceptance Criteria is met
+* Reviewed at all stages
+  * Person doing work
+  * Person reviewing code changes - prior to merge
+  * Person accepting - after merge and being applied
+    * Internal - Sanjay default acceptor and can pair with other team members to learn how or reach out to external stakeholders to get acceptance if needed
+* Relevant documentation is updated, whether it’s new or existing
+* External communication done if needed
+
