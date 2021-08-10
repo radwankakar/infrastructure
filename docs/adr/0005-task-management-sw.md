@@ -1,7 +1,7 @@
 # JIRA as the task management software tool of choice for Hosting team
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: proposed
+* Status: Decided
 * Deciders: Eady, Sanjay, Rebecca, and Jerel
 * Date: 2021-06-11 <!-- optional -->
 
