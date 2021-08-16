@@ -1,5 +1,8 @@
 The following should be used as a message template when sending notifications about system outages and this is an update about an issue that is still happening.
 
+## When to Use
+If a P0 or P1 issue is still present and there has already been an initial message sent. This message should be sent hourly until the issue is resolved.
+
 ## Recipients
 alana.buroff@acf.hhs.gov, headstart-hosting@truss.works, nate.price@gsa.gov, townley.knudson@hendall.com, scott.weinfeld@hendall.com, samuel.nevares@hendall.com, lsoaterna@zerotothree.org, daytonra@uw.edu, corvin@uw.edu
 
