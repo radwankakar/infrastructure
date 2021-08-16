@@ -1,5 +1,8 @@
 The following should be used as a message template when sending notifications about system outages and this is the first email letting people know.
 
+## When to Use
+If an issue is determined to be P0 or P1 based on docs/how-we-work/support-process.md
+
 ## Recipients
 alana.buroff@acf.hhs.gov, headstart-hosting@truss.works, nate.price@gsa.gov, townley.knudson@hendall.com, scott.weinfeld@hendall.com, samuel.nevares@hendall.com, lsoaterna@zerotothree.org, daytonra@uw.edu, corvin@uw.edu
 
