@@ -1,5 +1,8 @@
 The following should be used as a message template when sending notifications about system outages and this is when the issue has been resolved.
 
+## When to Use
+When a P0 or P1 issue has been resolved and site or application is fully operational
+
 ## Recipients
 alana.buroff@acf.hhs.gov, headstart-hosting@truss.works, nate.price@gsa.gov, townley.knudson@hendall.com, scott.weinfeld@hendall.com, samuel.nevares@hendall.com, lsoaterna@zerotothree.org, daytonra@uw.edu, corvin@uw.edu
 
