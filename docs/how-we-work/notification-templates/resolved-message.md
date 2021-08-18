@@ -1,4 +1,4 @@
-The following should be used as a message template when sending notifications about system outages and this is when the issue has been resolved.
+The following should be used as a message template when sending notifications via email about system outages and this is when the issue has been resolved.
 
 ## When to Use
 When a P0 or P1 issue has been resolved and site or application is fully operational
