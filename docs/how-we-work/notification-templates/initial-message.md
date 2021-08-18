@@ -1,4 +1,4 @@
-The following should be used as a message template when sending notifications about system outages and this is the first email letting people know.
+The following should be used as a message template when sending notifications via email about system outages and this is the first email letting people know.
 
 ## When to Use
 If an issue is determined to be P0 or P1 based on <span class="x x-first x-last">[our Support Process doc definition](</span>support-process.md<span class="x x-first x-last">).</span>
