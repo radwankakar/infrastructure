@@ -31,3 +31,9 @@ Typically, we've integrated with another service such as PagerDuty, which does h
 We will be using per-app team alert topics from SNS to indicate the source of the alert. However, all alerts will go directly to the Truss infrasec team member who is on call.
 
 Part of the rationale of setting up PagerDuty rather than just creating subscriptions to individual phone numbers via AWS SNS is that we would have to rotate these numbers every week, since they don't appear to have a scheduled rotation option.
+
+## PagerDuty
+
+To configure PagerDuty, we would have a separate stack outside of the `AWS` stacks in the [Environment Configuration](https://github.com/OHS-Hosting-Infrastructure/environment-configuration) repo. We could organize our work under a single ["Service"](https://support.pagerduty.com/docs/services-and-integrations) since although we are monitoring different sites, all alerts will go to the same team. We would add members of the Truss hosting team to a schedule that would automatically rotate in PagerDuty. Initially we would simply create SMS alerts directly to the team member on call, but ultimately we could implement the Slack-PagerDuty integration that creates an alert or notification within Slack and a page.
+
+We could rely on the [Truss External Integrations Guide](https://github.com/trussworks/Engineering-Playbook/blob/main/infrasec/aws/sns-guardduty-alert-integrations.md) to help describe how best to approach this, although initially we wouldn't be using GuardDuty.
