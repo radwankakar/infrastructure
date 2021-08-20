@@ -47,6 +47,7 @@ With that objective in mind, we would like to understand different stakeholders'
 #### Strategy
 4. Any strategic objectives affecting your project right now that we should be aware of?
 5. Can you articulate the problem that you think this project is trying to solve?
+6. Can you describe your ideal outcome for this project?
 #### Open Ended
 7. What keeps you up at night?
 8. If I had a magic wand and granted you one wish to make your job easier, what would you wish for and why?
@@ -61,6 +62,7 @@ With that objective in mind, we would like to understand different stakeholders'
 #### Strategy
 3. Any strategic objectives affecting your project right now that we should be aware of?
 4. Can you articulate the problem that you think this project is trying to solve?
+5. Who are your primary stakeholders?
 #### Collaboration
 5. Does your team collaborate with any other team currently?
    * If so, who do you collaborate with and how?
@@ -144,10 +146,43 @@ With that objective in mind, we would like to understand different stakeholders'
 2. Walk me through your day yesterday.
 #### Strategy
 3. Can you articulate the problem that you think this project is trying to solve?
+4. Can you describe your ideal outcome for this project?
 #### Collaboration
 4. Does your team collaborate with any other team currently?
    * If so, who do you collaborate with and how?
    * If so, what are some of the biggest challenges to effective collaboration?
 6. How do you collaborate with SREs/DevOps/Infrastructure practitioners?
-#### TODO
+#### Testing
+1. What is the current cadence of unit and/or integration tests? 
+    * Why is it this cadence?
+1. What is your lead time? (What is the average amount of time it takes from the time code is checked into the version control system to the point in time where it is deployed to staging and production?)
+#### Security and Observability
+1. What is your logging set up?
+1. What external services does your system use?
+#### Deployment and Process
+1. What would a healthy deployment cycle timeline look like, in your point of view?
+1. What kind of downtime is acceptable for the hosting infrastructure?
+#### Tools
+6. Do you or your team have preferred tools for the following tasks?
+   * Continuous integration
+   * Cloud Hosting
+   * Deployment
+   * Communication - Async or sync
+   * Authentication
+   * Logging
+7. Are there tools you would hate to use? Why?
+8. What do you wish you had in terms of tooling that you don’t currently?
+#### Open Ended
+9. What’s easy for you about your job?
+10. What is the most difficult thing about doing your job well?
+   * IF they mention anything about manual work:
+      * What’s the most painful manual process for you?
+      * Are there repeating manual tasks that bother you as well?
+11. What would you be upset about losing if it disappeared tomorrow (that’s job related)?
+12. Are there any constraints that aren’t captured in the questions we’ve asked you?  
+13. What keeps you up at night?
+14. If I had a magic wand and granted you one wish to make your job easier, what would you wish for and why?
+15. Is there anything you wish we asked about?
+16. Is there anything we’ve missed?
+17. Who else should we speak to?
 
