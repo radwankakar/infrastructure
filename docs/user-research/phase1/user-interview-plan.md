@@ -14,30 +14,39 @@ With that objective in mind, we would like to understand different stakeholders'
 4. Hosting Team
 5. End User (possible?)
 
-## Interviewees
-1. Alana Buroff (System Owner) - Business
-2. Nate Price (18F Consulting Engineer) - Business
+## Interviewee Selection
+1. Must have System Owner and 18F interviewees
+2. Must have primary Application Business Owner
+3. Must have at least two members of the development teams if possible
+4. Must have at least two members of the hosting team
+
+## Interviewee Candidates
+1. Alana Buroff (System Owner) - Business - ET
+2. Nate Price (18F Consulting Engineer) - Business - CT
 3. Townley Knudson (Hendall Project Lead) - Business
-4. Scott Weinfeld (HSICC Project Manager) - Business
-5. Sam Nevares (ECLKC Lead Dev) - Development Team
-6. Bhuvan Neupane (ECLKC QA) - Development Team
+4. Scott Weinfeld (HSICC Project Manager) - Business - ET
+5. Sam Nevares (ECLKC Lead Dev) - Development Team - ET
+6. Bhuvan Neupane (ECLKC QA) - Development Team - ET
 7. Raul Rodriguez (ECLKC Drupal Dev) - Development Team
-8. Luisa Soaterna (ZTT Director) - Business
+8. Luisa Soaterna (ZTT Director) - Business - ET
 9. Priyanka Shukla (iPD Product Manager) - Business
 10. Brittany King (iPD Admin) - Business
 11. Yakul Bajaj (iPD Developer) - Development Team
 12. Ever Giraldo (iPD Developer) - Development Team
-13. Craig Corvin (CC Product Manager) - Business
-14. Virginia Tse (CC Product Owner) - Business
-15. Dayton Allerman (CC Developer) - Development Team 
+13. Craig Corvin (CC Product Manager) - Business - PT
+14. Virginia Tse (CC Product Owner) - Business- PT
+15. Dayton Allerman (CC Developer) - Development Team - PT 
 16. Allyson Dean (ZTT EEC Owner) - Business
 17. Dan Gorman (EEC Product Manager) - Business
 18. Anna Hoff (ZTT PM) - Business
 19. Yashodip Kolhe (Mobisoft) - Development Team
 20. Rob Wilkerson (EEC Developer) - Development Team
-21. Rebecca Kilberg (Truss Infrasec) - Hosting Team
-22. Elizabeth Eady (Truss Team Lead) - Hosting Team
-23. Jerel Smith (Truss Infrasec) - Hosting Team
+21. Rebecca Kilberg (Truss Infrasec) - Hosting Team - PT
+22. Elizabeth Eady (Truss Team Lead) - Hosting Team - PT
+23. Jerel Smith (Truss Infrasec) - Hosting Team - CT
+
+## Schedule
+TODO
 
 ## Questions per Interviewee
 ### Overall Business Owner
