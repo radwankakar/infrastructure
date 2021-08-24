@@ -1,13 +1,40 @@
 # List of people w/ VPN access
 
-* ca
-* eec
+## Truss
+
+* eeady
+* eadywindows
+* rkilberg
+* jerel
+* ssatagopanECLKCvpn
+
+## 18f
+
 * jdussault
+* rahearn
+
+## iPD
+
 * paradiso1
 * paradiso2
-* rkilberg
+
+## Zero to Three
+
+* eec
+
+## NCHBHS
+
+* injury1
+* injury2
+
+## Coaching Companion
+
+* dayton
+
+## Uncategorized
+
+* ca
 * robert
-* jerel
 * sai
 * server
 * ahyder
@@ -20,22 +47,15 @@
 * david
 * logan
 * aleksey
-* dayton
 * mobisoft1
 * satt1
 * satt2
 * satt3
 * deepak
-* injury1
-* injury2
-* rahearn
 * sudha
 * ali
-* eeady
-* eadywindows
 * ohseast
 * thomas
 * banana
 * richard
 * bill
-* ssatagopanECLKCvpn
