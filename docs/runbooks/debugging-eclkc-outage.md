@@ -12,5 +12,5 @@ The following are a few good steps to take when debugging an outage. Be sure to 
     * error logs are a good place to start, as well as filtering logs by error codes i.e. 400 and 500.
     * checking the status of the above services is also recommended:
         * `sudo systemctl status [service].service`: gives you basic information on the current state of the specified service.
-        * `sudo systemctl restart [service].service`: restarts the specified service. **note: restarting php will most likely drop any open connections.
+        * `sudo systemctl restart [service].service`: restarts the specified service. **note: restarting php will most likely drop any open connections.**
 * SSH into the mariadb server, cd into `/var/lib/mysql` where the logs for the database live.
