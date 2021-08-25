@@ -23,7 +23,7 @@
 * paradiso1
 * paradiso2
 
-## Zero to Three
+## Early Educator Central
 
 * eec
 
@@ -36,6 +36,10 @@
 
 * dayton
 
+## Mobisoft
+
+* mobisoft1
+
 ## Uncategorized
 
 * ca
@@ -44,7 +48,5 @@
 * john
 * radwanullah
 * aleksey
-* mobisoft1
 * ohseast
 * banana
-* seyi
