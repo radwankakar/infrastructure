@@ -13,6 +13,11 @@
 * jdussault
 * rahearn
 
+## HSICC
+
+* sam
+* bhuvan
+
 ## iPD
 
 * paradiso1
@@ -34,28 +39,11 @@
 ## Uncategorized
 
 * ca
-* robert
-* sai
 * server
-* ahyder
 * curtisc
-* sam
 * john
 * radwanullah
-* seyibash1
-* seyi
-* david
-* logan
 * aleksey
 * mobisoft1
-* satt1
-* satt2
-* satt3
-* deepak
-* sudha
-* ali
 * ohseast
-* thomas
 * banana
-* richard
-* bill
