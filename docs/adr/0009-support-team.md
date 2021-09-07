@@ -16,9 +16,9 @@
   * [Positive Consequences](#positive-consequences)
   * [Negative Consequences](#negative-consequences)
 * [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-  * [[option 1]](#option-1)
-  * [[option 2]](#option-2)
-  * [[option 3]](#option-3)
+  * [Increase the Size of the Team](#increase-the-size-of-the-team)
+  * [Change Support Requirements](#change-support-requirements)
+  * [Status Quo](#status-quo)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -28,7 +28,7 @@
 
 The Truss hosting team has only three technical members. However, as part of the QASP for the project, we are required to maintain 99% uptime for the system. Two of the three technical team members are located in Pacific time. With these constraints, it's not sustainable for the team to maintain a weekly rotation to maintain 24x7 support in case of incidents.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
 * Outages caused during penetration testing took a while to respond to and resolve
 * On call every three weeks is not great
@@ -51,16 +51,16 @@ In order for Sam to be able to help, he will need to be granted read-only access
 
 Once Sam is provided these capabilities, those same capabilities will be extended to Sanjay, who will then be able to provide some additional support. However, this will also require runbooks to be created for common troubleshooting procedures.
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
 * System has required support during the most active hours
 * Team is able to focus more on implementing the new system vs. supporting the old
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences
 
 * Still a need for existing team to support old system leading to less time for new
 
-## Pros and Cons of the Options <!-- optional -->
+## Pros and Cons of the Options
 
 ### Increase the size of the team
 
@@ -68,13 +68,13 @@ Once Sam is provided these capabilities, those same capabilities will be extende
 * Good, because it offers a more sustainable rotation schedule
 * Bad, because it costs more to someone, either Truss or OHS
 
-### [option 2: Change support requirements]
+### Change support requirements
 
 * Good, because it makes supporting the system more sustainable for the team
 * Good, because it clarifies expectations for everyone
 * Bad, because it reduces support posture generally
 
-### [option 3: Status quo]
+### Status quo
 
 * Good, because no change
 * Bad, because not sustainable
