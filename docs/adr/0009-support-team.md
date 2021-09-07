@@ -1,7 +1,7 @@
 # [Supporting OHS Hosting with a Small Team]
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: proposed <!-- optional -->
+* Status: accepted <!-- optional -->
 * Deciders: Sanjay, Eady, Rebecca, Jerel, Alana, Nate <!-- optional -->
 * Date: 2021-09-02 <!-- optional -->
 
