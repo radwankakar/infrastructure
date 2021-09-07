@@ -10,16 +10,15 @@
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers-)
+* [Decision Drivers](#decision-drivers)
 * [Considered Options](#considered-options)
 * [Decision Outcome](#decision-outcome)
-  * [Positive Consequences](#positive-consequences-)
-  * [Negative Consequences](#negative-consequences-)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
+  * [Positive Consequences](#positive-consequences)
+  * [Negative Consequences](#negative-consequences)
+* [Pros and Cons of the Options](#pros-and-cons-of-the-options)
   * [[option 1]](#option-1)
   * [[option 2]](#option-2)
   * [[option 3]](#option-3)
-* [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -63,7 +62,7 @@ Once Sam is provided these capabilities, those same capabilities will be extende
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1: Increase the size of the team]
+### Increase the size of the team
 
 * Good, because it provides the capacity for team to work on new system
 * Good, because it offers a more sustainable rotation schedule
@@ -74,17 +73,10 @@ Once Sam is provided these capabilities, those same capabilities will be extende
 * Good, because it makes supporting the system more sustainable for the team
 * Good, because it clarifies expectations for everyone
 * Bad, because it reduces support posture generally
-* … <!-- numbers of pros and cons can vary -->
 
 ### [option 3: Status quo]
 
 * Good, because no change
 * Bad, because not sustainable
 * Bad, because no time to work on new system
-* … <!-- numbers of pros and cons can vary -->
 
-## Links <!-- optional -->
-
-* [Link type] [Link to ADR] <!-- example:
-* Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
