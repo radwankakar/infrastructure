@@ -12,11 +12,14 @@
 
 * jdussault
 * rahearn
+* NathanielPrice
 
 ## HSICC
 
 * sam
 * bhuvan
+* ty.collington
+* rrodriguez
 
 ## iPD
 
