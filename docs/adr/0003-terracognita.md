@@ -10,12 +10,12 @@ Technical Story: <https://github.com/OHS-Hosting-Infrastructure/environment-conf
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers-)
+* [Decision Drivers](#decision-drivers)
 * [Considered Options](#considered-options)
 * [Decision Outcome](#decision-outcome)
-  * [Positive Consequences](#positive-consequences-)
-  * [Negative Consequences](#negative-consequences-)
-* [Links](#links-)
+  * [Positive Consequences](#positive-consequences)
+  * [Negative Consequences](#negative-consequences)
+* [Links](#links)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 

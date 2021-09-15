@@ -138,4 +138,4 @@ We may also have:
 
 * Hosting team is able to work on prioritized work to address product teams' needs while aligning with project goals
 * Hosting team has identified needs for follow up research if any and is able to construct plan
-* Hosting team is able to construct research plan for all of OHS hosting needs 
+* Hosting team is able to construct research plan for all of OHS hosting needs
