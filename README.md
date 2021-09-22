@@ -2,7 +2,7 @@
 
 A place to begin.
 
-Looking for an on-call engineer? [CLICK HERE](docs/how-we-work/pagerduty-email.md)
+**Looking for an on-call engineer? [CLICK HERE](docs/how-we-work/pagerduty-email.md)**
 
 ## TODOs
 
