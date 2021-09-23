@@ -55,7 +55,7 @@ Attach the volume to the EC2 instance you are adding disk space to from the AWS 
 1. [Add a label to a disk](#add-a-label-to-a-disk) to give it a human-readable identifier.
 1. If you're switching a volume for a copy of a larger size:
    1. [Sync the backup](#sync-a-backup) then [unmount](#unmount-a-disk) both the current volume and replacement volume. 
-   1. Then [mount the replacement volume](#mount-a-disk) to the original disk. XXXXXXXXX THIS PART. 
+   1. Then [mount the replacement volume](#mount-a-disk) to the original mount path in the filesystem.
    1. Delete the disk you've been using for the swap out but NOT the disk you want to maintain.
 1. Add new device mount /etc/fstab so that it will automatically mounted on a reboot. Run `[sudo] vi /etc/fstab` to edit fstab. Replace the volume name with the new volume that has been mounted on disk. If you're switching the volume, remove the line referencing the swap mount you had been using. See [this linuxhint article](https://linuxhint.com/mount_partition_uuid_label_linux/ ) if you need further instructions.
 1. Run `[sudo] mount -av` to reload from fstab.
