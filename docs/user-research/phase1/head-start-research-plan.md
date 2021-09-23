@@ -29,9 +29,9 @@ _Not for now: We want to get early feedback on the proposed CI/CD process we are
 * What parts of their own system don’t developers know about?
 * How do dev teams keep up with ATO compliance requirements?
 
-Dev teams discussion guide
+[Dev teams discussion guide](./dev-discussion-guide.md)
 
-Business Owners discussion guide
+[Business Owners discussion guide](./business-owner-discussion-guide.md)
 
 ## Participants
 Dev teams: 
