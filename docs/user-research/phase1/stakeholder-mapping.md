@@ -1,4 +1,3 @@
-
 # Stakeholder Mapping
 
 ## Questions

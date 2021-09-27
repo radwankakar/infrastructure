@@ -10,11 +10,15 @@
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers)
+* [Decision Drivers](#decision-drivers-)
 * [Considered Options](#considered-options)
 * [Decision Outcome](#decision-outcome)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-* [Links](#links)
+  * [Positive Consequences](#positive-consequences-)
+  * [Negative Consequences](#negative-consequences-)
+* [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
+  * [Option 1: Sign up for Uptime Robot to monitor different URLs](#option-1-sign-up-for-uptime-robot-to-monitor-different-urls)
+  * [Option 2: Set up monitors in AWS](#option-2-set-up-monitors-in-aws)
+* [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 

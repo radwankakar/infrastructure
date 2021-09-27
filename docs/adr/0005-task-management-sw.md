@@ -21,9 +21,9 @@ Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/is
   * [GitHub Projects](#github-projects)
   * [Trello](#trello)
   * [ServiceNow](#servicenow)
-  * [SmartSheets](#smartsheets)
+  * [SmartSheet](#smartsheet)
   * [JIRA](#jira)
-  * [PivotalTracker](#PivotalTracker)
+  * [PivotalTracker](#pivotaltracker)
 * [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
