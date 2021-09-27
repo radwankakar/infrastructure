@@ -18,19 +18,18 @@ In general, if us-east is having networking issues, you should be switching over
 1. Select either `maintenance` or `failover` from the dropdown menu.
 1. Click `Build`.
 1. Confirm a successful build.
-1. To check the host is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
+1. To check the host that is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
     * If you’re on Varnish, you’ll have that name
-    * If you’re on Lifeboat, you’ll have `lifeboat.east.eclkc`
+    * If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
+    * If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
 
 ## How to switch to ECLKC-Prod
 
-1. To switch back over, go to the CloudFront Console in AWS.
-1. Select the CloudFront Distribution with name (Description) "production"--ID `E1M2MLYJK72V3I`
-1. On the `Origins` tab, select `ECLKC` Origin and select `Edit`.
-1. Click `Origin domain` and select `ECLKC-Reader-1685067169.us-east-1.elb.amazonaws.com` from the drop down menu.
-1. Scroll down and select `Save changes`.
-1. In the `Invalidations` tab, select `Create invalidation`.
-1. Add an object path of `/*` and select `Create invalidation`. The invalidation will take a minute or two to clear.
-1. To check the host is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
+1. 1. Login to Jenkins.
+1. Select the `ECLKC-Prod-Cutover` Project.
+1. From the menu bar, select `Build Now`.
+1. Confirm a successful build.
+1. To check the host that is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
     * If you’re on Varnish, you’ll have that name
-    * If you’re on Lifeboat, you’ll have `lifeboat.east.eclkc`.
+    * If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
+    * If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
