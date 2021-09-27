@@ -6,6 +6,7 @@ labels: state:to-triage, type:bug
 assignees: eeeady, jerels, kilbergr, ssatagopan
 
 ---
+**Looking for an on-call engineer? [CLICK HERE](../../docs/how-we-work/pagerduty-email.md)**
 
 ## Reported By
 Name of external person that raised issue and Contact Information

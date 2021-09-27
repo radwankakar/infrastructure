@@ -6,6 +6,7 @@ labels: state:to-triage, type:request
 assignees: eeeady, ssatagopan
 
 ---
+**Looking for an on-call engineer? [CLICK HERE](../../docs/how-we-work/pagerduty-email.md)**
 
 ## Requested By
 External user that requested this change and Contact Information

@@ -2,6 +2,8 @@
 
 A place to begin.
 
+**Looking for an on-call engineer? [CLICK HERE](docs/how-we-work/pagerduty-email.md)**
+
 ## TODOs
 
 * Determine what should be documented in wiki vs markdown documents in this repository.

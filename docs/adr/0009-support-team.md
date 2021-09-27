@@ -16,9 +16,9 @@
   * [Positive Consequences](#positive-consequences)
   * [Negative Consequences](#negative-consequences)
 * [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-  * [Increase the Size of the Team](#increase-the-size-of-the-team)
-  * [Change Support Requirements](#change-support-requirements)
-  * [Status Quo](#status-quo)
+  * [Increase the size of the team](#increase-the-size-of-the-team)
+  * [Change support requirements](#change-support-requirements)
+  * [Status quo](#status-quo)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
