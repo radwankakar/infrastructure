@@ -2,13 +2,13 @@
 
 ## Context
 
-Lifeboat is the read-only version of the ECLKC Database that we can switch to during maintenance windows and in the case of an incident when the website is getting attacked.
+Lifeboat is the read-only version of the ECLKC Database that we can switch to during maintenance windows and in the case of an incident when the website is getting attacked (failover).
 
 Lifeboat sync jobs run every night around 11pm, so the database should be within 24 hours of up to date at all times. Before switching over, you should check that it successfully ran the night before. It generally takes about 15-20 minutes to sync the databases.
 
 If the sync job didn't run the night before, you should default to triggering it before switching over to Lifeboat. Of course, this won't be possible if there are networking issues.
 
-In general, if us-east is having networking issues, you should be switching over to us-west. If the database isn't working in us-east, but other things are okay, you can move to Lifeboat in east because it is a read-only copy of the previous night's database.
+In general, if us-east is having networking issues, you should be switching over to us-west (failover). If the database isn't working in us-east, but other things are okay, you can move to Lifeboat in east (maintenance) because it is a read-only copy of the previous night's database.
 
 ## How to switch to Lifeboat
 
