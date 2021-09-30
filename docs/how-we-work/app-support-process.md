@@ -3,19 +3,6 @@
 ## Background
 The OHS Hosting team and the application teams it supports interact with each other in various ways. There is a need for documentation to describe the process that the application teams should follow depending on the need.
 
-## Types of Communication
-* Informational
-* Question
-* Change Request
-* Problem
-
-## Channels Available
-* Email to individuals
-* Email to hosting team
-* Email to PagerDuty
-* JIRA
-* Slack
-
 ## Process
 First, determine what type of communication is it?
 1. [Is it some information you need to convey to the hosting team?](#information)
@@ -24,8 +11,12 @@ First, determine what type of communication is it?
 1. [Do you want to report a problem?](#problem)
 
 ### Information
+* For communicating a Change Request related to a deployment to production, email Sanjay and Eady
+* For communicating anything else, send email to the hosting team at headstart-hosting@truss.works if you're not sure who to communicate with, otherwise email the individual(s) needed
 
 ### Question
+* For a question regarding timelines or communication, email Sanjay
+* For a technical question, email headstart-hosting@truss.works
 
 ### Change Request
 For something you need done by the hosting team that is not a bug, please create a ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa).
