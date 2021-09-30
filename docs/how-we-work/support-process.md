@@ -3,74 +3,22 @@
 This document details how the hosting team supports the system and its users along with the response plan during incidents.
 
 ## Table of Contents
-* [Definitions](#definitions)
 * [Reporting an Issue](#reporting-an-issue)
 * [Support Response Workflow](#support-response-workflow)
+* [Definitions](#definitions)
 * [References](#references)
-
-## Definitions
-
-Impact: the overall effect of an event or incident. This includes the number of affected users and the criticality of the affected system or data. Impact is also used to qualify the effect of reputation loss to the department, agency, or organization
-
-Urgency: combines the time it takes an incident to have a significant impact on business, the criticality of the system under attack, and the sensitivity of the data exposed.
-
-* Impact
-
-Impact | Description
------- | ----------
-Extensive | Affects all or most of the system across multiple applications. It has been verified that data was exposed to the public and it was sensitive PII. User data loss affects 500 unique individuals or more.
-Significant | Affects large portions of system affecting two or more applications. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data is sensitive PII. User data loss affects 100 unique individuals or more.
-Moderate | Affects some of the system and affects at least one application. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data is PII. User data loss affects 50 unique individuals or more.
-Minor | Affecting some of the system. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data may contain data that is PII. User data loss affects less than 50 unique individuals.
-
-* Urgency
-
-Urgency | Description
-------- | -----------
-Severe | Affects critical systems or high-value applications or resulting in a complete work stoppage. With data exposure, the data exposed is sensitive PII.
-High | Affects core support systems or high-value applications or resulting in a significant impact to business operations. With data exposure, the data exposed is sensitive PII.
-Medium | Affects systems or applications resulting in a moderate impact to business operations, but a workaround exists. With data exposure, the data exposed is PII.
-Low | Little to no impact to business operations. With data exposure, the data exposed is not PII.
-
-* Personally Identifiable Information (PII)
-
-PII | Description
---- | -----------
-Sensitive | Sensitive information such as medical, financial, or legal information
-Not-Sensitive PII | "Neutral" information, such as name, facial photos, or work address
-Not PII | Information that does not refer to any specific user
-
-* Priority
-
-Impact/Urgency | Extensive | Significant | Moderate | Minor
--------------- | --------- | ----------- | -------- | -----
-Severe | P0 | P0 | P1 | P2
-High | P1 | P1 | P2 | P3
-Moderate | P2 | P2 | P3 | P3
-Low | P3 | P3 | P3 | P3
-
-* Times
-
-Priority | Response Time (hours)<sup>*</sup> | Resolution Time (hours)
--------- | --------------------- | -----------------------
-P0 | 4 (1 with PII) | 16
-P1 | 8 (1 with PII) | 24
-P2 | 16 | 40
-P3 | 24 | 56 to 72
-
-_* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknowledgement should be sent within 2 hours_
 
 ## Reporting an Issue
 
-1. When an issue occurs, there needs to be some minimal assessment as to the impact and urgency of the issue. The reporter also needs to assess whether there was any possibility of PII exposure and if there's a possibility of the issue being security related. Using these definitions and your assessment, determine the Priority.
+1. When an issue occurs, there needs to be some minimal assessment as to the impact and urgency of the issue. The reporter also needs to assess whether there was any possibility of PII exposure and if there's a possibility of the issue being security related. Using the [definitions](#definitions) and your assessment, determine the Priority.
 1. If it's a P0 or a P1 with possibility of PII exposure:
-   1. Send an email to the hosting team's on-call email: on-call@eclkc.info with the following information:
+   1. Send an email to the hosting team's on-call email: [on-call@eclkc.info](mailto:on-call@eclkc.info) with the following information:
    *  Application affected (ECLKC, HS CC, iPD, any mobile apps, EEC)
    *  One line summary of issue
    *  How to reproduce
    *  When did it start
    *  Additional details including any impact on PII
-1. Create a Bug ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa) using [template below](#bug-template)
+1. For all issues, create a Bug ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa) using [template below](#bug-template)
 1. The reporter should receive a response within 2 hours during core business hours (12PM - 5PM ET) for non-PII issues. Outside of these hours, response times will depend on the Priority of the issue.
 
 ## Support Response Workflow
@@ -84,7 +32,7 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
 ### Workflow
 
 1. The OCR will monitor JIRA issues and the mailbox for new issues
-2. Once a new issue is reported, if ticket is not already opened in GitHub, open ticket with as much information as provided
+2. Once a new issue is reported, if ticket is not already opened in JIRA, open ticket with as much information as provided
 3. Assess Priority of issue based on Impact and Urgency
 4. If the reported issue is P0 or P1, start a thread in Slack, link ticket in thread, and do some immediate investigation to assess whether issue is actual and whether there is any possibility of PII exposure and whether this issue is security related. Include your findings in the thread and in the ticket.
    1. If the issue doesn't seem actual, send an email response to the reporter with your findings and verify with them that you can close ticket.
@@ -143,6 +91,58 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
    * P3 = Low
 * **Reproducibility**: Always, Frequently, Sometimes, Rarely, or Never
 * **ENV**: Prod, Stage, and/or Dev
+
+## Definitions
+
+Impact: the overall effect of an event or incident. This includes the number of affected users and the criticality of the affected system or data. Impact is also used to qualify the effect of reputation loss to the department, agency, or organization
+
+Urgency: combines the time it takes an incident to have a significant impact on business, the criticality of the system under attack, and the sensitivity of the data exposed.
+
+* Impact
+
+Impact | Description
+------ | ----------
+Extensive | Affects all or most of the system across multiple applications. It has been verified that data was exposed to the public and it was sensitive PII. User data loss affects 500 unique individuals or more.
+Significant | Affects large portions of system affecting two or more applications. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data is sensitive PII. User data loss affects 100 unique individuals or more.
+Moderate | Affects some of the system and affects at least one application. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data is PII. User data loss affects 50 unique individuals or more.
+Minor | Affecting some of the system. It has either been verified that data was exposed to the public or has a strong likelihood of being exposed to the public and the exposed data may contain data that is PII. User data loss affects less than 50 unique individuals.
+
+* Urgency
+
+Urgency | Description
+------- | -----------
+Severe | Affects critical systems or high-value applications or resulting in a complete work stoppage. With data exposure, the data exposed is sensitive PII.
+High | Affects core support systems or high-value applications or resulting in a significant impact to business operations. With data exposure, the data exposed is sensitive PII.
+Medium | Affects systems or applications resulting in a moderate impact to business operations, but a workaround exists. With data exposure, the data exposed is PII.
+Low | Little to no impact to business operations. With data exposure, the data exposed is not PII.
+
+* Personally Identifiable Information (PII)
+
+PII | Description
+--- | -----------
+Sensitive | Sensitive information such as medical, financial, or legal information
+Not-Sensitive PII | "Neutral" information, such as name, facial photos, or work address
+Not PII | Information that does not refer to any specific user
+
+* Priority
+
+Impact/Urgency | Extensive | Significant | Moderate | Minor
+-------------- | --------- | ----------- | -------- | -----
+Severe | P0 | P0 | P1 | P2
+High | P1 | P1 | P2 | P3
+Moderate | P2 | P2 | P3 | P3
+Low | P3 | P3 | P3 | P3
+
+* Times
+
+Priority | Response Time (hours)<sup>*</sup> | Resolution Time (hours)
+-------- | --------------------- | -----------------------
+P0 | 4 (1 with PII) | 16
+P1 | 8 (1 with PII) | 24
+P2 | 16 | 40
+P3 | 24 | 56 to 72
+
+_* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknowledgement should be sent within 2 hours_
 
 ## References
 1. [Incident Response Plan](https://acf-headstart.box.com/s/qvvzav6qy6swy7i6dj5a6125uw8ws29q)
