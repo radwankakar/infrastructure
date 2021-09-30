@@ -5,6 +5,7 @@ This document details how the hosting team supports the system and its users alo
 ## Table of Contents
 * [Reporting an Issue](#reporting-an-issue)
 * [Support Response Workflow](#support-response-workflow)
+* [Bug Template](#bug-template)
 * [Definitions](#definitions)
 * [References](#references)
 
