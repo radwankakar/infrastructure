@@ -62,14 +62,19 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
 
 ## Reporting an Issue
 
-1. When an issue occurs, there needs to be some minimal assessment as to the impact and urgency of the issue. The reporter also needs to assess whether there was any possibility of PII exposure and if there's a possibility of the issue being security related.
-2. Once the issue is detected, it needs to be reported to the hosting team by:
-   1. Raising an issue in GitHub - https://github.com/OHS-Hosting-Infrastructure/infrastructure/issues/new/choose
-   2. Use Bug Report template and fill out all requested information
-   3. If the issue's Urgency is Severe or High, also send an email to headstart-hosting@truss.works
-3.  The reporter should receive a response within 2 hours during core business hours (12PM - 5PM ET) for non-PII issues. Outside of these hours, response times will depend on the Priority of the issue.
+1. When an issue occurs, there needs to be some minimal assessment as to the impact and urgency of the issue. The reporter also needs to assess whether there was any possibility of PII exposure and if there's a possibility of the issue being security related. Using these definitions and your assessment, determine the Priority.
+1. If it's a P0 or a P1 with possibility of PII exposure:
+   1. Send an email to the hosting team's on-call email: on-call@eclkc.info with the following information:
+   *  Application affected (ECLKC, HS CC, iPD, any mobile apps, EEC)
+   *  One line summary of issue
+   *  How to reproduce
+   *  When did it start
+   *  Additional details including any impact on PII
+1. Create a Bug ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa) using [template below](#bug-template)
+1. The reporter should receive a response within 2 hours during core business hours (12PM - 5PM ET) for non-PII issues. Outside of these hours, response times will depend on the Priority of the issue.
 
 ## Support Response Workflow
+(for Hosting team)
 
 ### Roles
 * Reporter - the person that reported issue
@@ -78,7 +83,7 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
 
 ### Workflow
 
-1. The OCR will monitor GitHub issues and the mailbox for new issues
+1. The OCR will monitor JIRA issues and the mailbox for new issues
 2. Once a new issue is reported, if ticket is not already opened in GitHub, open ticket with as much information as provided
 3. Assess Priority of issue based on Impact and Urgency
 4. If the reported issue is P0 or P1, start a thread in Slack, link ticket in thread, and do some immediate investigation to assess whether issue is actual and whether there is any possibility of PII exposure and whether this issue is security related. Include your findings in the thread and in the ticket.
@@ -118,6 +123,26 @@ _* - within Core businss hours of 12pm ET - 5PM ET Monday through Friday, acknow
 7. If the issue is P2 or P3,
    1. If it's during core business hours, send an acknowledgement to the reporter within 2 hours
    2. If it's outside core business hours, wait until next business day and send acknowledgement and mention in Slack channel for reference
+
+## Bug Template
+* **Project**: OHS Hosting(OHSH)
+* **Issue Type**: Bug
+* **Summary**: one line summary of problem
+* **Component**: Infra
+* **Description**:
+   * **Application Affected:** (ECLKC, iPD, HS CC, EEC, or mobile app)
+   * **Description of Problem:** A clear and concise description of what the issue is. Include any system information that could inform our investigation.
+   * **Impact:** Who is affected? (i.e. developers or end users or application admins) How many are affected?
+   * **Additional Details:** Anything else that could help the team troubleshoot the issue.
+* **Steps to Reproduce**: How can the team reproduce and see the problem?
+* **Expected Results**: What should happen?
+* **Priority**:
+   * P0 or P1 w/ PII exposure = Highest
+   * P1 w/o PII exposure = High
+   * P2 = Medium
+   * P3 = Low
+* **Reproducibility**: Always, Frequently, Sometimes, Rarely, or Never
+* **ENV**: Prod, Stage, and/or Dev
 
 ## References
 1. [Incident Response Plan](https://acf-headstart.box.com/s/qvvzav6qy6swy7i6dj5a6125uw8ws29q)
