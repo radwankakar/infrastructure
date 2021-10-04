@@ -25,7 +25,7 @@ In general, if us-east is having networking issues, you should be switching over
 
 ## How to switch to ECLKC-Prod
 
-1. 1. Login to Jenkins.
+1. Login to Jenkins.
 1. Select the `ECLKC-Prod-Cutover` Project.
 1. From the menu bar, select `Build Now`.
 1. Confirm a successful build.
