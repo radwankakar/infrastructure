@@ -53,11 +53,29 @@ Currently, there exist no unified tooling or system to handle continuous integra
 ### Bamboo
 
 * **Cost**
+    * Pricing tiers are based on agents rather than users. The more agents, the more processes can run concurrently – either steps in the same build, or different builds. Includes an unlimited amount of jobs. Appears to be billed on an annual basis:
+        * 1, $1,200
+        * 5, $3,200
+        * 10, $5,840
+        * 25, $11,600
+        * 100, $23,280
+        * 250, $58,160
+        * 500, $87,280
+        * 1,000, $133,840
+        * 2,000, $187,380
 * **ATO of Services**
 * **Team Familiarity**
 * **Usability of Templates**
+    * As far as I can tell Bamboo uses Specs as a form of templating. You can either use YAML or Java to write a Spec, which creates the plan(s) for your CI pipeline. It seems it would have a similar issue to vanilla Jenkins, but I can't find as many examples of Specs being used. Bamboo also seems to really want you to use Java to get the full use out of using Specs.
 * **Ease of AWS (and other) integrations**
+    * It looks as if you could probably integrate Bamboo with AWS by hooking it up through an EC2 instance, it seems to require a server to operate.
+    * The real integration benefits of using Bamboo is how it can seamlessly integrate with other [Atlassian applications](https://confluence.atlassian.com/bamboo/integrating-bamboo-with-atlassian-applications-289276942.html).
 * **Job Metrics**
+    * Bamboo has built-in [reporting](https://confluence.atlassian.com/bamboo/generating-reports-across-multiple-plans-289276964.html) that tracks a variety of metrics. Some of which include:
+        * Build activity
+        * Build duration
+        * Percentage of successful builds
+        * Time to fix
 
 ### Github Actions
 
