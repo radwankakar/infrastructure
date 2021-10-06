@@ -178,6 +178,7 @@ To clean the yum cache:
 Run the following commands on the ansible machine to hit all of our centos7 instances:
 
 To remove all old kernels except for the last one.
+Note, run this after reboots on ansible-nagios and vpn because those instances will still be using the old kernels.
 `ansible centos7 -a "package-cleanup --oldkernels --count=1 -y" --become`
 
 To check the kernels installed:
