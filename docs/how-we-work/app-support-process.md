@@ -8,10 +8,10 @@ First, determine what type of communication is it?
 1. [Is it some information you need to convey to the hosting team?](#information)
 1. [Do you have a question about something that's not a ticket already?](#question)
 1. [Do you have a request for a change to the infrastructure or configuration?](#change-request)
-1. [Do you want to report a problem?](#problem)
+1. [Do you want to report a problem with the infrastructure causing an outage or other problem for you or your end users?](#problem)
 
 ### Information
-* For communicating a Change Request related to a deployment to production, email Sanjay and Eady
+* For communicating a Change Notice or Release Announcement related to a deployment to production, email Sanjay and Eady
 * For communicating anything else, send email to the hosting team at headstart-hosting@truss.works if you're not sure who to communicate with, otherwise email the individual(s) needed
 
 ### Question
@@ -19,7 +19,7 @@ First, determine what type of communication is it?
 * For a technical question, email headstart-hosting@truss.works
 
 ### Change Request
-For something you need done by the hosting team that is not a bug, please create a ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa).
+For something you need done by the hosting team that is not a bug with the infrastructure, please create a ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa).
 
 #### Ticket template
 * **Project**: OHS Hosting (OHSH)
