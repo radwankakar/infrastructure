@@ -16,7 +16,8 @@ Common things to note/do during maintenance.
 * [Sync the backup](#sync-the-backup)
 * [Update NodeJS to version 12](#update-nodejs-to-version-12)
 * [Updating packages on Ubuntu](#updating-packages-on-ubuntu)
-* [Updating pacakages on Centos](#updating-pacakages-on-centos)
+* [Updating packages on Centos](#updating-packages-on-centos)
+  * [Updating PHP on Centos](#updating-php-on-centos)
 * [Cleaning up old kernels on Centos](#cleaning-up-old-kernels-on-centos)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -183,7 +184,7 @@ Check to see what php related packages you have (consider saving this list):
 
 `yum list installed | grep php`
 
-You should be updating PHP from the ius repo, not the remi repo. Install the repo if it's not already on the box: 
+You should be updating PHP from the ius repo, not the remi repo. Install the repo if it's not already on the box:
 
 `yum install https://centos7.iuscommunity.org/ius-release.rpm`
 
