@@ -44,10 +44,19 @@ Currently, there exist no unified tooling or system to handle continuous integra
 ### CircleCI
 
 * **Cost**
+    * There’s [3 price levels](https://circleci.com/pricing/#compute-options-table), with each level allocating a number of credits that are used to pay for a team’s usage based on machine type and size. As well as a series of premium features such as, Docker layer caching:
+        * Free, 2,500 credits/week
+        * Performance, starting at $30 a month. 25,000 credits/month for the first 3 users, 25,000 credits/month for each additional user.
+        * Scale, have to talk to CircleCI representative to get pricing
 * **ATO of Services**
 * **Team Familiarity**
 * **Usability of Templates**
+    * CircleCI uses a `config.yml` file that lives in the top-level `.circleci` directory of the repo to provide a job/pipeline template. CircleCI also offers the capability to use [dynamic configuration](https://circleci.com/docs/2.0/dynamic-config/), providing a way to generate configuration when needed rather than manually creating them every time.
 * **Ease of AWS (and other) integrations**
+    * CircleCI has two options for integrating with AWS.
+        * Orbs: By using orbs teams can quickly, and with minimum effort, make deployments to AWS.
+        * VPC: Running CircleCI this way provides an extra bit of control over the security of the project/deployments.
+    * CircleCI provides a vast catalog of orbs, APIs, and web hooks. Allowing for easy integrations of several of our tools, including: Jira, Slack, and Github
 * **Job Metrics**
 
 ### Bamboo
@@ -66,7 +75,7 @@ Currently, there exist no unified tooling or system to handle continuous integra
 * **ATO of Services**
 * **Team Familiarity**
 * **Usability of Templates**
-    * As far as I can tell Bamboo uses Specs as a form of templating. You can either use YAML or Java to write a Spec, which creates the plan(s) for your CI pipeline. It seems it would have a similar issue to vanilla Jenkins, but I can't find as many examples of Specs being used. Bamboo also seems to really want you to use Java to get the full use out of using Specs.
+    * As far as I can tell Bamboo uses Specs as a form of templating. You can either use [YAML or Java](https://docs.atlassian.com/bamboo-specs-docs/8.0.2/) to write a Spec, which creates the plan(s) for your CI pipeline. It seems it would have a similar issue to vanilla Jenkins, but I can't find as many examples of Specs being used. Bamboo also seems to really want you to use Java to get the full use out of using Specs.
 * **Ease of AWS (and other) integrations**
     * It looks as if you could probably integrate Bamboo with AWS by hooking it up through an EC2 instance, it seems to require a server to operate.
     * The real integration benefits of using Bamboo is how it can seamlessly integrate with other [Atlassian applications](https://confluence.atlassian.com/bamboo/integrating-bamboo-with-atlassian-applications-289276942.html).
