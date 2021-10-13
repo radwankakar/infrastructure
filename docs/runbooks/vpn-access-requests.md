@@ -95,7 +95,7 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 
 1. Install the [OpenVPN connect app](https://openvpn.net/client-connect-vpn-for-windows/).
 1. In the "Certificates & Tokens" menu select the "PKCS #12" tab.
-1. Click "Add Certificate" and select the `.pfx` file you created earlier. Type in the password you ...
+1. Click "Add Certificate" and select the `.pfx` file you created earlier. Type in the password you chose.
 1. For each `.ovpn` file:
     - Remove the lines referencing `<<username>>.crt` and `<<username>>.key` then save.
     - In the OpenVPN connect app, "Import profile" from file and drag the `.ovpn` file.
