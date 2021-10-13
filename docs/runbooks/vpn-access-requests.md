@@ -38,9 +38,7 @@ Email the Certificate Signing Request file to the hosting team: `<<INSERT EMAIL>
 They will sign the certificate request and send you a zip file containing the following files:
 
 - `ca.crt`
-- `<<username>>.west.crt`
-- `<<username>>.east.crt`
-- `west.ovpn`
+- `<<username>>.crt`
 - `east.ovpn`
 
 #### Export and Transform private key
@@ -78,10 +76,9 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 
 1. You should receive several files from the Hosting team:
     - `ca.crt`
-    - `<<username>>.west.crt`
-    - `<<username>>.east.crt`
-    - `eclkc_centos_id_rsa` (may be sent separately and named differently)
-1. Create two files: `east.ovpn` and `west.ovpn`.
+    - `<<username>>.crt`
+    - `east.ovpn`
+1. If you haven't received `east.ovpn`, you can create the file: `east.ovpn`.
     - Copy in the text for the files found in the [Hosting team](#hosting-team) instructions
     - Change `<<USERNAME>>` to match the `.crt` files you were sent
 
@@ -118,8 +115,8 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 1. Switch to root: `sudo -s`
 1. `cd /etc/openvpn/easy-rsa/`
 1. `source vars`
-1. `cp /home/centos/<<USERNAME>>.csr keys/`
-1. `./sign-req keys/<<USERNAME>>` (note the lack of `.csr` here)
+1. `./sign-req /home/centos/<<USERNAME>>` (note the lack of `.csr` here)
+1. `sudo cp /home/centos/<<USERNAME>>.crt /etc/openvpn/easy-rsa/keys/`
 1. Send `east.ovpn`, `/etc/openvpn/easy-rsa/keys/ca.crt`, and `/etc/openvpn/easy-rsa/keys/<<USERNAME>>.crt` to the user.
 1. Repeat for `us-west-1` if the user should have access to the west region.
 
