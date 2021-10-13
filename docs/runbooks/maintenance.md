@@ -187,6 +187,8 @@ Check to see what php related packages you have (save this list):
 You should be updating PHP from the ius repo, not the remi repo. Install the repo if it's not already on the box:
 
 `yum install https://centos7.iuscommunity.org/ius-release.rpm`
+or
+`wget https://repo.ius.io/ius-release-el7.rpm`
 
 Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
