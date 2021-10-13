@@ -180,7 +180,7 @@ Check the php version:
 
 `php -v`
 
-Check to see what php related packages you have (consider saving this list):
+Check to see what php related packages you have (save this list):
 
 `yum list installed | grep php`
 
@@ -188,24 +188,30 @@ You should be updating PHP from the ius repo, not the remi repo. Install the rep
 
 `yum install https://centos7.iuscommunity.org/ius-release.rpm`
 
-Install plugin-replace tool if it's not already on the box:
+Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
-`yum install yum-plugin-replace`
+`sudo yum install phpXX` or `sudo yum install phpXX-common`.
 
-Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82u):
+Then install all the packages you identified in the grep step. Will look like:
 
-`yum replace --replace-with phpXXu php`
+`sudo yum install php74 php74-fpm-nginx php74-fpm php74-gd php74-cli` etc.
 
-Restart apache service:
+If you get an error that there's a conflict, you will need to remove the current package (replace XX with the version i.e. v8.2 becomes php82u) before doing the install steps above:
+
+`sudo yum remove phpXX` or `sudo yum remove phpXX-common`.
+
+Restart various services:
 
 `service httpd restart`
+`sudo systemctl restart php-fpm.service`
+`sudo systemctl restart nginx.service`.
 
 Check the environment that you've replaced the php version in. Make sure to check not just the home page.
 In the case that you are getting a 502 or other error, run the following to look at the logs:
 
 `sudo tail -f /var/log/nginx/error.log`
 
-[This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
+If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
 
 You may need to also update the memory_limit in the /etc/php.ini file as well to 1024M for deployment jobs to complete successfully.
 
