@@ -3,6 +3,7 @@
 ## Background
 
 As part of understanding the current system, we need to document all the current integrations and applications that are functional on the system so that we can include them when considering design, implementation, and migration to the new system. This will also help us when it comes to evaluating applications suitability for Cloud.gov.
+This doc's contents is mostly cribbed from a doc by Sam Nevares of the HSICC team.
 
 ## Integrations
 
