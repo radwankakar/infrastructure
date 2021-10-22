@@ -175,47 +175,57 @@ To clean the yum cache:
 `yum clean all`
 
 ### Updating PHP on Centos
+1. Check the php version:
 
-Check the php version:
+    `php -v`
 
-`php -v`
+1. Check to see what php related packages you have (save this list):
 
-Check to see what php related packages you have (save this list):
+    `yum list installed | grep php`
 
-`yum list installed | grep php`
+1. You should be updating PHP from the ius repo, not the remi repo. Install the repo if it's not already on the box:
 
-You should be updating PHP from the ius repo, not the remi repo. Install the repo if it's not already on the box:
-
-`yum install https://centos7.iuscommunity.org/ius-release.rpm`
+    `yum install https://centos7.iuscommunity.org/ius-release.rpm`
 or
 `wget https://repo.ius.io/ius-release-el7.rpm`
 
-Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
+1. Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
-`sudo yum install phpXX` or `sudo yum install phpXX-common`.
+    `sudo yum install phpXX` or `sudo yum install phpXX-common`.
 
-Then install all the packages you identified in the grep step. Will look like:
+1. Then install all the packages you identified in the grep step. Will look like:
 
-`sudo yum install php74 php74-fpm-nginx php74-fpm php74-gd php74-cli` etc.
+    `sudo yum install php74 php74-fpm-nginx php74-fpm php74-gd php74-cli` etc.
 
-If you get an error that there's a conflict, you will need to remove the current package (replace XX with the version i.e. v8.2 becomes php82u) before doing the install steps above:
+    If you get an error that there's a conflict, you will need to remove the current package (replace XX with the version i.e. v8.2 becomes php82u) before doing the  install steps above, copy the current php config:
 
-`sudo yum remove phpXX` or `sudo yum remove phpXX-common`.
+    `cd /etc/php-fpm.d`  
+    `cp www.conf www.conf.backup`
 
-Restart various services:
+    Then remove the current version:
 
-`service httpd restart`
-`sudo systemctl restart php-fpm.service`
-`sudo systemctl restart nginx.service`.
+    `sudo yum remove phpXX` or `sudo yum remove phpXX-common`.
 
-Check the environment that you've replaced the php version in. Make sure to check not just the home page.
+    And continue from step 4. After you've done the installation, replace the newly generated `www.conf` with the backup you saved:
+
+    `mv www.conf www.conf.default`  
+    `mv www.conf.backup www.conf`  
+    `rm www.conf.default`
+
+1. Restart various services:
+
+    `service httpd restart`  
+    `sudo systemctl restart php-fpm.service`  
+    `sudo systemctl restart nginx.service`.
+
+1. Check the environment that you've replaced the php version in. Make sure to check not just the home page.
 In the case that you are getting a 502 or other error, run the following to look at the logs:
 
-`sudo tail -f /var/log/nginx/error.log`
+    `sudo tail -f /var/log/nginx/error.log`
 
-If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
+1. If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
 
-You may need to also update the memory_limit in the /etc/php.ini file as well to 1024M for deployment jobs to complete successfully.
+1. You may need to also update the memory_limit in the /etc/php.ini file as well to 1024M for deployment jobs to complete successfully.
 
 ## Cleaning up old kernels on Centos
 
