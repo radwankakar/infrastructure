@@ -4,7 +4,7 @@ This document details how the hosting team supports the system and its users alo
 
 ## Table of Contents
 * [Reporting an Issue](#reporting-an-issue)
-* [Support Response Workflow](#support-response-workflow)
+* [Support Response Workflow for Hosting Team](#support-response-workflow-for-hosting-team)
 * [Bug Template](#bug-template)
 * [Definitions](#definitions)
 * [References](#references)
@@ -22,7 +22,7 @@ This document details how the hosting team supports the system and its users alo
 1. For all issues, create a Bug ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa) using [template below](#bug-template)
 1. The reporter should receive a response within 2 hours during core business hours (12PM - 5PM ET) for non-PII issues. Outside of these hours, response times will depend on the Priority of the issue.
 
-## Support Response Workflow (Hosting team)
+## Support Response Workflow for Hosting Team
 
 ### Roles
 * Reporter - the person that reported issue
