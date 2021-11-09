@@ -27,5 +27,5 @@ We would like to understand the current stakeholder testing process so that we c
 7. She tests to make sure that the change meets her requirements.
 
 ## Possible Areas of Improvement
-* In at least the session that we observed, there seemed to be a disconnect between what Brittany wanted and the implementation that was done. This may be a result of lack of clarity in the original ask and/or lack of collaboration during the design and implementation process.
+* In at least the session that we observed, there seemed to be a disconnect between what Brittany wanted and the implementation that was done. This may be a result of lack of clarity in the original ask and/or lack of collaboration during the design and implementation process. Training around writing user stories may be a worthwhile offering to address this concern.
 * The fact that this testing took place the morning before the release gave no time to adjust implementation yet still keep in the release. While this may not be the norm, it's still worth including cadence of testing in our recommendations
