@@ -19,6 +19,7 @@ This document details how the hosting team supports the system and its users alo
    *  How to reproduce
    *  When did it start
    *  Additional details including any impact on PII
+   1. Send a note in the [#support-infra channel in Slack](https://acf-ohs.slack.com/archives/C02MW2N1YSX) with the same information
 1. For all issues, create a Bug ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa) using [template below](#bug-template)
 1. The reporter should receive a response within 2 hours during core business hours (12PM - 5PM ET) for non-PII issues. Outside of these hours, response times will depend on the Priority of the issue.
 
@@ -37,7 +38,7 @@ This document details how the hosting team supports the system and its users alo
    1. If it was reported as a PagerDuty alert, **_Acknowledge_** if it was an actual alert or **_Resolve_** if it was a test or if you know the cause of the alert and it has been resolved.
    2. If ticket is not already opened in JIRA, open ticket with as much information as provided
 4. Assess Priority of issue based on Impact and Urgency
-5. If the reported issue is P0 or P1, start a thread in Slack in the #pb-ohs-hsis-vendors channel, link ticket in thread, and do some immediate investigation to assess whether issue is actual and whether there is any possibility of PII exposure and whether this issue is security related. Include your findings in the thread and in the ticket. **_FOR NON-HOSTING TEAM MEMBERS:_** If you don't have access to the Slack channel, do the same with an email chain to headstart-hosting@truss.works.
+5. If the reported issue is P0 or P1, start a thread in Slack in the #support-infra channel, link ticket in thread, and do some immediate investigation to assess whether issue is actual and whether there is any possibility of PII exposure and whether this issue is security related. Include your findings in the thread and in the ticket. **_FOR NON-HOSTING TEAM MEMBERS:_** If you don't have access to the Slack channel, do the same with an email chain to headstart-hosting@truss.works.
    1. If the issue doesn't seem actual, send an email response to the reporter with your findings and verify with them that you can close ticket. If issue was reported by monitoring systems and not by a person, raise ticket to address bug in monitoring and **_Resolve_** incident in PagerDuty.
       1. If reporter responds with their acceptance, close ticket with your findings in comments, include in thread, and **_Resolve_** incident in PagerDuty
       2. If reporter responds that they see it as an issue, obtain more information as needed to investigate further, whether over email or a zoom session.
