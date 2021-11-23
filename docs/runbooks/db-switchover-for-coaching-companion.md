@@ -9,4 +9,4 @@ Every so often we have to replace the Coaching Companion staging database with t
 * once you've got the sql file locally open it and change any reference to `coaching-companion` to `ncqtlcoachingdev`
 * next run the above scp again, just flipped, pointing at the CoachingCompanion-Dev instead of the mariadb server. sending the newly edited sql to the CoachingCompanion-Dev server: `scp -i [ssh creds] [dump].sql [remote username]@[remote ip address]:[path]`
 * make your way back into CoachingCompanion-Dev and run the following command: `mysql ncqtlcoachingdev < [prod dump].sql` once that's done you've just updated the db!
-* get in touch with the point of contact for the Coaching Companion app to get them a password-protected zipped version of the dump. as well as ensuring the switch went through on their end.
+* get in touch with the point of contact for the Coaching Companion app to get them a password-protected zipped version of the dump, as well as to ensure the switch went through on their end.
