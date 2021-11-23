@@ -4,14 +4,16 @@
 We would like to be transparent with our client and application teams on how we decide what we work on. Therefore, we need to document the methods by which we prioritize our work, whether it's feature development, i.e. adding new functionality, or issues.
 We will answer the following questions:
 * What method will we use to prioritize new development?
-* What scale will be run this prioritization on?
+* What scale will we run this prioritization on?
 * How often will we review and adjust priorities for new development?
 * What method will we use to prioritize issues?
 * Once prioritization is complete, how will we schedule it into our work stream?
 
 ## New development
 The team discussed several methods, including [WSJF](https://www.scaledagileframework.com/wsjf/), [Weighted Scoring](https://www.productplan.com/glossary/weighted-scoring/), Impact/Urgency vs Effort, and [RICE](https://www.productplan.com/glossary/rice-scoring-model/). After discussion, the team selected **Impact/Urgency vs. Effort**. Essentially a comparison of Impact and Urgency together against the Effort involved in completing the work.
+
 ### Description
+
 The Impact and Urgency vs Effort prioritization method is essentially a simplified form of the WSJF method above. The team will put together a list of the items to be discussed. These items will typically be gathered on an ongoing basis by the Product Manager along with the team themselves based on input from the application teams, the system owner, hosting team, strategic discussions, etc.
 * The list will be constructed at an epic or large story level. It will not include all work to be done as the details at that level may not be available at the time of prioritization.
 * It will also not include issues or ongoing maintenance work.
@@ -41,7 +43,7 @@ There are two types of issues that need two different prioritization methods. On
 1. Assess Severity of the issue using multiple factors. Could include number of application users impacted, whether it's an important workflow for the application user, whether there is a workaround, whether there is heightened visibility due to any external events, i.e. a launch of new functionality or offering.
    | Severity | Definition |
    | -------- | ---------- |
-   | Sev1 | A critical issue with very high impact. This could include data loss, a security breach, or when a client-facing service is down for all users. No workaround available. Typicall would fall into the Incident category above.|
+   | Sev1 | A critical issue with very high impact. This could include data loss, a security breach, or when a client-facing service is down for all users. No workaround available. Typically would fall into the Incident category above.|
    | Sev2 | A major issue with significant impact, including when a client-facing service is down for a sub-set of users or a critical function within a system is not functioning. No workaround available. Brings large volume of support requests to application teams. |
    | Sev3 | A minor issue with low impact, such as a system glitch that is causing users slight inconvenience or a major issue with a workaround. |
    | Sev4 | A minor issue that impacts usability but doesn’t bring it to a halt or a minor issue with an available workaround. For example: Slower-than-average load times.|
