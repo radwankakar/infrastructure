@@ -21,7 +21,7 @@ The Impact and Urgency vs Effort prioritization method is essentially a simplifi
 #### Prioritization Exercise
 * Once the list is selected to prioritize, the team will vote on points per item for Impact, Urgency, and Effort, **doing one column at a time**.
 * The points will be using a Fibonnaci sequence of 1, 2, 3, 5, 8, 13, 20
-* There must be at least one item with a vote of "1" per column.
+* In each column, the team first selects the item that would have 1 for its value. There must be at least one item with a vote of "1" per column.
 * Definition of Impact: What is the impact of this change in terms of the outcome delivered? Could incorporate number of users affected as well as change delivered to their experience or capabilities. Could also include alignment with overall strategy.
 * Definition of Urgency: How does the user/business value decay over time? Is there a fixed deadline? Will they wait for us or move to another solution? Are there Milestones on the critical path impacted by this? What is the current effect on customer satisfaction?
 * Definition of Effort: Estimate of how long or how big the item is relative to other items being estimated. Dependencies will be considered as part of this estimate. _Sunk costs will be ignored, meaning that any work already done is not included in these estimates._
