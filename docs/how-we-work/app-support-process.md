@@ -11,12 +11,12 @@ First, determine what type of communication is it?
 1. [Do you want to report a problem with the infrastructure causing an outage or other problem for you or your end users?](#problem)
 
 ### Information
-* For communicating a Change Notice or Release Announcement related to a deployment to production, email Sanjay and Eady
+* For communicating a Change Notice or Release Announcement related to a deployment to production, email Sanjay, Mike, and Eady
 * For communicating anything else, send email to the hosting team at headstart-hosting@truss.works if you're not sure who to communicate with, otherwise email the individual(s) needed
 
 ### Question
-* For a question regarding timelines or communication, email Sanjay
-* For a technical question, email headstart-hosting@truss.works
+* For a question regarding timelines or communication, ask in the [#support-infra channel in Slack](https://acf-ohs.slack.com/archives/C02MW2N1YSX)
+* For a technical question, ask in the [#support-infra channel in Slack](https://acf-ohs.slack.com/archives/C02MW2N1YSX)
 
 ### Change Request
 For something you need done by the hosting team that is not a bug with the infrastructure, please create a ticket in [JIRA](https://ocio-jira.acf.hhs.gov/secure/CreateIssue!default.jspa).
