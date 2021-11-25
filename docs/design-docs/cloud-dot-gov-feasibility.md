@@ -53,3 +53,6 @@ These are not an exhaustive list of requirements.
 | Email         | No                           | Sending/receiving email is not supported.                                                                                                                                                                                                           |
 
 
+## Adventures
+
+[Read about our attempt to get ECLKC in cloud.gov](../research/applications/eclkc-cloudgov)
