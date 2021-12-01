@@ -189,6 +189,9 @@ To clean the yum cache:
 or
 `wget https://repo.ius.io/ius-release-el7.rpm`
 
+
+Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fpm.d/www.conf`.
+
 1. Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
     `sudo yum install phpXX` or `sudo yum install phpXX-common`.
@@ -212,8 +215,9 @@ or
     `mv www.conf.backup www.conf`  
     `rm www.conf.default`
 
-1. Restart various services:
+Add back the php configuration from the backups you saved previously.
 
+1. Restart various services:
     `service httpd restart`  
     `sudo systemctl restart php-fpm.service`  
     `sudo systemctl restart nginx.service`.
@@ -226,6 +230,11 @@ In the case that you are getting a 502 or other error, run the following to look
 1. If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
 
 1. You may need to also update the memory_limit in the /etc/php.ini file as well to 1024M for deployment jobs to complete successfully.
+
+The php-fpm service may not be automatically enabled so when the server restarts php-fpm will not automatically be started.
+To fix this run:
+
+`sudo systemctl enable php-fpm.service`
 
 ## Cleaning up old kernels on Centos
 
