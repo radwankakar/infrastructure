@@ -42,7 +42,7 @@ Depending on whether they want to install or remove a module, they have to compl
 
 Everything in production is manual. Sam does all the work himself, but hopes to automate it.
 
-Previously, you would make all parameter, module, and configuration changes for each environment via the Drupal UI. Now, Drupal has **configuration management**, which handles the parameters, layout, and other configs across environments. They use this UI.
+Previously, in Drupal 7, you would make all parameter, module, and configuration changes for each environment via the Drupal UI. Now, Drupal has **configuration management**, which handles the parameters, layout, and other configs across environments. They use this UI. The configuration can be exported, stored in the repository and imported in a different environment.
 
 To uninstall a module, Sam disables it in the UI or through the command line (via drush command or config import) and then runs composer and the code for the module is removed.
 
