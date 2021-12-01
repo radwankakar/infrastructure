@@ -5,7 +5,7 @@ Rebecca Kilberg
 
 ## Context
 
-We wanted to determine how difficult it would be to get various applications on cloud.gov due to [the benefits it offers around compliance, security, and best practices](../design-docs/cloud-dot-gov-feasibility). We selected the ECLKC app because we believed it would be the most difficult to migrate to cloud.gov since it uses the greatest number of services and is a Drupal app, which we were aware had some historical challenges getting onto cloud.gov. These challenges include the way Drupal depends on the local filesystem (incompatible with cloud.gov) for configuration and that the cloud.gov provided alternative was to use S3, which previous dev teams had struggled to use with Drupal.
+We wanted to determine how difficult it would be to get various applications on cloud.gov due to [the benefits it offers around compliance, security, and best practices](../design-docs/cloud-dot-gov-feasibility). We selected the ECLKC app because we believed it would be the most difficult to migrate to cloud.gov since it uses the greatest number of services and is a Drupal app, which we were aware had some historical challenges getting onto cloud.gov. These challenges include the way Drupal depends on the local filesystem (incompatible with cloud.gov) for configuration and that the cloud.gov provided alternative was to use S3, which previous dev teams had struggled to use with Drupal. The HSICC team had attempted to port a previous Drupal app over to cloud.gov and found the S3 integration challenging. Steven Reilly, of 18F, had a similar experience with a different Drupal app migration effort. He said that part of the issue were the number of hardcoded environment variables, many of which were untracked.
 
 ## Accessing cloud.gov
 
@@ -35,7 +35,7 @@ After that failed, I began following the [instructions in the DDEV guide](https:
     ```
 
 * Take the data (`production_full.sql`) from SFTP server that is synced every night.
-* Specify path of static files in the `web/sites/defaults/ettings.php` in the public path.
+* Specify path of static files in the `web/sites/defaults/settings.php` in the public path.
 
     ```[bash]
     $settings['file_private_path'] = '/var/www/web/private';
@@ -167,7 +167,7 @@ which I dealt with simply by rerunning the command.
 
 ## Death Knell
 
-The issue we're currently facing is that there is something off with the routing. We've made it to the point of encountering the following error when visiting our cloud.gov site (hsicc.app.cloud.gov):
+The issue we're currently facing is that there is something off with the routing within the app regarding PHP and Drupal. It is likely related to a default expected route that the app diverges from. We've made it to the point of encountering the following error when visiting our cloud.gov site (hsicc.app.cloud.gov):
 
 ```[bash]
 The website encountered an unexpected error. Please try again later.
