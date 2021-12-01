@@ -32,11 +32,11 @@ The develop branch is the HSICC team equivalent to master or main branch.
 1. Sam takes a look at the Jenkins console for the job to verify that there are no warnings.
 1. Everything is now deployed into Stage with a production copy of the database.
 1. Sam does a sweep of the staging site [stage.eclkc.info](https://stage.eclkc.info). He makes sure there are no major, obvious issue. When he's done, he alerts Bhuvan and one of them set the status of the issue to "Testing".
-1. Bhuvan tests each of the issues in the the Fix Version queue in the "In Review" state. He will also complete regression testing.
+1. Bhuvan tests each of the issues in the the Fix Version queue in the "Testing" state. He will also complete regression testing.
 1. The team will do User Acceptance Testing for the issues that require it. This is relatively infrequent, and are typically UI-related. Usually this UAT looks like a demo or training rather than formal UAT. If there is a large functional change, they may have stakeholders validate against a list of requirements.
 1. If there are additional updates, they can run them at any time in staging.
 
-Depending on whether they want to install or remove a module, they have to complete various certain steps in a certain order. If they are removing, they first remove the code then the module. If they are installing, they install the module first and then add the code.
+Depending on whether they want to install or remove a module, they have to complete various certain steps in a certain order. If they are removing, they first disable the module, uninstall and then remove the code. If they are installing, they pull the code and then install the module with its config.
 
 ## Production
 
@@ -44,13 +44,16 @@ Everything in production is manual. Sam does all the work himself, but hopes to 
 
 Previously, you would make all parameter, module, and configuration changes for each environment via the Drupal UI. Now, Drupal has **configuration management**, which handles the parameters, layout, and other configs across environments. They use this UI.
 
-To uninstall a module, Sam disables it in the UI or through the command line and then runs composer and the code for the module is removed.
+To uninstall a module, Sam disables it in the UI or through the command line (via drush command or config import) and then runs composer and the code for the module is removed.
 
+1. [Using this guide to support the ECLKC Drupal deploy](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-support-eclkc-drupal-deploy.md), the Truss infrasec team [syncs the latest data to Lifeboat](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-support-eclkc-drupal-deploy.md#sync-the-latest-application-data-to-lifeboat).
+1. The Truss infrasec team then [routes traffic to Lifeboat only for the Drupal app](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-support-eclkc-drupal-deploy.md#route-traffic-to-lifeboat-only-for-drupal).
 1. Sam does not have to synchronize the files between production and staging database when deploying to production since the production database is up to date. He does not have to import the database either for the same reason.
 1. Otherwise, he runs all of the commands in the various jobs automated in staging.
 1. Sometimes, they have to do something extra due to a module requirement or a security header update. Unlike in staging, they intend to have all changes happen during the same period in the prod environmnent.
 1. Eady regularly updates the content security policy (CSP) headers on the Varnish configuration. Sam does not have write access to that.
 1. Sam says you cannot just blindly run the Jenkins jobs to deploy into production like you do in staging. This is because there are certain configs and variables that are environment specific that they are not always aware of. **Sam** may be aware of these specifics, but it is not common knowledge, nor does the system accommodate.
+1. After the Drupal deployment is complete, the Truss infrasec team [reroutes Varnish traffic back to production](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-support-eclkc-drupal-deploy.md#reroute-varnish-traffic-back-to-production).
 
 ## Other information
 
