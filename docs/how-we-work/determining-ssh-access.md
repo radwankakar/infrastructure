@@ -24,7 +24,7 @@ Currently, we grant SSH access to the engineers who ask for it for different mac
     * If not, do **NOT** grant access.
     * If so, continue on decision tree.
 1. Does the server have sensitive information (PII) on it (the MariaDB server or the LDAP server)?
-    * If so, do **NOT** grant access with OHS Stakeholder team discussion.
+    * If so, do **NOT** grant access without OHS Stakeholder team discussion.
     * If not, continue with decision tree.
 1. Are they requesting access to a non-prod machine?
     * If not (i.e. requesting access to prod), do **NOT** grant access.
