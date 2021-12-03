@@ -10,8 +10,11 @@ We wanted to determine how difficult it would be to get various applications on 
 ## Lessons Learned
 
 Cloud.gov is a very opinionated platform. Though it is well aligned with our approach to infrastructure, it is much harder to use with apps that do not already abide by certain expectations. For example, a containerized app or an app that runs using certain default settings (such as how the app is routed) would be much easier to deploy than one that cannot easily be containerized or deviates from a default set up. With that in mind, Cloud.gov makes it very easy to do the things it wants you to do--provisioning a DB and attaching it to an app, for example, is easy to do and can be done multiple ways (via cf CLI, a script, or manually in their GUI). Going forward, experimenting with an app that is containerized (Drupal or otherwise) is likely to yield better results.
+
 You need to interact with the cloud.gov team any time you have an issue related to access. We're used to having full access on our teams as the administrators of the infrastructure or at least having someone on the team with full access. In this case, even the space owner (Nate from 18F) did not have that type of administrative access. However, the cloud.gov support team is extremely helpful and responsive and I would encourage you to reach out with any blockers [via email to support@cloud.gov](support@cloud.gov).
+
 Somewhat surprisingly, we did not run into any show stoppers--indicators that would absolutely derail this process. Instead, we ended our exploration due to having competing priorities and an expectation that we could make faster progress on cloud.gov from other angles (such as starting with a different app). Given our team's background, one of the biggest challenges was the lack of familiarity with Drupal, PHP, and buildpacks.
+
 The ultimate takeaway was that there are many different small tweaks that would be necessary to getting ECLKC on cloud.gov (the ones encountered are detailed below). I suspect having a pair work on something similar full time for 2 weeks would yield greater progress.
 
 ## Accessing cloud.gov
@@ -52,8 +55,11 @@ After that failed, I began following the [instructions in the DDEV guide](https:
     ```
 
   **Private path**: Drupal stores non-publicly available info. Permissions layer on top. We don't have many--could run without that.
+
   **Tmp files** -- make sure the server has write access to that folder.
+
   **Public path**--everything on the drupal files in SFTP folders has to be mapped here.
+
   **Config sync**--can leave as is.
 
 * Enable one of the host names to connect (avoids XRSF)
