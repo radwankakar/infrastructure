@@ -22,6 +22,8 @@ This is where we'll store runbooks.
 
 [How to request an emergency change request](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/emergency-change-request.md)
 
+[How to run Ansible commands](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-run-ansible-commands.md)
+
 [How to support the eclkc drupal deployment](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-support-eclkc-drupal-deploy.md)
 
 [Lifeboat Switchover](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/lifeboat-switchover.md)
