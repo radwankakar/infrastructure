@@ -10,8 +10,8 @@ We are using Ansible for more automation. At some point we will have it set up s
 1. Copy the code you've written into the `/home/centos/ansible` directory on the Ansible machine (probably via scp e.g. `scp -r ansible/* centos@10.2.0.6:ansible/` where the initial argument is the location of your local changes).
 1. SSH into the Ansible machine as the centos user.
 1. `cd ansible` to access the ansible directory.
-1. Run `ansible-playbook -i inventory <YOUR-RUNBOOK.yml> --check` to dryrun your code. Make sure it appears to work correctly.
-1. You may choose to request a PR here in case you want eyes on the runbook before actually executing.
-1. Run `ansible-playbook -i inventory <YOUR-RUNBOOK.yml>` to actually run the runbook.
-1. Test your runbook worked as expected.
-1. If you didn't request a PR before, do so now and merge your code.
+1. Run `ansible-playbook <YOUR-RUNBOOK.yml> --check` to dryrun your code. Make sure it appears to work correctly.
+1. Request a PR here to get eyes on the runbook before actually executing.
+1. Run `ansible-playbook <YOUR-RUNBOOK.yml>` to actually run the runbook.
+1. Test your runbook worked as expected. This likely means ssh'ing to the *remote host* you're configuring and verifying expected changes were made.
+1. Merge your approved PR.
