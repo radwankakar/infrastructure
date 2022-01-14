@@ -16,6 +16,30 @@ The following are a few good steps to take when debugging an outage. Be sure to 
 * If the errors found in the Varnish servers point to a database issue, or if for some reason it proves to be a dead end, SSH into the mariadb server, and cd into `/var/lib/mysql` where the logs for the database live.
   * there you will find `mariadb-error.log`. Using the `less` command you can take a look through. Looking for anything particularly odd. Such as repeated failed attempts to accomplish a job, the same job called many times in succession, an aborted connection to a particular host, among other things.
 
+## Intermittent outages
+
+TODO: clean this up with some historical information on types these issues correlate with.
+These are some of the intermittent failure states we have seen ECLKC in.
+
+### MariaDB is struggling under load
+
+Some symptoms that may point to this issue:
+
+* The application intermittently throws a 403 error.
+* The cpu utilization metric for the MariaDB machine climbs and then drastically drops.
+
+To fix:
+
+1. SSH to the MariaDB machine.
+1. Check logs and MariaDB stats. Note: The database application may be in a zombie state and not taking new connections so checking the status of the service may not help.
+   * In Mysql client:
+      * To get general db query/uptime stats run `mysqladmin status` from the command line.
+      * To check current running process threads for the db run `show processlist;` as a query on the database.
+      * To check all network connections in/out of the server run `netstat` from the command line. (Flags will help you here.)
+1. Attempt to restart the MariaDB service with `sudo systemctl restart mariadb`.
+1. Check the status of the service `sudo systemctl status mariadb`.
+   * If there's an error, work on it from there. Get help if you need it.
+
 ## Common Nagios Alerts
 
 ### Many alerts from same server
