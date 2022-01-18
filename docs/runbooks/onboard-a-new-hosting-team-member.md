@@ -6,7 +6,7 @@ This is a checklist for onboarding a new Headstart hosting team member.
 
 __The new team member__ will need to complete the following:
 
-- [ ] Introduce yourself to the team on Slack, use #pb-ohs-hsis-vendors (the shared 18f/Truss channel):
+- [ ] Introduce yourself to the team on the [shared Slack server](https://app.slack.com/client/T025YR8S487/C026S711T6D):
   - [ ]  Where are you located?
   - [ ]  What are your working hours?
   - [ ]  What is your favorite food?
