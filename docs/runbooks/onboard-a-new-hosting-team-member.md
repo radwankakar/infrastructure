@@ -6,6 +6,11 @@ This is a checklist for onboarding a new Headstart hosting team member.
 
 __The new team member__ will need to complete the following:
 
+- [ ] Introduce yourself to the team on Slack, use #pb-ohs-hsis-vendors (the shared 18f/Truss channel):
+  - [ ]  Where are you located?
+  - [ ]  What are your working hours?
+  - [ ]  What is your favorite food?
+  - [ ]  What is your GitHub user name?
 - [ ] [Create ECLKC logins](./how-to-create-an-eclkc-login.md):
   - [ ]  Dev
     - [ ] Provide this username to the existing team member helping you onboard to get Jenkins access.
