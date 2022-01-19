@@ -3,7 +3,7 @@
 There are three different environments to create accounts on: Dev, Staging, Production.
 
 1. Go to the appropriate page for the environment you are creating an account for:
-   * [ECLKC Dev login](https://eclkcdev.cleverex.com/cas/login?service=https%3A%2F%2Feclkcdev.cleverex.com%2F&locale=en)
+   * [ECLKC Dev login](https://eclkcdev.eclkc.info/cas/login)
    * [ECLKC Staging login](https://stage.eclkc.info/cas/login?service=https%3A%2F%2Fstage.eclkc.info%2F&locale=en)
    * [ECLKC Prod login](https://eclkc.ohs.acf.hhs.gov/cas/login?service=https%3A%2F%2Feclkc.ohs.acf.hhs.gov%2F&locale=en)
 2. Click the large "REGISTER NOW" button midway down the page.
