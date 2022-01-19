@@ -21,7 +21,6 @@ __An existing team member__ will need to give the new member access to the follo
 
 - [ ] Add the new member to existing calendar invites. This may mean reaching out to the HSICC team.
 - [ ] [GitHub Org](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization)
-- [ ] AWS (Read only)
 - [ ] [Qualys](./how-to-manage-qualys.md)
 
 ## Post Favorable Security Review
