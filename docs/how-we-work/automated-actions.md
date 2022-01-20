@@ -9,7 +9,7 @@
 * Create Jenkins jobs to run necessary yum commands as part of maintenance
 * Automate testing in between above jobs as part of maintenance testing
 * Write Jenkins job (using Ansible scripts) to switch varnish1 to point at lifeboat etc etc so we don’t need to support drupal deployments
-
+* [Create a jenkins job to restart MariaDB server](https://ocio-jira.acf.hhs.gov/browse/OHSH-85)
 ### Make it easier to get instances to a known configuration
 * Documentation on how to use Ansible
 * Trigger specified updates on specific hosts
