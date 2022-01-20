@@ -16,6 +16,7 @@ __The new team member__ will need to complete the following:
     - [ ] Provide this username to the existing team member helping you onboard to get Jenkins access.
   - [ ]  Staging
   - [ ]  Prod
+- [ ] Ask Sam Nevares in the Headstart Slack to be added to the [HSICC Github org](https://github.com/HSICC)
 
 __An existing team member__ will need to give the new member access to the following:
 
