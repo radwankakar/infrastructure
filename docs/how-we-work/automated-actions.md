@@ -6,7 +6,7 @@
 * Move Jenkins behind the VPN: [OHSH-356](https://ocio-jira.acf.hhs.gov/browse/OHSH-356)
 * Add additional Jenkins workers to execute jobs: [OHSH-778](https://ocio-jira.acf.hhs.gov/browse/OHSH-378)
 * Create a jenkins job to restart MariaDB server: [OHSH-85](https://ocio-jira.acf.hhs.gov/browse/OHSH-85)
-* Jenkins job to update staging and dev ahead of production maintenance: OHSH-355
+* Jenkins job to update staging and dev ahead of production maintenance: [OHSH-355](https://ocio-jira.acf.hhs.gov/browse/OHSH-355)
 * Document our standard for where we configure Jenkins jobs
 * Create Jenkins jobs to run necessary yum commands as part of maintenance
 * Automate testing in between above jobs as part of maintenance testing
