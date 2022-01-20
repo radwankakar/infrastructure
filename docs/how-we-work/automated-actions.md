@@ -13,6 +13,7 @@
 ### Make it easier to get instances to a known configuration
 * Documentation on how to use Ansible
 * Trigger specified updates on specific hosts
+* Trigger specified package removal on specific hosts
 * Create user accounts/remove user accounts - document the process of removing user accounts. Audit which users exist on all the systems
 * Create sudo access
 * Management of user access on VPNs (east and west)
