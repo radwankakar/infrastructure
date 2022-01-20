@@ -8,7 +8,7 @@
 * Document our standard for where we configure Jenkins jobs
 * Create Jenkins jobs to run necessary yum commands as part of maintenance
 * Automate testing in between above jobs as part of maintenance testing
-* Write Jenkins job (using Ansible scripts) to switch varnish1 to point at lifeboat etc etc so we dont’ need to support drupal deployments
+* Write Jenkins job (using Ansible scripts) to switch varnish1 to point at lifeboat etc etc so we don’t need to support drupal deployments
 
 ### Make it easier to get instances to a known configuration
 * Documentation on how to use Ansible
