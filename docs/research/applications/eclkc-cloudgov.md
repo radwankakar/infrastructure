@@ -23,7 +23,7 @@ To begin, we had to get access to cloud.gov. We relied on our partner at 18F, Na
 
 18F partner Ryan Ahearn negotiated with TTA SmartHub, who already had a cloud.gov account, to allow us to use their organization to set up our own space. We ended up being given access to the SmartHub organization (`hhs-acf-ohs-tta`) with a 2GB memory allocation for our exploration. The space we were given is called `eclkc-investigation`.
 
-Once we had permission to access cloud.gov, I installed [cloudfoundry CLI (7)](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html#pkg-mac) locally and was able to [access the web GUI and use cf on the command line](https://cloud.gov/docs/getting-started/setup/). I did later install
+Once we had permission to access cloud.gov, I installed [cloudfoundry CLI (7)](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html#pkg-mac) locally and was able to [access the web GUI and use cf on the command line](https://cloud.gov/docs/getting-started/setup/).
 
 ## Standing up the server
 
