@@ -19,6 +19,7 @@ __The new team member__ will need to complete the following:
 
 __An existing team member__ will need to give the new member access to the following:
 
+- [ ] Add the new member to the team google groups (`headstart-hosting@truss.works` and `headstart-alerts@truss.works`)
 - [ ] Add the new member to existing calendar invites. This may mean reaching out to the HSICC team.
 - [ ] [GitHub Org](https://docs.github.com/en/organizations/managing-membership-in-your-organization/inviting-users-to-join-your-organization)
 - [ ] [Qualys](./how-to-manage-qualys.md)
