@@ -16,7 +16,7 @@
 * Create user accounts/remove user accounts - document the process of removing user accounts. Audit which users exist on all the systems
 * Create sudo access
 * Management of user access on VPNs (east and west)
-* Investigate automating logging configuration on hosts
+* Investigate automating logging configuration on hosts (including logrotate)
 * Collect logs from all systems into CloudWatch 
 
 ### Make it so lifeboat and maintenance pages are easier to manage
