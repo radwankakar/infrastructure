@@ -1,11 +1,11 @@
 # Coaching Companion Cloud.Gov Feasibility
 
 Rebecca Kilberg
-1/29/2022
+1/19/2022
 
 ## Context
 
-We wanted to determine how difficult it would be to get various applications on cloud.gov due to [the benefits it offers around compliance, security, and best practices](../design-docs/cloud-dot-gov-feasibility). After investigation how difficult it would be to get the [ECLKC app on cloud.gov](../eclkc-cloudgov.md), we moved on to trying with Coaching Companion (CC). We believed CC would be the simplest to migrate to cloud.gov since it uses few services and only uses PHP on the backend. We were correct that it was much easier to get onto the platform than the ECLKC app. The biggest issues we encountered were with nginx configuration regarding routing. Although not fully fleshed out, we believe it would be a relatively low lift to transfer CC to cloud.gov.
+We wanted to determine how difficult it would be to get various applications on cloud.gov due to [the benefits it offers around compliance, security, and best practices](../design-docs/cloud-dot-gov-feasibility). After investigating how difficult it would be to get the [ECLKC app on cloud.gov](../eclkc-cloudgov.md), we moved on to trying with Coaching Companion (CC). We believed CC would be the simplest to migrate to cloud.gov since it uses few services and only uses PHP on the backend. We were correct that it was much easier to get onto the platform than the ECLKC app. The biggest issues we encountered were with nginx configuration regarding routing. Although not fully fleshed out, we believe it would be a relatively low lift to transfer CC to cloud.gov.
 
 Throughout this effort, we had help from Roger Ruiz on the app eng team, who had previously worked on the cloud.gov development team at 18f.
 
@@ -91,7 +91,7 @@ All changes made to the CC team's app in this effort can be found in a [branch c
 
 ## Database Loading
 
-To load the database with what Dayton had sent us, I copied the sql dump to the Ansible/Nagios EC2 instance using scp (`scp -i myidentityfile -3 ~/Downloads/ccdump.sql centos@10.2.0.6:/home/centos/ccdump.sql`) because I had already installed the [cloudfoundry CLI (7)](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html#pkg-mac) in the Ansible/Nagios machine. Then, using the instructions from cloud.gov docs to [export a database](https://cloud.gov/docs/services/relational-database/#access-the-data-in-the-database), I used the [`cf connect-to-service` plugin](https://github.com/cloud-gov/cf-service-connect#readme) to open an SSH tunnel from the Ansible/Nagios instance and run a mysql query using the port, host, username, password, and name (database name) it generated. This meant running a command similar to `mysql -h 127.0.0.1 -P 40742 -u urzzofrodm29u325 -p -f -D cgawsbrokerprodcz6fgyioasosi39 < ccdump.sql` in another window on the Ansible/Nagios instance. At the same time, I could connect to the db in a third window to watch the transfer's progress by running something similar to `mysql -h 127.0.0.1 -P 40742 -u urzzofrodm29u325 -p -D cgawsbrokerprodcz6fgyioasosi39` and then running MySQL commands.
+To load the database with what Dayton had sent us, I copied the sql dump to the Ansible/Nagios EC2 instance using scp (`scp -i myidentityfile -3 ~/Downloads/ccdump.sql centos@10.2.0.6:/home/centos/ccdump.sql`) because I had already installed the [cloudfoundry CLI (7)](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html#pkg-mac) in the Ansible/Nagios machine and was having an unexpectedly hard time downloading the [`cf connect-to-service` plugin](https://github.com/cloud-gov/cf-service-connect#readme) locally. Then, using the instructions from cloud.gov docs to [export a database](https://cloud.gov/docs/services/relational-database/#access-the-data-in-the-database), I used the [`cf connect-to-service` plugin](https://github.com/cloud-gov/cf-service-connect#readme) to open an SSH tunnel from the Ansible/Nagios instance and run a mysql query using the port, host, username, password, and name (database name) it generated. This meant running a command similar to `mysql -h 127.0.0.1 -P 40742 -u urzzofrodm29u325 -p -f -D cgawsbrokerprodcz6fgyioasosi39 < ccdump.sql` in another window on the Ansible/Nagios instance. At the same time, I could connect to the db in a third window to watch the transfer's progress by running something similar to `mysql -h 127.0.0.1 -P 40742 -u urzzofrodm29u325 -p -D cgawsbrokerprodcz6fgyioasosi39` and then running MySQL commands.
 
 I did not encounter any issues getting the dump into the database bound to my cc app instance.
 
@@ -99,7 +99,7 @@ I did not encounter any issues getting the dump into the database bound to my cc
 
 Once the database was loaded, we started seeing new errors--issues with the database configuration and some php errors.
 
-We could see errors in the php error log we had set up previously. It was telling us that certain extensions being used in the app were undefined. By adding them to a `PHP_EXTENSIONS` field in the `options.json`, we were able to resolve those errors.
+We could see errors in the php error log we had set up previously. It was telling us that certain extensions being used in the app (`mbstring", "mysqli", "openssl`) were undefined. By adding them to a `PHP_EXTENSIONS` field in the `options.json`, we were able to resolve those errors.
 
 We realized the database config values had to correspond to what was in the `vce-config.php`. Ultimately we would be loading these values from the database so that the config would stay up to date as environment variables changed, but for now we just wanted things to work as easily as possible. We grabbed the configs from the database itself and hardcoded them into the `vce-config`. The one thing that was tricky for us there was the `DB_HOST` field, which we didn't realize was the part of the AWS host address that did not include username, database name, or password. It ended up looking like this in the definition block:
 
