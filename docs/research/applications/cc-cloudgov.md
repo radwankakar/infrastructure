@@ -85,7 +85,7 @@ At this point, we were trying to understand how the app loaded and why the app a
 
 Following the page loads, we got down to `class.page.php`, which loaded a query. We tried to see whether we could get anything to load without making a database query, but were unsuccessful. At this point we reached out to Dayton Alleman, the CC app developer.
 
-Dayton clarified a few things for us. He said the vce-config copy we had was an example one that was out of date. Because it could contain sensitive info, they didn't include it in the repo. He also said that the site couldn't load the homepage without a database query. To move us forward, he sent us a sandbox db dump, a sandbox vce-config, and the sandbox nginx conf.
+Dayton clarified a few things for us. He said the vce-config copy we had was an example one that was out of date. Because it could contain sensitive info, they didn't include it in the repo. He also said that the site couldn't load the homepage without a database query. To move us forward, he sent us a sandbox db dump, a sandbox vce-config, and a sandbox nginx conf. The nginx config varied from what we had on prod because it was written for use on their Elastic Beanstalk instances. However it shared the main functionality of the prod config's location rewrites: everything after the base URL is parsed to build the page requested.
 
 All changes made to the CC team's app in this effort can be found in a [branch called `rek-rl-cc-cloudgov-exp` on their repo](https://github.com/HSICC/OHSCC/compare/rek-rl-cc-cloudgov-exp).
 
