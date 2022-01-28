@@ -45,4 +45,4 @@ For something you need done by the hosting team that is not a bug with the infra
 * **ENV**: Dev, Stage, and/or Prod
 
 ### Problem
-Use the workflow documented in the [support process document](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/4e98bf8f9767f57cc2dcbfdef29d285634d77c56/docs/how-we-work/support-process.md#reporting-an-issue)
+Use the workflow documented in the [support process document](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/how-we-work/support-process.md#reporting-an-issue)
