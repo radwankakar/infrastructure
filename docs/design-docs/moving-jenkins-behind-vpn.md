@@ -52,8 +52,8 @@ A more detailed step by step breakdown of the process is below.
 2) Modify the existing ‘jenkins.ecklc.east’ Route53 record to point to the private IP of the EC2 instance running jenkins. 
 3) Test to make sure that ‘jenkins.ecklc.east’ is only routable via the VPN and has permissions to access the EC2 instance. This will include ensuring that Jenkins works as expected and there aren’t any certificate or access errors. 
 4) Inform teams of upcoming changes regarding accessing Jenkins. This will include:
-- Letting teams know that in the future they will have to be connected to the vpn to access jenkins
-- The new DNS name for Jenkins 
+   - Letting teams know that in the future they will have to be connected to the VPN to access jenkins
+   - The new DNS name for Jenkins 
 5) Create a security group in the EC2 instance for Jenkins that mirrors security groups relating to VPN access in apps such as Coaching Companion. Note that not all security group rules needed in Coaching Companion / ZTT etc may be needed in our case. 
 6) Add a security group rule to the existing Jenkins EC2 instance to only allow TCP / HTTP access from the VPN’s IP. This should block all traffic outside of the VPN to jenkins.
 7) Test to make sure that ‘jenkins.ecklc.east’ works from the browser when connected to the VPN and does not work when connecting from the public internet and verify all other functionality. 
