@@ -41,11 +41,12 @@ Redeploy Jenkins instance
 Chosen option: change security groups rules. 
 
 Adding a security group rule to the Jenkins EC2 instance to block HTTP traffic from anywhere but the VPN will consist of 2 main changes:
- - Use an existing route53 entry and modify it to point to our Jenkins - instance. Verify that this works as expected.
+ - Use an existing route53 entry and modify it to point to our Jenkins instance. Verify that this works as expected.
  - Create an HTTP security group rule that only allows access to Jenkins from the VPN’s IP.  
 
-A more detailed step by step breakdown of the process is below. 
-Steps To Move Jenkins Behind the VPN:
+A more detailed step by step breakdown of the process is below.
+
+### Steps To Move Jenkins Behind the VPN:
 
 1) Verify existence of or add a security group rule that allows the VPN IP to access the jenkins EC2 instance.
 2) Modify the existing ‘jenkins.ecklc.east’ Route53 record to point to the private IP of the EC2 instance running jenkins. 
