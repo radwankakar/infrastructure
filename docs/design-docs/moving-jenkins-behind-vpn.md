@@ -1,5 +1,6 @@
 # OHS: Move Jenkins Behind VPN
-Technical Story: [Develop Plan to Move Jenkins behind VPN](https://ocio-jira.acf.hhs.gov/browse/OHSH-354)
+Technical Story: [Develop Plan to Move Jenkins behind VPN](https://ocio-jira.acf.hhs.gov/browse/OHSH-354) 
+
 Design Doc  
 02/01/2022 
 
@@ -38,9 +39,10 @@ Redeploy Jenkins instance
 
 ## Decision Outcome
 Chosen option: change security groups rules. 
+
 Adding a security group rule to the Jenkins EC2 instance to block HTTP traffic from anywhere but the VPN will consist of 2 main changes:
- Use an existing route53 entry and modify it to point to our Jenkins instance. Verify that this works as expected.
-Create an HTTP security group rule that only allows access to Jenkins from the VPN’s IP.  
+ - Use an existing route53 entry and modify it to point to our Jenkins - instance. Verify that this works as expected.
+ - Create an HTTP security group rule that only allows access to Jenkins from the VPN’s IP.  
 
 A more detailed step by step breakdown of the process is below. 
 Steps To Move Jenkins Behind the VPN:
