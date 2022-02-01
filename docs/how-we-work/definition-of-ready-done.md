@@ -11,6 +11,8 @@ This describes the criteria that marks a ticket as ready to be worked on.
 3. Initial Implementation Steps (could be done during grooming, could include multiple options for implementation) - enough to get started on ticket
 4. Point Estimate
 5. Relation to overall roadmap/epic
+6. Assessment of the ability and urgency to automate the work completed during grooming. Tickets requiring automation should have this indicated in their Acceptance Criteria.
+
 
 # Definition of Done
 
@@ -28,4 +30,6 @@ This describes the criteria that need to be met to consider a ticket complete. T
      * Reviewer that knows enough to look for patterns
 1. Documentation when applicable
 1. Additional tickets created and linked if need for more work is discovered
+2. Automation of a task should be completed (if applicable). If the team decides this is not possible as part of the current ticket, ensure a ticket is created to follow-up on the automation work. This work should be prioritized to be added to the next sprint.
+
 
