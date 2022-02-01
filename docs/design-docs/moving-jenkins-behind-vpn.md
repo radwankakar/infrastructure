@@ -6,7 +6,7 @@ Design Doc
 
 ## Context and Problem Statement
 
-Currently Jenkins is available through the public internet. While there are controls to prevent unauthorized access, it's still not best practice to continue this since Jenkins also has access to the production environments. We are also blocked on using Jenkins for automation during deployments due to the security risks the current setup poses.
+Currently Jenkins is available through the public internet. While there are controls to prevent unauthorized access, it's still not best practice to continue this since. We are also blocked on using Jenkins for automation during deployments due to the current setup.
 
 We need to move the Jenkins machine behind the VPN so that the Jenkins login page can only be accessed when connected to the VPN.
 
@@ -49,11 +49,11 @@ A more detailed step by step breakdown of the process is below.
 ### Steps To Move Jenkins Behind the VPN:
 
 1) Verify existence of or add a security group rule that allows the VPN IP to access the jenkins EC2 instance.
-2) Modify the existing `jenkins.ecklc.east` Route53 record to point to the private IP of the EC2 instance running jenkins. 
-3) Test to make sure that `jenkins.ecklc.east` is only routable via the VPN and has permissions to access the EC2 instance. This will include ensuring that Jenkins works as expected and there aren’t any certificate or access errors. 
+2) Modify the existing Route53 record to point to the private IP of the EC2 instance running jenkins. 
+3) Test to make sure that the Route53 record is only routable via the VPN and has permissions to access the EC2 instance. This will include ensuring that Jenkins works as expected and there aren’t any certificate or access errors. 
 4) Inform teams of upcoming changes regarding accessing Jenkins. This will include:
    - Letting teams know that in the future they will have to be connected to the VPN to access jenkins
    - The new DNS name for Jenkins 
 5) Create a security group in the EC2 instance for Jenkins that mirrors security groups relating to VPN access in apps such as Coaching Companion. Note that not all security group rules in Coaching Companion / ZTT etc may be needed for Jenkins. 
 6) Add a security group rule to the existing Jenkins EC2 instance to only allow TCP / HTTP access from the VPN’s IP. This should block all traffic outside of the VPN to jenkins.
-7) Test to make sure that `jenkins.ecklc.east` works from the browser when connected to the VPN and does not work when connecting from the public internet and verify all other functionality. 
+7) Test to make sure that the new DNS name routes properly from the browser when connected to the VPN (and does not work when connecting from the public internet). Verify other functionality as well.  
