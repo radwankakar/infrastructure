@@ -1,13 +1,13 @@
 
 
-# [Move Jenkins Behind VPN]
+# Move Jenkins Behind VPN
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
 ## Table of Contents
 
 <!-- toc -->
 
-- Move Jenkins Behind VPN(#move-jenkins-behind-vpn)
+- [Move Jenkins Behind VPN](#move-jenkins-behind-vpn)
   - [Table of Contents](#table-of-contents)
   - [Context and Problem Statement](#context-and-problem-statement)
   - [Decision Drivers](#decision-drivers)
