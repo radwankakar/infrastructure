@@ -25,7 +25,7 @@
 
 ## Context and Problem Statement
 
-Currently Jenkins is available through the public internet. While there are controls to prevent unauthorized access, it's still not best practice to continue this since. We are also blocked on using Jenkins for automation during deployments due to the current setup.
+Currently Jenkins is available through the public internet. While there are controls to prevent unauthorized access, it's still not best practice to continue this since the current setup is a blocker for using Jenkins for automation during deployments due to the current setup.
 
 We need to move the Jenkins machine behind the VPN so that the Jenkins login page can only be accessed when connected to the VPN.
 
@@ -46,7 +46,7 @@ Chosen option: change security groups rules of our currently deployed Jenkins in
 ### Positive Consequences 
 
 * Jenkins locked down behind VPN 
-* Jenkins jobs can be created and used to automate deployments
+* Jenkins jobs can be created and used to automate deployments and many other currently manual processes
 
 ### Negative Consequences 
 
