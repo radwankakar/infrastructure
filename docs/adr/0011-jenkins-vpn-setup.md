@@ -1,0 +1,69 @@
+
+
+# [Move Jenkins Behind VPN]
+<!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
+
+## Table of Contents
+
+<!-- toc -->
+
+- Move Jenkins Behind VPN(#move-jenkins-behind-vpn)
+  - [Table of Contents](#table-of-contents)
+  - [Context and Problem Statement](#context-and-problem-statement)
+  - [Decision Drivers](#decision-drivers)
+  - [Considered Options](#considered-options)
+  - [Decision Outcome](#decision-outcome)
+    - [Positive Consequences](#positive-consequences)
+    - [Negative Consequences](#negative-consequences)
+  - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
+    - [Change Security Group Rules](#change-security-group-rules)
+    - [Redeploy Jenkins instance](#redeploy-jenkins-instance)
+
+<!-- Regenerate with "pre-commit run -a markdown-toc" -->
+
+<!-- tocstop -->
+
+## Context and Problem Statement
+
+Currently Jenkins is available through the public internet. While there are controls to prevent unauthorized access, it's still not best practice to continue this since. We are also blocked on using Jenkins for automation during deployments due to the current setup.
+
+We need to move the Jenkins machine behind the VPN so that the Jenkins login page can only be accessed when connected to the VPN.
+
+## Decision Drivers 
+
+* Reduce technical toil
+* Automate currently manual tasks
+
+## Considered Options
+
+* One proposed solution is to change the security group rule(s) of our currently deployed Jenkins instance. We could add a security group rule that only allows a connection from the VPN and blocks all other traffic
+* The second proposed solution is to redeploy Jenkins within a private subnet that the VPN can access. This change would include: deploying a new instance of Jenkins in a private subnet that the VPN can access, communicating with OHS teams using Jenkins to not make any changes in the old instance, and transferring jobs over to the newly deployed instance batch by batch. 
+
+## Decision Outcome
+
+Chosen option: change security groups rules of our currently deployed Jenkins instance, because it is the lowest lift option that allows us to automate currently manual actions and reduce technical toil. This in turn will allow us to focus on improvements to the system.
+
+### Positive Consequences 
+
+* Jenkins locked down behind VPN 
+* Jenkins jobs can be created and used to automate deployments
+
+### Negative Consequences 
+
+* Possible interuption in access to Jenkins if security group rule configuration isn't implemented correctly or works unexpectedly
+
+## Pros and Cons of the Options 
+
+### Change Security Group Rules
+
+* Good, doesn’t require Jenkins redeploy
+* Good, lower lift to implement / can be implemented relatively quickly
+* Bad, This could result in some downtime for jenkins if there are any issues with the connection rules / implementing this change.
+* Bad, Jenkins would still be in public subnet, which is not best practice given security considerations
+
+
+### Redeploy Jenkins instance
+
+* Good, Jenkins would be in private subnet, which is best practice given security considerations
+* Bad, Jenkins redeploy required - this is a greater lift from the team, most of whom do not have access at the time
+* Bad, would require communication to OHS teams 
