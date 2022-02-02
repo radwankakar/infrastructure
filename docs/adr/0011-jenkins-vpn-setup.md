@@ -65,5 +65,5 @@ Chosen option: change security groups rules of our currently deployed Jenkins in
 ### Redeploy Jenkins instance
 
 * Good, Jenkins would be in private subnet, which is best practice given security considerations
-* Bad, Jenkins redeploy required - this is a greater lift from the team, most of whom do not have access at the time
+* Bad, Jenkins redeploy required - this is a greater lift from the team, most of whom do not have access at the time. We also plan to stop using Jenkins as part of our future improvements to the system which means the redployed instance will likely be taken out of use.
 * Bad, would require communication to OHS teams 
