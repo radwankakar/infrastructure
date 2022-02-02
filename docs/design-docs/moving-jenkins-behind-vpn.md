@@ -1,7 +1,9 @@
 # Moving Jenkins Behind VPN
 
-Design/Investigation Doc
+Design Doc
+
 02/02/2022
+
 Avanti Joshi
 
 ## Context
