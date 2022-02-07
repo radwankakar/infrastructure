@@ -52,7 +52,7 @@ Chosen option: change security groups rules of our currently deployed Jenkins in
 
 ### Negative Consequences 
 
-* Possible interuption in access to Jenkins if security group rule configuration isn't implemented correctly or works unexpectedly
+* Possible interruption in access to Jenkins if security group rule configuration isn't implemented correctly or works unexpectedly
 
 ## Pros and Cons of the Options 
 
