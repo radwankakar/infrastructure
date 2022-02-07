@@ -10,7 +10,7 @@ Avanti Joshi
 We are moving Jenkins behind the VPN by modifying current security group rules and using an existing route53 record to access Jenkins.
 
 Adding a security group rule to the Jenkins EC2 instance to block HTTP traffic from anywhere but the VPN will consist of 2 main changes:
- - Use an existing route53 entry and modify it to point to our Jenkins instance. Verify that this works as expected.
+ - Use the existing route53 '.east' entry and modify it to point to the private IP of our Jenkins EC2 instance. Verify that this works as expected.
  - Create an HTTP security group rule that only allows access to Jenkins from the VPN’s IP.  
 
 
@@ -22,6 +22,8 @@ Adding a security group rule to the Jenkins EC2 instance to block HTTP traffic f
 4) Inform teams of upcoming changes regarding accessing Jenkins. This will include:
    - Letting teams know that in the future they will have to be connected to the VPN to access Jenkins
    - Sending teams new DNS name for Jenkins 
+   - Checking to see if any teams have incoming webhooks into jenkins configured
+   - Asking teams to see if additional VPN access will need to be granted for members who need access to Jenkins
 5) Create a security group in the EC2 instance for Jenkins that mirrors security groups relating to VPN access in apps such as Coaching Companion. Note that not all security group rules in Coaching Companion / ZTT etc may be needed for Jenkins. 
 6) Add a security group rule to the existing Jenkins EC2 instance to only allow TCP / HTTP access from the VPN’s IP. This should block all traffic outside of the VPN to Jenkins.
 7) Test to make sure that the new DNS name routes properly from the browser when connected to the VPN (and does not work when connecting from the public internet). Verify other functionality as well.  
