@@ -37,9 +37,9 @@ We need to move the Jenkins machine behind the VPN so that the Jenkins login pag
 
 ## Considered Options
 
-* One proposed solution is to change the security group rule(s) of our currently deployed Jenkins instance. We could add a security group rule that only allows a connection from the VPN and blocks all other traffic
+* One proposed solution is to change the security group rule(s) of our currently deployed Jenkins instance. We could add a security group rule that only allows a connection from the VPN and blocks all other traffic.
 * The second proposed solution is to redeploy Jenkins within a private subnet that the VPN can access. This change would include: deploying a new instance of Jenkins in a private subnet that the VPN can access, communicating with OHS teams using Jenkins to not make any changes in the old instance, and transferring jobs over to the newly deployed instance batch by batch. 
-* Do Nothing
+* The third proposed solution is to do nothing and leave Jenkins' setup as is.
 
 ## Decision Outcome
 
