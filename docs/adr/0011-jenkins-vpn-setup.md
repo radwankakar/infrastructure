@@ -58,7 +58,7 @@ Chosen option: change security groups rules of our currently deployed Jenkins in
 
 * Good, doesn’t require Jenkins redeploy
 * Good, lower lift to implement / can be implemented relatively quickly
-* Bad, This could result in some downtime for jenkins if there are any issues with the connection rules / implementing this change.
+* Bad, This could result in some downtime for Jenkins if there are any issues with the connection rules / implementing this change.
 * Bad, Jenkins would still be in public subnet, which is not best practice given security considerations
 
 
