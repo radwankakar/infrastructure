@@ -61,7 +61,6 @@ Chosen option: change security groups rules of our currently deployed Jenkins in
 
 * Good, doesn’t require Jenkins redeploy
 * Good, lower lift to implement / can be implemented relatively quickly
-* Bad, more risk of downtime in comparison to redeploying
 * Bad, Jenkins would still be in public subnet, which is not best practice given security considerations. Leaving Jenkins in the public subnet means it is theoretically accessible via the public internet, but locking it down with security groups will mitigate a lot of this risk
 
 
