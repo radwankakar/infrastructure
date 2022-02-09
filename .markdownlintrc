@@ -12,5 +12,7 @@
     "code-block-style": {
       "style": "fenced"
     },
-    "single-trailing-newline": false
-  }
+    "single-trailing-newline": false,
+    // don't enforce unordered list style (asterisks vs hyphens)
+    "ul-style": false
+}
