@@ -98,7 +98,9 @@ budget constraints.
 - Good, because this is the shortest path to solving all the problems described in the
   context and problem statement.
 - Bad, because cloud.gov requires containerization, and several hosted apps are currently
-  in states that cannot run on a containerized platform.
+  in states that cannot run on a containerized platform. Adapting them all for containerization
+  would be an extremely heavy lift, requiring the app dev teams to drop all their active
+  priorities simultaneously.
 - Bad, because the overall architecture of the hosted apps is fragile and has many unknowns.
   If one service becomes inaccessible or unresponsive, many hosted apps may be impacted,
   and that impact is sometimes difficult to predict. Therefore, a shotgun migration carries
