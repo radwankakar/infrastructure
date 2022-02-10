@@ -34,7 +34,9 @@ their applications. These include:
 - Inadequate visibility into their applications for investigating problems.
 - Friction with security requirements that inhibit needed access to application
   architecture within OHS' hosting platform.
-- ?
+- Differences in the infrastructure between dev/stage and prod environments limits
+  our ability to find problems with new versions of an application before it is deployed
+  to production.
 
 In turn, this presents difficulties for the hosting team:
 
