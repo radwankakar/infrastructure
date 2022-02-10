@@ -49,7 +49,7 @@ In turn, this presents difficulties for the hosting team:
 - App teams need access to infrastructure on an as-needed basis consistent with
   the principle of least privilege.
 - There is a substantial flat cost for using cloud.gov.
-- The project has a limited bugdet for infrastructure costs.
+- The project has a limited budget for infrastructure costs.
 - We need to maintain the stability of the applications in production during
   infrastructure level transitions.
 
