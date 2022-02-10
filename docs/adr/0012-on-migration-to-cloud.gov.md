@@ -90,6 +90,8 @@ budget constraints.
 - Good, because we have access to more AWS services in general.
 - Bad, because we have inadequate engineering bandwidth to put everything together
   and get improvements rolled out to our users within an acceptable time frame.
+- Bad, because if we did get everything put together, maintaining it going forward
+  would require more engineering time than we will have available.
 
 ### Migrate everything to cloud.gov all at once
 
