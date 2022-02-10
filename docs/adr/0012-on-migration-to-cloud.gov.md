@@ -106,6 +106,8 @@ budget constraints.
 
 - Good, because we can test cloud.gov with a smaller slice of the architecture
   as a proof of concept.
+- Good, because our [research][1] suggests that we have at least one app (Coaching Companion)
+  that is close to ready for migration.
 - Bad, because there is a substantial flat cost for using cloud.gov, and we have decided that
   having only one app there is not a worthwhile use of the current budget.
 
@@ -116,3 +118,5 @@ budget constraints.
 - Good, because we can gradually improve the architecture before making the most risky
   and difficult changes.
 - Bad, because cloud.gov does not support some AWS services we want, such as SES for email.
+
+[1]: https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/research/applications/cc-cloudgov.md
