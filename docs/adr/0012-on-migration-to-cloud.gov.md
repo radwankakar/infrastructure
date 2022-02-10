@@ -93,7 +93,8 @@ budget constraints.
 
 ### Migrate everything to cloud.gov all at once
 
-- Good, because this is the shortest path to solving all the problems.
+- Good, because this is the shortest path to solving all the problems described in the
+  context and problem statement.
 - Bad, because cloud.gov requires containerization, and several hosted apps are currently
   in states that cannot run on a containerized platform.
 - Bad, because the overall architecture of the hosted apps is fragile and has many unknowns.
