@@ -34,6 +34,9 @@ their applications. These include:
 - Inadequate visibility into their applications for investigating problems.
 - Friction with security requirements that inhibit needed access to application
   architecture within OHS' hosting platform.
+- Fragile architecture creates more risk when making changes, which is being managed
+  with manual toil. This leads to a general aversion to change and low confidence in app
+  resiliency to user demand and malicious activity.
 - Differences in the infrastructure between dev/stage and prod environments limits
   our ability to find problems with new versions of an application before it is deployed
   to production.
@@ -42,7 +45,6 @@ In turn, this presents difficulties for the hosting team:
 
 - Infrastructure engineers with access must act as technical go-betweens for application
   engineers who know what needs doing but don't have access.
-- ?
 
 ## Decision Drivers
 
