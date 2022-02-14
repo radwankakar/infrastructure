@@ -20,7 +20,7 @@ Technical Story: [OHSH-229](https://ocio-jira.acf.hhs.gov/browse/OHSH-229)
   * [Build our own self-managed, comprehensive solution in AWS](#build-our-own-self-managed-comprehensive-solution-in-aws)
   * [Migrate everything to cloud.gov all at once](#migrate-everything-to-cloudgov-all-at-once)
   * [Migrate one app to cloud.gov](#migrate-one-app-to-cloudgov)
-  * [Wait until the hosted apps are ready for cloud.gov, then migrate everything](#wait-until-the-hosted-apps-are-ready-for-cloudgov-then-migrate-everything)
+  * [Adapt the hosted apps to make ready for cloud.gov, then migrate everything](#adapt-the-hosted-apps-to-make-ready-for-cloudgov-then-migrate-everything)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -62,7 +62,7 @@ In turn, this presents difficulties for the hosting team:
 - Build our own self-managed, comprehensive solution in AWS
 - Migrate everything to cloud.gov all at once
 - Migrate one app to cloud.gov
-- Wait until the hosted apps are ready for cloud.gov, then migrate everything
+- Adapt the hosted apps to make ready for cloud.gov, then migrate everything
 
 ## Decision Outcome
 
@@ -117,7 +117,7 @@ budget constraints.
 - Bad, because there is a substantial flat cost for using cloud.gov, and we have decided that
   having only one app there is not a worthwhile use of the current budget.
 
-### Wait until the hosted apps are ready for cloud.gov, then migrate everything
+### Adapt the hosted apps to make ready for cloud.gov, then migrate everything
 
 - Good, because modernizing the hosted applications in preparation for a possible migration
   to cloud.gov is in alignment with our overall strategy.
