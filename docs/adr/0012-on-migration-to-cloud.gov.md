@@ -120,9 +120,10 @@ budget constraints.
 ### Adapt the hosted apps to make ready for cloud.gov, then migrate everything
 
 - Good, because modernizing the hosted applications in preparation for a possible migration
-  to cloud.gov is in alignment with our overall strategy.
+  to cloud.gov is in alignment with our overall strategy using [12 Factor architecture][2].
 - Good, because we can gradually improve the architecture before making the most risky
   and difficult changes.
 - Bad, because cloud.gov does not support some AWS services we want, such as SES for email.
 
 [1]: https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/research/applications/cc-cloudgov.md
+[2]: https://12factor.net/
