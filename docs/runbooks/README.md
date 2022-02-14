@@ -9,7 +9,12 @@ This is where we'll store runbooks.
 [How to create an ECLKC login](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-create-an-eclkc-login.md)
 
 [How to get SSH Access](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-get-ssh-access.md)
+
 [How to grant SFTP Access](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-grant-sftp-access.md)
+
+[How to instate logrotate](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-instate-logrotate.md)
+
+
 [How to manage ECLKC.info emails](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-manage-eclkcinfo-emails.md)
 
 [How to manage Qualys](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-manage-qualys.md)
