@@ -18,6 +18,7 @@ Common things to note/do during maintenance.
 * [Updating packages on Ubuntu](#updating-packages-on-ubuntu)
 * [Updating packages on Centos](#updating-packages-on-centos)
   * [Updating PHP on Centos](#updating-php-on-centos)
+* [Updating failures](#updating-failures)
 * [Cleaning up old kernels on Centos](#cleaning-up-old-kernels-on-centos)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -175,6 +176,7 @@ To clean the yum cache:
 `yum clean all`
 
 ### Updating PHP on Centos
+
 1. Check the php version:
 
     `php -v`
@@ -189,8 +191,7 @@ To clean the yum cache:
 or
 `wget https://repo.ius.io/ius-release-el7.rpm`
 
-
-Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fpm.d/www.conf`.
+    Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fpm.d/www.conf`.
 
 1. Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
@@ -202,8 +203,9 @@ Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fp
 
     If you get an error that there's a conflict, you will need to remove the current package (replace XX with the version i.e. v8.2 becomes php82u) before doing the  install steps above, copy the current php config:
 
-    `cd /etc/php-fpm.d`  
-    `cp www.conf www.conf.backup`
+    ```console
+    cd /etc/php-fpm.d && cp www.conf www.conf.backup
+    ```
 
     Then remove the current version:
 
@@ -211,16 +213,21 @@ Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fp
 
     And continue from step 4. After you've done the installation, replace the newly generated `www.conf` with the backup you saved:
 
-    `mv www.conf www.conf.default`  
-    `mv www.conf.backup www.conf`  
-    `rm www.conf.default`
+    ```console
+    mv www.conf www.conf.default
+    mv www.conf.backup www.conf
+    rm www.conf.default
+    ```
 
-Add back the php configuration from the backups you saved previously.
+    Add back the php configuration from the backups you saved previously.
 
 1. Restart various services:
-    `service httpd restart`  
-    `sudo systemctl restart php-fpm.service`  
-    `sudo systemctl restart nginx.service`.
+
+    ```console
+    service httpd restart
+    sudo systemctl restart php-fpm.service
+    sudo systemctl restart nginx.service
+    ```
 
 1. Check the environment that you've replaced the php version in. Make sure to check not just the home page.
 In the case that you are getting a 502 or other error, run the following to look at the logs:
@@ -235,6 +242,30 @@ The php-fpm service may not be automatically enabled so when the server restarts
 To fix this run:
 
 `sudo systemctl enable php-fpm.service`
+
+## Updating failures
+
+Sometimes when running the [`update-dev` ansible playbook](https://github.com/OHS-Hosting-Infrastructure/environment-configuration/blob/main/docs/runbooks/how-to-monthly-maintenance.md#update-os-packages-on-dev-and-staging), you'll get a failure. The error may look like this:
+
+```sh
+"Error: Package: 1:v8-devel-3.14.5.10-25.el7.x86_64 (@epel)
+           Requires: v8 = 1:3.14.5.10-25.el7
+           Removing: 1:v8-3.14.5.10-25.el7.x86_64 (@epel)
+               v8 = 1:3.14.5.10-25.el7
+           Obsoleted By: 1:nodejs-libs-16.13.2-7.el7.x86_64 (epel)
+               v8 = 2:9.4.146.24-7.el7
+```
+
+In those cases, it may help to find package blocking the update (in the above case, v8) and to SSH onto the individual machines, uninstall the package and reinstall.
+
+```sh
+yum info v8
+sudo yum remove v8
+sudo yum install v8
+yum info v8
+```
+
+This is acknowledged bad behavior. It is a bandaid solution for now.
 
 ## Cleaning up old kernels on Centos
 
