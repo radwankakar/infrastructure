@@ -191,8 +191,7 @@ To clean the yum cache:
 or
 `wget https://repo.ius.io/ius-release-el7.rpm`
 
-
-Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fpm.d/www.conf`.
+    Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fpm.d/www.conf`.
 
 1. Replace the php version you're using with the one you want (replace XX with the version i.e. v8.2 becomes php82):
 
@@ -204,8 +203,9 @@ Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fp
 
     If you get an error that there's a conflict, you will need to remove the current package (replace XX with the version i.e. v8.2 becomes php82u) before doing the  install steps above, copy the current php config:
 
-    `cd /etc/php-fpm.d`
-    `cp www.conf www.conf.backup`
+    ```console
+    cd /etc/php-fpm.d && cp www.conf www.conf.backup
+    ```
 
     Then remove the current version:
 
@@ -213,16 +213,21 @@ Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fp
 
     And continue from step 4. After you've done the installation, replace the newly generated `www.conf` with the backup you saved:
 
-    `mv www.conf www.conf.default`
-    `mv www.conf.backup www.conf`
-    `rm www.conf.default`
+    ```console
+    mv www.conf www.conf.default
+    mv www.conf.backup www.conf
+    rm www.conf.default
+    ```
 
-Add back the php configuration from the backups you saved previously.
+    Add back the php configuration from the backups you saved previously.
 
 1. Restart various services:
-    `service httpd restart`
-    `sudo systemctl restart php-fpm.service`
-    `sudo systemctl restart nginx.service`.
+
+    ```console
+    service httpd restart
+    sudo systemctl restart php-fpm.service
+    sudo systemctl restart nginx.service
+    ```
 
 1. Check the environment that you've replaced the php version in. Make sure to check not just the home page.
 In the case that you are getting a 502 or other error, run the following to look at the logs:
