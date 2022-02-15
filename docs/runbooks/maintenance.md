@@ -243,7 +243,12 @@ To fix this run:
 Sometimes when running the [`update-dev` ansible playbook](https://github.com/OHS-Hosting-Infrastructure/environment-configuration/blob/main/docs/runbooks/how-to-monthly-maintenance.md#update-os-packages-on-dev-and-staging), you'll get a failure. The error may look like this:
 
 ```sh
-"Error: Package: 1:v8-devel-3.14.5.10-25.el7.x86_64 (@epel)\n           Requires: v8 = 1:3.14.5.10-25.el7\n           Removing: 1:v8-3.14.5.10-25.el7.x86_64 (@epel)\n               v8 = 1:3.14.5.10-25.el7\n           Obsoleted By: 1:nodejs-libs-16.13.2-7.el7.x86_64 (epel)\n               v8 = 2:9.4.146.24-7.el7
+"Error: Package: 1:v8-devel-3.14.5.10-25.el7.x86_64 (@epel)
+           Requires: v8 = 1:3.14.5.10-25.el7
+           Removing: 1:v8-3.14.5.10-25.el7.x86_64 (@epel)
+               v8 = 1:3.14.5.10-25.el7
+           Obsoleted By: 1:nodejs-libs-16.13.2-7.el7.x86_64 (epel)
+               v8 = 2:9.4.146.24-7.el7
 ```
 
 In those cases, it may help to find package blocking the update (in the above case, v8) and to SSH onto the individual machines, uninstall the package and reinstall.
