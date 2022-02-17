@@ -22,7 +22,7 @@ Adding a security group rule to the Jenkins EC2 instance to block HTTP traffic f
 4) Inform teams of upcoming changes regarding accessing Jenkins. This will include:
    - Letting teams know that in the future they will have to be connected to the VPN to access Jenkins
    - Sending teams new DNS name for Jenkins 
-   - Checking to see if any teams have incoming webhooks into Jenkins configured that could be affected by moving Jenkins behind the VPN.We know there is interaction between GitHub, BitBucket and Box with Jenkins. We will need to investigate whether these are inbound or outbound.
+   - Checking to see if any teams have incoming webhooks into Jenkins configured that could be affected by moving Jenkins behind the VPN.We know there is interaction between GitHub, BitBucket and Box with Jenkins. We will need to investigate whether these are inbound or outbound. Note that GitHub and BitBucket provide IP blocks that we could use to modify security groups if necessary, but Box does not provide this option and instead suggests checking the DNS name which is much less secure.
    - Asking teams to see if additional VPN access will need to be granted for members who need to use Jenkins
 5) Remove the security group rule that currently allows HTTP access externally from the public internet.
 6) Test to make sure that the new DNS name routes properly from the browser when connected to the VPN (and does not work when connecting from the public internet). Verify that there are no issus with Github, BitBucket, and Box accessing Jenkins along with other functionality as well.  
