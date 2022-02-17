@@ -9,7 +9,7 @@ Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/is
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers-)
@@ -26,9 +26,8 @@ Technical Story: https://github.com/OHS-Hosting-Infrastructure/infrastructure/is
   * [PivotalTracker](#pivotaltracker)
 * [Links](#links-)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

@@ -9,7 +9,7 @@ Technical Story: [Evaluate DB Migration](https://github.com/OHS-Hosting-Infrastr
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers)
@@ -23,9 +23,8 @@ Technical Story: [Evaluate DB Migration](https://github.com/OHS-Hosting-Infrastr
   * [Migrate the databases onto RDS (shared tenancy)](#migrate-the-databases-onto-rds-shared-tenancy)
   * [Migrate the databases into their own RDS instances](#migrate-the-databases-into-their-own-rds-instances)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

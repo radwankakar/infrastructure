@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers-)
@@ -21,9 +21,8 @@
   * [Option 3: Automation using Terraform](#option-3-automation-using-terraform)
   * [Option 4: Custom Automation Tooling](#option-4-custom-automation-tooling)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

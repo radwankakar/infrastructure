@@ -10,7 +10,7 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers-)
@@ -24,9 +24,8 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
   * [[option 3]](#option-3)
 * [Links](#links-)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

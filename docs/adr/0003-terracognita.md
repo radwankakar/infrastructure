@@ -7,7 +7,7 @@
 
 Technical Story: <https://github.com/OHS-Hosting-Infrastructure/environment-configuration/issues/3>
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers)
@@ -17,9 +17,8 @@ Technical Story: <https://github.com/OHS-Hosting-Infrastructure/environment-conf
   * [Negative Consequences](#negative-consequences)
 * [Links](#links)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

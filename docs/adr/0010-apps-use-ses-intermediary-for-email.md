@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
   * [About integrating with Ironport](#about-integrating-with-ironport)
@@ -19,9 +19,8 @@
   * [Applications send emails through SES as an intermediary to Ironport](#applications-send-emails-through-ses-as-an-intermediary-to-ironport)
   * [Applications send emails through a SMTP server that OHS Hosting maintains](#applications-send-emails-through-a-smtp-server-that-ohs-hosting-maintains)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

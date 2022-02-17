@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers)
@@ -16,9 +16,8 @@
   * [Redeploy Jenkins instance](#redeploy-jenkins-instance)
   * [Do Nothing](#do-nothing)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

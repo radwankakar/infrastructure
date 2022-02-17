@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers-)
@@ -18,9 +18,8 @@
   * [Option 2: Get Developers to change their apps to better fit in Docker containers then build those](#option-2-get-developers-to-change-their-apps-to-better-fit-in-docker-containers-then-build-those)
   * [Option 3: Implement Ansible or Chef or Puppet or Saltstack to keep currently running instances up to date](#option-3-implement-ansible-or-chef-or-puppet-or-saltstack-to-keep-currently-running-instances-up-to-date)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 

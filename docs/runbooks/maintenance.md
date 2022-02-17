@@ -4,7 +4,7 @@ Common things to note/do during maintenance.
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Create a new volume](#create-a-new-volume)
 * [Attach a volume to an EC2 instance](#attach-a-volume-to-an-ec2-instance)
@@ -20,9 +20,8 @@ Common things to note/do during maintenance.
   * [Updating PHP on Centos](#updating-php-on-centos)
 * [Cleaning up old kernels on Centos](#cleaning-up-old-kernels-on-centos)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Create a new volume
 

@@ -8,7 +8,7 @@ Technical Story: [OHSH-229](https://ocio-jira.acf.hhs.gov/browse/OHSH-229)
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers)
@@ -22,9 +22,8 @@ Technical Story: [OHSH-229](https://ocio-jira.acf.hhs.gov/browse/OHSH-229)
   * [Migrate one app to cloud.gov](#migrate-one-app-to-cloudgov)
   * [Adapt the hosted apps to make ready for cloud.gov, then migrate everything](#adapt-the-hosted-apps-to-make-ready-for-cloudgov-then-migrate-everything)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 
