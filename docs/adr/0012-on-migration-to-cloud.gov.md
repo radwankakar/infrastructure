@@ -8,20 +8,21 @@ Technical Story: [OHSH-229](https://ocio-jira.acf.hhs.gov/browse/OHSH-229)
 
 ## Table of Contents
 
-<!-- mdformat-toc start --slug=github --no-anchors -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
-* [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers)
-* [Considered Options](#considered-options)
-* [Decision Outcome](#decision-outcome)
-  * [Positive Consequences](#positive-consequences)
-  * [Negative Consequences](#negative-consequences)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-  * [Build our own self-managed, comprehensive solution in AWS](#build-our-own-self-managed-comprehensive-solution-in-aws)
-  * [Migrate everything to cloud.gov all at once](#migrate-everything-to-cloudgov-all-at-once)
-  * [Migrate one app to cloud.gov](#migrate-one-app-to-cloudgov)
-  * [Adapt the hosted apps to make ready for cloud.gov, then migrate everything](#adapt-the-hosted-apps-to-make-ready-for-cloudgov-then-migrate-everything)
-
+- [On whether to migrate hosted OHS apps to cloud.gov or not](#on-whether-to-migrate-hosted-ohs-apps-to-cloudgov-or-not)
+  - [Table of Contents](#table-of-contents)
+  - [Context and Problem Statement](#context-and-problem-statement)
+  - [Decision Drivers](#decision-drivers)
+  - [Considered Options](#considered-options)
+  - [Decision Outcome](#decision-outcome)
+    - [Positive Consequences](#positive-consequences)
+    - [Negative Consequences](#negative-consequences)
+  - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
+    - [Build our own self-managed, comprehensive solution in AWS](#build-our-own-self-managed-comprehensive-solution-in-aws)
+    - [Migrate everything to cloud.gov all at once](#migrate-everything-to-cloudgov-all-at-once)
+    - [Migrate one app to cloud.gov](#migrate-one-app-to-cloudgov)
+    - [Adapt the hosted apps to make ready for cloud.gov, then migrate everything](#adapt-the-hosted-apps-to-make-ready-for-cloudgov-then-migrate-everything)
 
 <!-- mdformat-toc end -->
 
@@ -116,6 +117,7 @@ budget constraints.
 - Bad, because there is a substantial flat cost for using cloud.gov, and we have decided that
   having only one app there is not a worthwhile use of the current budget.
 - Bad, because migrating only one app doesn't solve any of the problems for the other applications, requiring our team to spend more time supporting them on current infrastructure
+
 ### Adapt the hosted apps to make ready for cloud.gov, then migrate everything
 
 - Good, because modernizing the hosted applications in preparation for a possible migration

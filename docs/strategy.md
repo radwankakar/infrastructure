@@ -15,18 +15,18 @@ A workflow that implements DevOps practice aims to deliver high quality secure s
 
 Key features of a DevOps enabled workflow are:
 
-* Flow - ease and consistency in delivery of development work to our customers
-* Feedback - ability to understand changes to a system and if there is a defect to correct
-* Continual Learning and experimentation - safely sharing well thought through hypotheses in our system
+- Flow - ease and consistency in delivery of development work to our customers
+- Feedback - ability to understand changes to a system and if there is a defect to correct
+- Continual Learning and experimentation - safely sharing well thought through hypotheses in our system
 
 This team aims to create a platform to enable DevOps workflows for development teams.
 
 Some common practices we will implement follow:
 
-* Continuous Integration
-* Infrastructure as code
-* Immutable infrastructure
-* Continuous Monitoring and Alerting
+- Continuous Integration
+- Infrastructure as code
+- Immutable infrastructure
+- Continuous Monitoring and Alerting
 
 ## I. Get Daily Operations Under Control and Automated
 
@@ -40,29 +40,29 @@ Additionally, we would like to shadow development teams to understand their exis
 
 ### Goals
 
-* Automate as much as we can
-  * Immutable infrastructure
-  * Usability
-* Prepare compliance and security workflows for automation
-* Increase visibility for customers and stakeholders
+- Automate as much as we can
+  - Immutable infrastructure
+  - Usability
+- Prepare compliance and security workflows for automation
+- Increase visibility for customers and stakeholders
 
 ### Possible workstreams
 
-* Automate common tasks
-  * Database dumps for development teams
-* Create dashboards to answer questions about system status
-* Migrate existing resources into infrastructure as code
-  * Implement Terraform/Atlantis and share config with dev teams
-  * Start abstractions into modules
-* Work with dev teams to provide immutable artifacts to better facilitate automated deployment
-* Review AWS Billing and usage
-  * Automate dashboards
-* ATO prep
-* Decrease Operational Overhead
-  * Migrate mail services to SES
-  * Migrate MariaDB to RDS
-  * Migrate all caching configuration into Cloudfront
-  * Is there a better way to allow access to dev/staging to developers?
+- Automate common tasks
+  - Database dumps for development teams
+- Create dashboards to answer questions about system status
+- Migrate existing resources into infrastructure as code
+  - Implement Terraform/Atlantis and share config with dev teams
+  - Start abstractions into modules
+- Work with dev teams to provide immutable artifacts to better facilitate automated deployment
+- Review AWS Billing and usage
+  - Automate dashboards
+- ATO prep
+- Decrease Operational Overhead
+  - Migrate mail services to SES
+  - Migrate MariaDB to RDS
+  - Migrate all caching configuration into Cloudfront
+  - Is there a better way to allow access to dev/staging to developers?
 
 ## II. Enablement
 
@@ -72,37 +72,37 @@ Enabling them to make better decisions and understand system ramifications
 
 ### Goals
 
-* Make it easy to change and deploy applications
-* Make it easy to stand up new services
-* Enable development teams debug access
-* Enable development teams to automate testing
-* Empower development teams to develop applications with confidence
+- Make it easy to change and deploy applications
+- Make it easy to stand up new services
+- Enable development teams debug access
+- Enable development teams to automate testing
+- Empower development teams to develop applications with confidence
 
 ### Open questions
 
-* What is the change request process today?
-  * How can we make this easier for developers to submit and review changes?
-* What are common architecture patterns that we host?
-  * Can we give developers templates to start with?
-  * Can we provide configuration and services for common actions?
-* What information do developers need to debug and manage their systems?
-* What access do developers need to debug and manage their systems?
-* What are things developers want control of?
-* What are thing developers don't want control of?
-* Should we allow for multi cloud management?
-* If we stay in AWS, should we allow each developer isolated environments?
-* How can we maintain visibility into all systems for our CORs and stakeholders?
+- What is the change request process today?
+  - How can we make this easier for developers to submit and review changes?
+- What are common architecture patterns that we host?
+  - Can we give developers templates to start with?
+  - Can we provide configuration and services for common actions?
+- What information do developers need to debug and manage their systems?
+- What access do developers need to debug and manage their systems?
+- What are things developers want control of?
+- What are thing developers don't want control of?
+- Should we allow for multi cloud management?
+- If we stay in AWS, should we allow each developer isolated environments?
+- How can we maintain visibility into all systems for our CORs and stakeholders?
 
 ### Possible Workstreams
 
-* Zero downtime deployments
-* Isolated environments
-  * Temporary demo and test environments
-* Proof of concept or template repositories for new applications
-* Centralized Identity management
-  * IT systems access
-  * CAS integration and stability improvements
-* Other centralized services
-  * How to configure SES
-  * How to manage a database
-  * How to share data across services
+- Zero downtime deployments
+- Isolated environments
+  - Temporary demo and test environments
+- Proof of concept or template repositories for new applications
+- Centralized Identity management
+  - IT systems access
+  - CAS integration and stability improvements
+- Other centralized services
+  - How to configure SES
+  - How to manage a database
+  - How to share data across services

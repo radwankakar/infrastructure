@@ -35,7 +35,7 @@ fatal: unable to access 'https://github.com/HSICC/OHSCC/': The requested URL ret
 
 In the Jenkins job configuration, scroll down to the section labelled "Source Code Management".
 You will see the repository configuration with the URL and the Credentials to use.
-Jenkins has several different credentials configured, you should select something from the dropdown that has been configured to pull from the HSICC repos like "eclkcgithub/***".
+Jenkins has several different credentials configured, you should select something from the dropdown that has been configured to pull from the HSICC repos like "eclkcgithub/\*\*\*".
 
 ### Prod
 

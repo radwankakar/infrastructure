@@ -10,11 +10,11 @@ To check quotas on the server, ssh to the mailserver.
 
 To check the quota limits for the email address use:
 
-```doveadm quota get -u headstart@eclkc.info```
+`doveadm quota get -u headstart@eclkc.info`
 
 To recalculate quota limits for the user:
 
-```doveadm quota recalc -u headstart@eclkc.info```
+`doveadm quota recalc -u headstart@eclkc.info`
 
 You will likely need to recalculate the quota after expunging emails from the different mailbox folders.
 
@@ -24,14 +24,14 @@ To do this as the mail admin and not as the user, ssh to the mailserver.
 
 To check the different folders in the mailbox for the user:
 
-```doveadm mailbox list -u headstart@eclkc.info```
+`doveadm mailbox list -u headstart@eclkc.info`
 
 To delete mail in the Junk box:
 
-```doveadm expunge -u headstart@eclkc.info mailbox Junk all```
+`doveadm expunge -u headstart@eclkc.info mailbox Junk all`
 
 To delete mail in the Trash box older than this week:
 
-```doveadm expunge -u headstart@eclkc.info mailbox Trash before 1w```
+`doveadm expunge -u headstart@eclkc.info mailbox Trash before 1w`
 
 You may need to run similar comands on other mailboxes.

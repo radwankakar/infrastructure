@@ -1,7 +1,7 @@
 # Alerting Basics
 
-Design Doc  
-8/13/2021  
+Design Doc
+8/13/2021
 Rebecca Kilberg
 
 ## Context
@@ -20,9 +20,9 @@ Alerts are for issues that require immediate action or investigation. Notificati
 
 ## Costs
 
-Currently we believe the most effective way to alert team members is via SMS. 
+Currently we believe the most effective way to alert team members is via SMS.
 
-If we decide to use AWS directly, [this price sheet](https://aws.amazon.com/sns/sms-pricing/) describes costs per SMS for the US. We'll have to use [short codes, 10 digit number (10DLC), or a toll free number](https://docs.aws.amazon.com/sns/latest/dg/channels-sms-us-requirements.html) to reach phones in the US, where all team members are located. 
+If we decide to use AWS directly, [this price sheet](https://aws.amazon.com/sns/sms-pricing/) describes costs per SMS for the US. We'll have to use [short codes, 10 digit number (10DLC), or a toll free number](https://docs.aws.amazon.com/sns/latest/dg/channels-sms-us-requirements.html) to reach phones in the US, where all team members are located.
 
 Typically, we've integrated with another service such as PagerDuty, which does have a [free tier](https://www.pagerduty.com/sign-up-free/?type=free). I think it's worth considering whether it would be easier to set up subscriptions to our SNS topics with PagerDuty rather than to first set up with 10DLC or a toll free number (the short codes cost $650 to request and almost $1k per month to maintain).
 
