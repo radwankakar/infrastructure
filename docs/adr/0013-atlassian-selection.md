@@ -3,24 +3,24 @@
 
 * Status: proposed
 * Deciders: Hosting team, client system owner, OHS app team reps
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Date: 2022-02-22
 
-Technical Story: [OHSH-469 | https://ocio-jira.acf.hhs.gov/browse/OHSH-469]
+Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
 
 ## Table of Contents
 
 <!-- toc -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers-)
+* [Decision Drivers](#decision-drivers)
 * [Considered Options](#considered-options)
 * [Decision Outcome](#decision-outcome)
   * [Positive Consequences](#positive-consequences-)
   * [Negative Consequences](#negative-consequences-)
 * [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
-  * [[option 1]](#option-1)
-  * [[option 2]](#option-2)
-  * [[option 3]](#option-3)
+  * [Atlassian](#atlassian)
+  * [Integrations](#integrations)
+  * [Process](#process)
 * [Links](#links-)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
@@ -28,9 +28,6 @@ Technical Story: [OHSH-469 | https://ocio-jira.acf.hhs.gov/browse/OHSH-469]
 <!-- tocstop -->
 
 ## Context and Problem Statement
-
-[Describe the context and problem statement, e.g., in free form using two to
-three sentences. You may want to articulate the problem in form of a question.]
 
 ### Background
 
@@ -48,70 +45,61 @@ As part of our project scope, we are tasked with helping facilitate collaboratio
 1. Not all OHS IT teams have monitoring and alerting systems in place so that they can be notified of and act on issues that arise.
 1. Not all OHS IT teams are following DevSecOps best practices so that OHS can be assured of success.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
-* [driver 1, e.g., a force, facing concern, …]
-* [driver 2, e.g., a force, facing concern, …]
-* Can provide a consolidated view of status and roadmaps across OHS IT teams
-* Cost
-* Simplicity of use and administration
-* Integrations with different systems, i.e. between code development and task management, between task management and incident management, to Slack, etc.
+1. Can provide a consolidated view of status and roadmaps across OHS IT teams
+1. Cost
+1. Simplicity of use and administration
+1. Integrations with different systems, i.e. between code development and task management, between task management and incident management, to Slack, etc.
 
 ## Considered Options
 
-* Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
-* Integrate existing systems and develop a way to present consolidated view to OHS
-* Status quo of systems, but use process and communications to achieve objectives
-* … <!-- numbers of options can vary -->
+1. Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
+1. Integrate existing systems and develop a way to present consolidated view to OHS
+1. Status quo of systems, but use process and communications to achieve objectives
 
 ## Decision Outcome
 
-Chosen option: "[option 1]", because [justification. e.g., only option, which
-meets k.o. criterion decision driver | which resolves force force | … | comes
-out best (see below)].
+Chosen option: "Option 1", because it offers an integrated solution out of the box, can be configured and supported by non-engineers, allowing them to do more valuable engineering work, and can be used to support processes and communications while process only can only do so much.
 
 ### Positive Consequences <!-- optional -->
 
-* [e.g., improvement of quality attribute satisfaction, follow-up decisions
-  required, …]
-* …
+* Flexible enough to support baseline standards while providing teams autonomy
+* Doesn't require engineering effort
+* Within project budget
 
 ### Negative Consequences <!-- optional -->
 
-* [e.g., compromising quality attribute, follow-up decisions required, …]
-* …
+* Hosting team may become tools administrators (IT Dept)
 
 ## Pros and Cons of the Options <!-- optional -->
 
-### [option 1]
+### Atlassian
 
-[example | description | pointer to more information | …] <!-- optional -->
+Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Good, because several teams already use an Atlassian product so there should be less of a learning curve
+* Good, because it can in theory address all the identified needs
+* Bad, because it makes us act as IT administrators
+* Bad, because it makes some teams use new systems
 
-### [option 2]
+### Integrations
 
-[example | description | pointer to more information | …] <!-- optional -->
+Integrate existing systems and develop a way to present consolidated view to OHS
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Good, because it doesn't require teams to use new systems
+* Good, because it could still address the needs
+* Bad, because it requires engineering effort to provide the consolidated view
+* Bad, because it is harder to establish baseline standards for processes
 
-### [option 3]
+### Process
 
-[example | description | pointer to more information | …] <!-- optional -->
+Status quo of systems, but use process and communications to achieve objectives
 
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* … <!-- numbers of pros and cons can vary -->
+* Good, because it doesn't require teams to use new systems
+* Bad, because it is harder to establish baseline standards for processes
+* Bad, because it doesn't address all the needs, specifically a consolidated view of teams for OHS
 
 ## Links <!-- optional -->
 
-* [Link type] [Link to ADR] <!-- example:
-* Refined by [ADR-0005](0005-example.md) -->
-* … <!-- numbers of links can vary -->
+* [Atlassian OpenDevOps](https://www.atlassian.com/solutions/devops/features)
