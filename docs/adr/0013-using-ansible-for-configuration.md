@@ -17,6 +17,7 @@
     - [Use Ansible to manage machine configuration](#use-ansible-to-manage-machine-configuration)
     - [Building pre-packed AMIs to manage system deployments](#building-pre-packed-amis-to-manage-system-deployments)
     - [Continue manually managing systems](#continue-manually-managing-systems)
+  - [Resources](#resources)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -24,7 +25,7 @@
 
 ## Context and Problem Statement
 
-We maintain many hosts for our app dev teams - each of these require a different set of packages and configurations to function as intended. Different hosts also require different users. Currently these systems are all managed manually, meaning that repeated tasks take longer than they should, and take away from improvements to the system.
+We maintain many hosts for our app dev teams - each of these require a different set of packages and configurations to function as intended. Different hosts also require different users. Currently these systems are all managed manually, meaning that repeated tasks take longer than they should, and take away tiem that could be used for improvements to the system.
 
 ## Decision Drivers <!-- optional -->
 
@@ -41,7 +42,7 @@ We maintain many hosts for our app dev teams - each of these require a different
 
 ## Decision Outcome
 
-Chosen option: "Use Ansible to manage machine configuration", because ansible was already setup, team member already has experience in it and can train others, and is the easiest way to automate currently manual actions
+Chosen option: "Use Ansible to manage machine configuration", because ansible was already setup, Reid already has experience in it and can train others, and is the easiest way to automate currently manual actions
 
 ### Positive Consequences <!-- optional -->
 
@@ -51,7 +52,7 @@ Chosen option: "Use Ansible to manage machine configuration", because ansible wa
 
 ### Negative Consequences <!-- optional -->
 
-* Building off of the currently existing ansible setup will require restructuring to be used successfully 
+* Building off of the currently existing ansible setup will require restructuring to be used successfully which might mean duplicating work (for example, regrouping our hosts list)
 
 ## Pros and Cons of the Options <!-- optional -->
 
@@ -73,3 +74,7 @@ Chosen option: "Use Ansible to manage machine configuration", because ansible wa
 * Good, because it's the easiest o ption
 * Bad, because manually 
 * Bad, because we would be responsible for maintaining many different images for all the teams 
+
+## Resources
+
+* https://www.whizlabs.com/blog/ansible-advantages-and-disadvantages/
