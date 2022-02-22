@@ -41,13 +41,12 @@ We maintain many hosts for our app dev teams - each of these require a different
 
 ## Decision Outcome
 
-Chosen option: "Use Ansible to manage machine configuration", because ansible was already setup, Reid already has experience in it and can train others, and is the easiest way to automate currently manual actions
+Use Ansible to manage machine configuration. This decision was chosen because because ansible was already configured and setup, making it an option that can be implemented quickly and fairly easily.
 
 ### Positive Consequences <!-- optional -->
 
-* Many currently manual tasks automated 
-* Repeated tasks defined as processes
-* More secure setup (process of removing access easier)
+* Repeated manual tasks can be defined as automated processes without too much of a heavy lift from the team 
+* More secure environment setup (process of managing user access and permissions more transparent and easily audited)
 
 ### Negative Consequences <!-- optional -->
 
