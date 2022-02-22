@@ -28,7 +28,7 @@ We maintain many hosts for our app dev teams - each of these require a different
 
 ## Decision Drivers 
 
-* Adhoc requests to add users to machines and VPN - current manual process results in technical toil and lack of one source of truth that contains all user management information.Manually completing configuration tasks is more error prone in comparison to automating configuration tasks.
+* Adhoc requests to add users to machines and VPN - current manual process results in technical toil and lack of one source of truth that contains all user management information. Manually completing configuration tasks is more error prone in comparison to automating configuration tasks.
 * Dependency management / maintaining different versions of packages on different machines
 * Manual management of system takes time away from planned improvements 
 
