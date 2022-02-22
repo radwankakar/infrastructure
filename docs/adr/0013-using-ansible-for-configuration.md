@@ -1,4 +1,4 @@
-# Using Ansible For Host Configuration
+# Use Ansible For Host Configuration
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
 ## Table of Contents
