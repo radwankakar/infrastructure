@@ -41,7 +41,7 @@ We maintain many hosts for our app dev teams - each of these require a different
 
 ## Decision Outcome
 
-Use Ansible to manage machine configuration. This decision was chosen because because ansible was already configured and setup, making it an option that can be implemented quickly and fairly easily.
+Use Ansible to manage machine configuration. This decision was chosen because ansible was already configured and setup, making it an option that can be implemented quickly and fairly easily.
 
 ### Positive Consequences 
 
