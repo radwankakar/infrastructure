@@ -50,7 +50,7 @@ Use Ansible to manage machine configuration. This decision was chosen because be
 
 ### Negative Consequences
 
-* Building off of the currently existing ansible setup will require restructuring to be used successfully which might mean re-doing work (for example, regrouping our already defined hosts list and modifying ansible playbooks accoerdingly)
+* Building off of the currently existing ansible setup will require restructuring to be used successfully which might mean re-doing work (for example, regrouping our already defined hosts list and modifying ansible playbooks accordingly)
 
 ## Pros and Cons of the Options 
 
