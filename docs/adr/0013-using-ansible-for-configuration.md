@@ -26,7 +26,7 @@
 
 We maintain many hosts for our app dev teams - each of these require a different set of packages and configurations to function as intended. Different hosts also require different users. Currently these systems are all managed manually, meaning that repeated tasks take longer than they should, and take away time that could be used for improvements to the system.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers 
 
 * Adhoc requests to add users to machines
 * Adhoc requests to add users to the VPN
