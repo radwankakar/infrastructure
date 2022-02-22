@@ -16,6 +16,7 @@
   - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
     - [Use Ansible to manage machine configuration](#use-ansible-to-manage-machine-configuration)
     - [Building pre-packed AMIs to manage system deployments](#building-pre-packed-amis-to-manage-system-deployments)
+    - [Continue manually managing systems](#continue-manually-managing-systems)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
@@ -23,22 +24,24 @@
 
 ## Context and Problem Statement
 
-We maintain many hosts for our app dev teams - each of these require a different subset of packages / configuration / etc to function as intended. Different hosts also can require different users. 
+We maintain many hosts for our app dev teams - each of these require a different set of packages and configurations to function as intended. Different hosts also require different users. Currently these systems are all managed manually, meaning that repeated tasks take longer than they should, and take away from improvements to the system.
 
 ## Decision Drivers <!-- optional -->
 
 * Adhoc requests to add users to machines
 * Adhoc requests to add users to the VPN
 * Dependency management / maintaining different versions of packages on different machines
+* Manual management of system takes time away from planned improvements 
 
 ## Considered Options
 
-* [Use Ansible to manage machine configuration]
-* [Building pre-packed AMIs to manage system deployments]
+* Use Ansible to manage machine configuration
+* Building pre-packed AMIs to manage system deployments
+* Do Nothing
 
 ## Decision Outcome
 
-Chosen option: "Use Ansible to manage machine configuration", because ansible was already setup, team member already has experience in it and can train others, and is the easiest way to automate currently nmanual actions
+Chosen option: "Use Ansible to manage machine configuration", because ansible was already setup, team member already has experience in it and can train others, and is the easiest way to automate currently manual actions
 
 ### Positive Consequences <!-- optional -->
 
@@ -63,4 +66,10 @@ Chosen option: "Use Ansible to manage machine configuration", because ansible wa
 
 * Good, because faster start times and easier dependency configuration
 * Bad, because most teams have very different requirements so there wouldn't be many commonalities to create a base image
+* Bad, because we would be responsible for maintaining many different images for all the teams 
+
+### Continue manually managing systems 
+
+* Good, because it's the easiest o ption
+* Bad, because manually 
 * Bad, because we would be responsible for maintaining many different images for all the teams 
