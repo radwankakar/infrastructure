@@ -69,6 +69,6 @@ Use Ansible to manage machine configuration. This decision was chosen because an
 
 ### Continue manually managing systems 
 
-* Good, because it's the easiest option
+* Good, because it's the easiest option in the short term
 * Bad, because manually managing systems creates a lot of extra work for team
 * Bad, because many improvements to the system would be blocked by manual management of systems 
