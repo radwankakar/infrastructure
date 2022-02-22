@@ -43,16 +43,16 @@ We maintain many hosts for our app dev teams - each of these require a different
 
 Use Ansible to manage machine configuration. This decision was chosen because because ansible was already configured and setup, making it an option that can be implemented quickly and fairly easily.
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences 
 
 * Repeated manual tasks can be defined as automated processes without too much of a heavy lift from the team 
 * More secure environment setup (process of managing user access and permissions more transparent and easily audited)
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences
 
 * Building off of the currently existing ansible setup will require restructuring to be used successfully which might mean re-doing work (for example, regrouping our already defined hosts list and modifying ansible playbooks accoerdingly)
 
-## Pros and Cons of the Options <!-- optional -->
+## Pros and Cons of the Options 
 
 ### Use Ansible to manage machine configuration
 
