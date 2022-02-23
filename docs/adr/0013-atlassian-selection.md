@@ -59,7 +59,7 @@ As part of our project scope, we are tasked with helping facilitate collaboratio
 
 1. Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 1. Integrate existing systems and develop a way to present consolidated view to OHS
-1. Status quo of systems, but use process and communications to achieve objectives
+1. Teams use existing systems, but communications and management processes are used to achieve objective
 
 ## Decision Outcome
 
@@ -97,7 +97,7 @@ Integrate existing systems and develop a way to present consolidated view to OHS
 
 ### Process
 
-Status quo of systems, but use process and communications to achieve objectives
+The different teams still use whatever systems they use now, but we work with them to establish communication processes between the teams and also OHS as well so that coordination and oversight can happen, and also work with them to establish a CI pipeline with their existing systems.
 
 * Good, because it doesn't require teams to use new systems
 * Bad, because it is harder to establish baseline standards for processes
