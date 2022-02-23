@@ -18,7 +18,7 @@ There are two types of scans that are typically run from Qualys, an OS scan that
 1. Login to the [Qualys Web portal][1].
 
 ### For OS scans
-1. Click on "Vulnerability Management"
+1. Click on "VMDR".
 1. Click on "Scans" from the tabs at the top
 1. If there has already been a scan run that targets the machines you need scanned, select that from the list and choose Relaunch from the Quick Action dropdown next to the scan name
 1. If you would like to configure and launch a new scan:
