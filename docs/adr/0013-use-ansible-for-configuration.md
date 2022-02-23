@@ -71,3 +71,4 @@ Use Ansible to manage machine configuration. This decision was chosen because an
 * Good, because it's the easiest option in the short term
 * Bad, because manually managing systems creates a lot of extra work for team
 * Bad, because many improvements to the system would be blocked by manual management of systems 
+* Bad, because desired configuration state isn't tracked. If any changes are made, there's not way to check if the desired configuration was overridden. ex. if we wanted to test temporarily removing a user manually and forgot to add them back, there is no record of the fact that they should be on the system
