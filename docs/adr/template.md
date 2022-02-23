@@ -1,6 +1,6 @@
 # \[short title of solved problem and solution\]
 
-<!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
+<!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
 - Status: \[proposed | rejected | accepted | deprecated | … | superseded by
   [ADR-0005](0005-example.md)\] <!-- optional -->
