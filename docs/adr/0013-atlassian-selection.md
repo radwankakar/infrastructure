@@ -1,4 +1,4 @@
-# Atlassian suite for OHS IT teams
+# Provide Atlassian suite for OHS IT teams
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
 * Status: proposed
@@ -32,9 +32,12 @@ Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
 ### Background
 
 The Office of Head Start (OHS) currently has several systems and applications being maintained and developed by different teams, both OHS and vendor teams. These include Early Childhood Learning & Knowledge Center (ECLKC), Head Start Coaching Companion (HS CC), Individualized Professional Development (iPD) Portfolio, Early Educator Central (EEC), TTA Hub, and several mobile apps. 
+
 All these teams use different tools for their development processes, including task management, development, automated test, build and deploy, documentation, and support notifications. For example, the hosting team uses ACF Jira for task management, GitHub for code and documentation, and PagerDuty for support notifications, the HSICC team uses their own Jira for task management, GitHub for code, Jenkins for build and deploy, the Paradiso team uses Service Desk for task management, GitHub for code, etc.
+
 These teams also follow different processes when it comes to their development and deployment pipeline. Some have a form of CI with automated tests while others do not. Some use Jenkins to deploy while others are updated by doing a git pull directly from the application server(s).
 OHS has oversight responsibilities over all the systems that these teams build and maintain, yet there is no consolidated review system. There is also no consolidated or collaborative planning process when it comes to future work. The systems and teams are dependent on each other for some functionality yet they cannot always identify those dependencies ahead of time so that the teams can align their work together.
+
 As part of our project scope, we are tasked with helping facilitate collaboration and communication across OHS IT teams and moving OHS IT teams to more DevSecOps practices. We have made a start with providing a Slack workspace and introducing a cross-team sprint review. However, teams still use separate tools and processes for development and deployment. And there is still not a coordinated planning activity across OHS so teams are still identifying dependencies too late.
 
 ### Problems
@@ -60,7 +63,7 @@ As part of our project scope, we are tasked with helping facilitate collaboratio
 
 ## Decision Outcome
 
-Chosen option: "Option 1", because it offers an integrated solution out of the box, can be configured and supported by non-engineers, allowing them to do more valuable engineering work, and can be used to support processes and communications while process only can only do so much.
+Chosen option: "Option 1", because it offers an integrated solution out of the box, it can be configured and supported by non-engineers (allowing them to do more valuable engineering work), and can be used to support processes and communications while process only can only do so much.
 
 ### Positive Consequences <!-- optional -->
 
@@ -98,7 +101,7 @@ Status quo of systems, but use process and communications to achieve objectives
 
 * Good, because it doesn't require teams to use new systems
 * Bad, because it is harder to establish baseline standards for processes
-* Bad, because it doesn't address all the needs, specifically a consolidated view of teams for OHS
+* Bad, because it doesn't address all the needs: specifically, a consolidated view of teams for OHS
 
 ## Links <!-- optional -->
 
