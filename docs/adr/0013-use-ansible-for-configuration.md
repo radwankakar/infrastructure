@@ -57,6 +57,9 @@ Use Ansible to manage machine configuration. This decision was chosen because an
 
 * Good, because ansible is already installed and configured, requiring no extensive setup on our part
 * Good, because lots of documentation about ansible syntax exists, making it fairly approachable to start learning 
+* Good, because it (generally) will only run updates that need to be run (vs. scripting with bash, etc.)
+* Good, because it allows us to have some level of configuration as code, which means also leveraging code review processes when making changes via ansible, ensure it is repeatable, etc.
+* Good, because doesn't require us to redeploy existing machines (vs. using a golden image/pre-packed AMI) to manage and make changes
 * Good, does not require an agent on systems and uses python and ssh
 * Bad, because no notion of state. Ansible does not track dependencies and executes tasks until they complete successfully or fail. This means we have to be extra vigilant to make sure the state of a machine is as expected
 
@@ -65,10 +68,13 @@ Use Ansible to manage machine configuration. This decision was chosen because an
 * Good, because faster start times and easier dependency configuration
 * Bad, because most teams have very different requirements so there wouldn't be many commonalities to create a base image
 * Bad, because we would be responsible for maintaining many different images for all the teams 
+* Bad, because would require a redeploy on all existing machines, which would be difficult and a heavy lift for the team 
+* Bad, would require container / image management agent installation on all machines
+* Bad, because for each change all updates will be run instead of just the updates that need to be made 
 
 ### Continue manually managing systems 
 
 * Good, because it's the easiest option in the short term
 * Bad, because manually managing systems creates a lot of extra work for team
 * Bad, because many improvements to the system would be blocked by manual management of systems 
-* Bad, because desired configuration state isn't tracked. If any changes are made, there's no way to check if the desired configuration was overridden. ex. if we wanted to test temporarily removing a user manually and forgot to add them back, there is no record of the fact that they should be on the system
+* Bad, because no configuration as code, which means changes are not repeatable and don't go through code review process
