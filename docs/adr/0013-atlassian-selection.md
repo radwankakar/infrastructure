@@ -68,7 +68,7 @@ Chosen option: "Option 1", because it offers an integrated solution out of the b
 ### Positive Consequences <!-- optional -->
 
 * Flexible enough to support baseline standards while providing teams autonomy
-* Doesn't require engineering effort
+* As a SaaS app, it doesn't require engineering effort to deploy or manage
 * Within project budget
 
 ### Negative Consequences <!-- optional -->
@@ -81,7 +81,7 @@ Chosen option: "Option 1", because it offers an integrated solution out of the b
 
 Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 
-* Good, because several teams already use an Atlassian product so there should be less of a learning curve
+* Good, because several teams already use Atlassian products so there should be less of a learning curve
 * Good, because it can in theory address all the identified needs
 * Bad, because it makes us act as IT administrators
 * Bad, because it makes some teams use new systems
