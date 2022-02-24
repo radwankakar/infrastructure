@@ -127,7 +127,7 @@ PHP Notice:  Undefined variable: summary_preset_id in /home/vcap/app/htdocs/vce-
 
 For [https://cc.app.cloud.gov/about](https://cc.app.cloud.gov/about), I got a banner that read `About component cannot be found on this server.`
 
-Resources within the resource library (for example [https://cc.app.cloud.gov/resourcelibrary?resource_id=19903]( https://cc.app.cloud.gov/resourcelibrary?resource_id=19903)) had an error that said `eclkc.ohs.acf.hhs.gov refused to connect.`.
+Resources within the resource library (for example [https://cc.app.cloud.gov/resourcelibrary?resource_id=19903](https://cc.app.cloud.gov/resourcelibrary?resource_id=19903)) had an error that said `eclkc.ohs.acf.hhs.gov refused to connect.`.
 
 Dayton [explained these issues](https://acf-ohs.slack.com/archives/C02SA7X0R16/p1642543469009100?thread_ts=1642533934.006800&cid=C02SA7X0R16) with the following: "components must be present, activated, and added to a recipe to function. There are probably some discrepancies between the sandbox site and this one, with certain db entries out of place."
 

@@ -1,28 +1,29 @@
-# [Supporting OHS Hosting with a Small Team]
+# \[Supporting OHS Hosting with a Small Team\]
+
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: accepted <!-- optional -->
-* Deciders: Sanjay, Eady, Rebecca, Jerel, Alana, Nate <!-- optional -->
-* Date: 2021-09-02 <!-- optional -->
+- Status: accepted <!-- optional -->
+- Deciders: Sanjay, Eady, Rebecca, Jerel, Alana, Nate <!-- optional -->
+- Date: 2021-09-02 <!-- optional -->
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
-* [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers)
-* [Considered Options](#considered-options)
-* [Decision Outcome](#decision-outcome)
-  * [Positive Consequences](#positive-consequences)
-  * [Negative Consequences](#negative-consequences)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-  * [Increase the size of the team](#increase-the-size-of-the-team)
-  * [Change support requirements](#change-support-requirements)
-  * [Status quo](#status-quo)
+- [[Supporting OHS Hosting with a Small Team]](#supporting-ohs-hosting-with-a-small-team)
+  - [Table of Contents](#table-of-contents)
+  - [Context and Problem Statement](#context-and-problem-statement)
+  - [Decision Drivers](#decision-drivers)
+  - [Considered Options](#considered-options)
+  - [Decision Outcome](#decision-outcome)
+    - [Positive Consequences](#positive-consequences)
+    - [Negative Consequences](#negative-consequences)
+  - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
+    - [Increase the size of the team](#increase-the-size-of-the-team)
+    - [Change support requirements](#change-support-requirements)
+    - [Status quo](#status-quo)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
-
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 
@@ -30,8 +31,8 @@ The Truss hosting team has only three technical members. However, as part of the
 
 ## Decision Drivers
 
-* Outages caused during penetration testing took a while to respond to and resolve
-* On call every three weeks is not great
+- Outages caused during penetration testing took a while to respond to and resolve
+- On call every three weeks is not great
 
 ## Considered Options
 
@@ -53,30 +54,29 @@ Once Sam is provided these capabilities, those same capabilities will be extende
 
 ### Positive Consequences
 
-* System has required support during the most active hours
-* Team is able to focus more on implementing the new system vs. supporting the old
+- System has required support during the most active hours
+- Team is able to focus more on implementing the new system vs. supporting the old
 
 ### Negative Consequences
 
-* Still a need for existing team to support old system leading to less time for new
+- Still a need for existing team to support old system leading to less time for new
 
 ## Pros and Cons of the Options
 
 ### Increase the size of the team
 
-* Good, because it provides the capacity for team to work on new system
-* Good, because it offers a more sustainable rotation schedule
-* Bad, because it costs more to someone, either Truss or OHS
+- Good, because it provides the capacity for team to work on new system
+- Good, because it offers a more sustainable rotation schedule
+- Bad, because it costs more to someone, either Truss or OHS
 
 ### Change support requirements
 
-* Good, because it makes supporting the system more sustainable for the team
-* Good, because it clarifies expectations for everyone
-* Bad, because it reduces support posture generally
+- Good, because it makes supporting the system more sustainable for the team
+- Good, because it clarifies expectations for everyone
+- Bad, because it reduces support posture generally
 
 ### Status quo
 
-* Good, because no change
-* Bad, because not sustainable
-* Bad, because no time to work on new system
-
+- Good, because no change
+- Bad, because not sustainable
+- Bad, because no time to work on new system

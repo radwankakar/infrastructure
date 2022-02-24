@@ -1,4 +1,4 @@
-# [Task title](<URL>)
+# [Task title](URL)
 
 <!--
 Please add context for changes.
