@@ -35,24 +35,26 @@ I cloned the [HSICC repo](https://github.com/HSICC/drupal-composer-project). At 
 
 After that failed, I began following the [instructions in the DDEV guide](https://github.com/HSICC/drupal-composer-project/blob/develop/README.ddevVM.md). After running into some blockers trying to get started, I paired with Sam from the HSICC team, who said that in fact they do not use that tool and that the Readme is out of date. They do not use Docker. Instead, Sam runs a local instance of the app on a server. We were able to make some progress: we hit a disk quota issue, which we addressed by increasing the disk quota in the `manifest.yml` file to 600MB, although Sam was unsure why so much disk space was being used. Sam said if we continued to use this approach, we'd have to do the following:
 
-* Install the patches package on the OS (we had commented it out at this point, but resolved later on)
-* Create a production RDS DB instance and pass the settings in `web/sites/defaults/settings.php`. We could use the following command to create a db with the fields of interest set:
+- Install the patches package on the OS (we had commented it out at this point, but resolved later on)
 
-    ```[bash]
-    CREATE DATABASE db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+- Create a production RDS DB instance and pass the settings in `web/sites/defaults/settings.php`. We could use the following command to create a db with the fields of interest set:
 
-    GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES ON db.* TO 'db'@'%' IDENTIFIED BY 'db';
-    ```
+  ```[bash]
+  CREATE DATABASE db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-* Take the data (`production_full.sql`) from SFTP server that is synced every night.
-* Specify path of static files in the `web/sites/defaults/settings.php` in the public path.
+  GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES ON db.* TO 'db'@'%' IDENTIFIED BY 'db';
+  ```
 
-    ```[bash]
-    $settings['file_private_path'] = '/var/www/web/private';
-    $settings['file_temp_path'] = '/tmp';
-    $settings['file_public_path'] = '../../drupal_files';
-    $settings['config_sync_directory'] = './../config/sync';
-    ```
+- Take the data (`production_full.sql`) from SFTP server that is synced every night.
+
+- Specify path of static files in the `web/sites/defaults/settings.php` in the public path.
+
+  ```[bash]
+  $settings['file_private_path'] = '/var/www/web/private';
+  $settings['file_temp_path'] = '/tmp';
+  $settings['file_public_path'] = '../../drupal_files';
+  $settings['config_sync_directory'] = './../config/sync';
+  ```
 
   **Private path**: Drupal stores non-publicly available info. Permissions layer on top. We don't have many--could run without that.
 
@@ -62,15 +64,17 @@ After that failed, I began following the [instructions in the DDEV guide](https:
 
   **Config sync**--can leave as is.
 
-* Enable one of the host names to connect (avoids XRSF)
-* Generate a salt hash and put it in settings.php
+- Enable one of the host names to connect (avoids XRSF)
 
-    ```[bash]
-    $settings['hash_salt'] = 'WHATEVER';
-    ```
+- Generate a salt hash and put it in settings.php
+
+  ```[bash]
+  $settings['hash_salt'] = 'WHATEVER';
+  ```
 
   Note: If you want to synchronize a local version to the prod version, you have to use the same salt
-* Normally when you deploy and make config changes, you have to run a command to import config into db. Since we're working with most up to date config and db version, we don't have to run that at this time.
+
+- Normally when you deploy and make config changes, you have to run a command to import config into db. Since we're working with most up to date config and db version, we don't have to run that at this time.
 
 I did not end up pursuing these instructions because I decided instead to attempt the second approach of pushing the app code and having cloud.gov build the container. Partially this was due to not being able to easily spin up a container locally and partially this was due to the way that example Drupal repo showed of having cloud.gov deploy an RDS instance and attach it to the instances with secrets injected.
 

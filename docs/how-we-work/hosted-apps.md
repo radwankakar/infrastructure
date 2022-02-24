@@ -6,7 +6,7 @@ This is a list of all the applications we host and their associated team names. 
 All of these instances are running On Demand rather than as Reserved Instances. [You can find an up to date report via the AWS Billing console](https://console.aws.amazon.com/billing/home?#/bills?year=2021&month=6).
 
 | Name                    | Instance ID         | Instance Type | Environment     | Team               | Notes                                                                  |
-|-------------------------|---------------------|---------------|-----------------|--------------------|------------------------------------------------------------------------|
+| ----------------------- | ------------------- | ------------- | --------------- | ------------------ | ---------------------------------------------------------------------- |
 | NAT                     | i-bb37664b          | m3.medium     | Prod            | Hosting            | Network address translation for private subnets                        |
 | Tomcat1                 | i-2129e5f6          | m4.xlarge     | Prod            | HSICC              | Tomcat applications, CAS, and user management                          |
 | Tomcat2                 | i-569c4881          | m4.xlarge     | Prod            | HSICC              | Tomcat applications                                                    |
@@ -22,7 +22,7 @@ All of these instances are running On Demand rather than as Reserved Instances. 
 | CoachingCompanion       | i-0c6c089d0f7800dcf | m4.large      | Prod            | Coaching Companion | Coaching companion production server                                   |
 | CoachingCompanion-Dev   | i-01d2c4a49ffea98a2 | t2.micro      | Staging         | Coaching Companion | Coaching companion staging server                                      |
 | VPN                     | i-0d1afc4a953659c60 | m3.medium     | misc            | Hosting            | OpenVPN                                                                |
-| ECLKCDev                | i-0847e3f510888f9bf | m4.2xlarge    | Dev             | HSICC            | ECLKC Drupal development integration and staging server                |
+| ECLKCDev                | i-0847e3f510888f9bf | m4.2xlarge    | Dev             | HSICC              | ECLKC Drupal development integration and staging server                |
 | DrupalDemo1             | i-01a7d791df7fa5b13 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo2             | i-075faea7f1608b0e6 | t2.micro      | Staging         | HSICC              | Demo server                                                            |
 | DrupalDemo3             | i-03ab1e383dd0d7768 | t2.micro      | Staging         | HSICC              | Demo server                                                            |

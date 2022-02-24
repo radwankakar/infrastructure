@@ -36,12 +36,17 @@
 Following instructions are based on those from this [webpage](https://vitux.com/how-to-generate-a-certificate-signing-request-csr-on-ubuntu/).
 
 1. Check whether OpenSSL is installed already on your machine. If not, install it.
-2. Run the following command replacing 'private key' with a name of your choice
-   - ```sudo openssl genrsa -out <private key>.key 2048```
+
+1. Run the following command replacing 'private key' with a name of your choice
+
+   - `sudo openssl genrsa -out <private key>.key 2048`
    - This will generate a private key
-3. Run the following command
-   - ```sudo openssl req -new -key <private key>.key -out <username>_eclkc.csr```
-4. In the prompts that appear, enter "." for everything except Common Name. For Common Name, enter `<username>.vpn.eclkc.info` replacing username with your username
+
+1. Run the following command
+
+   - `sudo openssl req -new -key <private key>.key -out <username>_eclkc.csr`
+
+1. In the prompts that appear, enter "." for everything except Common Name. For Common Name, enter `<username>.vpn.eclkc.info` replacing username with your username
 
    Once completed, you will have a CSR file to send to the hosting team.
 
@@ -89,12 +94,12 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 #### Set up VPN
 
 1. You should receive several files from the Hosting team:
-    - `ca.crt`
-    - `<<username>>.crt`
-    - `east.ovpn`
+   - `ca.crt`
+   - `<<username>>.crt`
+   - `east.ovpn`
 1. If you haven't received `east.ovpn`, you can create the file: `east.ovpn`.
-    - Copy in the text for the files found in the [Hosting team](#hosting-team) instructions
-    - Change `<<USERNAME>>` to match the `.crt` files you were sent
+   - Copy in the text for the files found in the [Hosting team](#hosting-team) instructions
+   - Change `<<USERNAME>>` to match the `.crt` files you were sent
 
 #### Log into VPN
 
@@ -111,21 +116,21 @@ openssl pkcs12 -in <<FILE_NAME>>.p12 -nodes -out <<USER_NAME>>.key -nocerts
 1. In the "Certificates & Tokens" menu select the "PKCS #12" tab.
 1. Click "Add Certificate" and select the `.pfx` file you created earlier. Type in the password you chose.
 1. For each `.ovpn` file:
-    - Remove the lines referencing `<<username>>.crt` and `<<username>>.key` then save.
-    - In the OpenVPN connect app, "Import profile" from file and drag the `.ovpn` file.
-    - In the configuration menu that pops up, update the profile name if necessary and click "Certificate and Key" then "Assign". Select the certificate profile you just created earlier. Click "Confirm".
-    - Click "Connect" to try the connection.
+   - Remove the lines referencing `<<username>>.crt` and `<<username>>.key` then save.
+   - In the OpenVPN connect app, "Import profile" from file and drag the `.ovpn` file.
+   - In the configuration menu that pops up, update the profile name if necessary and click "Certificate and Key" then "Assign". Select the certificate profile you just created earlier. Click "Confirm".
+   - Click "Connect" to try the connection.
 
 #### Ubuntu Instructions
 
 1. OpenVPN should be included with your Ubuntu server. If not, install it.
-2. Open the file with VPN extension that you received from the hosting team in a text editor and remove the lines referencing `<<username>>.crt` and `<<username>>.key` then save.
-3. In Settings, go to Network.
-4. In VPN section, click the +
-5. Select Import from file and select the VPN file you just saved
-6. Provide a meaningful name for the connection, i.e. ECLKC VPN
-7. In the dialog that then appears, select the `<<username>>.crt` file for the User Certificate and `<<private key>>.key` for the User private key and click Add
-8. You can then enable the VPN
+1. Open the file with VPN extension that you received from the hosting team in a text editor and remove the lines referencing `<<username>>.crt` and `<<username>>.key` then save.
+1. In Settings, go to Network.
+1. In VPN section, click the +
+1. Select Import from file and select the VPN file you just saved
+1. Provide a meaningful name for the connection, i.e. ECLKC VPN
+1. In the dialog that then appears, select the `<<username>>.crt` file for the User Certificate and `<<private key>>.key` for the User private key and click Add
+1. You can then enable the VPN
 
 #### SSH
 

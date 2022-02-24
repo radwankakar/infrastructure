@@ -12,17 +12,15 @@ repos:
           - --autofix
       - id: trailing-whitespace
 
-  - repo: git://github.com/igorshubovych/markdownlint-cli
-    rev: v0.27.1
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.11
     hooks:
-      - id: markdownlint
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-toc
 
   - repo: git://github.com/detailyang/pre-commit-shell
     rev: 1.0.5
     hooks:
       - id: shell-lint
-
-  - repo: git://github.com/trussworks/pre-commit-hooks
-    rev: v1.1.0
-    hooks:
-      - id: markdown-toc

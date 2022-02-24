@@ -4,8 +4,8 @@
 
 1. Please describe your architecture.
 1. Please describe the authentication flow of your users.
-    * Follow up: Are there different types of users in your system?
-    * Is their auth flow different?
+   - Follow up: Are there different types of users in your system?
+   - Is their auth flow different?
 1. Are there repeating jobs your system relies on (e.g. cron data sync)?
 1. Are there any APIs or export processes for sharing data with other systems or people?
 

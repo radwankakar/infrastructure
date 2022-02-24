@@ -8,12 +8,15 @@ If an issue was reported as a ticket, please use ticket to acknowledge receipt u
 If an issue was reported as an email, send an email response and ask for a ticket.
 
 ## When to Use
-If an issue is P1 or P2 according to <span class="x x-first x-last">[our support process doc definition](../</span>support-process.md<span class="x x-first x-last">)</span>
+
+If an issue is P1 or P2 according to <span class="x x-first x-last">\[our support process doc definition\](../</span>support-process.md<span class="x x-first x-last">)</span>
 
 ## Recipients
+
 Reporter of issue, headstart-hosting@truss.works
 
 ## Subject
+
 `Report Acknowledged: <Headline of ask>`
 
 ## Body
@@ -22,6 +25,7 @@ If there was a ticket:
 `We have received your report and will prioritize within our backlog as needed.`
 
 If there was no ticket:
+
 ```
 We have received your report. Please [create a ticket](https://github.com/OHS-Hosting-Infrastructure/infrastructure/issues/new/choose) and we will prioritize within our backlog as needed.
 

@@ -1,14 +1,12 @@
-# Headstart Hosting: [Name/role/title]
+# Headstart Hosting: \[Name/role/title\]
 
 __When:__ Date, time
-
 
 __Attendeess:__
 attendee (name/role/title)
 
 __Truss:__
 Truss attendee (name/title)
-
 
 ## Background
 
@@ -20,8 +18,8 @@ List of goals or research questions you hope to answer within this interview. Th
 
 Examples are:
 
-* How do recent college graduates decide what and when to eat?
-* What are the greatest barriers to saving money for Americans in their 30s?
+- How do recent college graduates decide what and when to eat?
+- What are the greatest barriers to saving money for Americans in their 30s?
 
 ## Methodology
 
@@ -29,18 +27,18 @@ This is the interview/research method you are using during this session.
 
 Examples are:
 
-* 2 hour video interview
-* In-person contextual inquiry
-* 1 hour usability test
+- 2 hour video interview
+- In-person contextual inquiry
+- 1 hour usability test
 
 ## Introductions
 
 Use this section for:
 
-* Introducing yourself and the team that is participating in the research session/interview.
-* Give a brief overview of the projects goals/objectives.
-* Confirm the length of the interview and the approximate shape of it. (Work out any screen sharing or other requirements here.)
-* Ask permission to record the session.
+- Introducing yourself and the team that is participating in the research session/interview.
+- Give a brief overview of the projects goals/objectives.
+- Confirm the length of the interview and the approximate shape of it. (Work out any screen sharing or other requirements here.)
+- Ask permission to record the session.
 
 Example of how to ask recording permission:
 
@@ -70,6 +68,6 @@ Closing questions help your conversation naturally progress to an end, while als
 
 Some sample questions:
 
-* Is there anything else you think we’ve missed?
-* Who do you recommend we speak to next?
-* Do you have any questions for us?
+- Is there anything else you think we’ve missed?
+- Who do you recommend we speak to next?
+- Do you have any questions for us?

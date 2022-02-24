@@ -2,55 +2,55 @@
 
 ## Truss
 
-* eeady
-* eadywindows
-* rkilberg
-* jerel
-* ssatagopanECLKCvpn
+- eeady
+- eadywindows
+- rkilberg
+- jerel
+- ssatagopanECLKCvpn
 
 ## 18f
 
-* jdussault
-* rahearn
-* NathanielPrice
+- jdussault
+- rahearn
+- NathanielPrice
 
 ## HSICC
 
-* sam
-* bhuvan
-* ty.collington
-* rrodriguez
-* mhandelsman
+- sam
+- bhuvan
+- ty.collington
+- rrodriguez
+- mhandelsman
 
 ## iPD
 
-* paradiso1
-* paradiso2
+- paradiso1
+- paradiso2
 
 ## Early Educator Central
 
-* eec
+- eec
 
 ## NCHBHS
 
-* injury1
-* injury2
+- injury1
+- injury2
 
 ## Coaching Companion
 
-* dayton
+- dayton
 
 ## Mobisoft
 
-* mobisoft1
+- mobisoft1
 
 ## Uncategorized
 
-* ca
-* server
-* curtisc
-* john
-* radwanullah
-* aleksey
-* ohseast
-* banana
+- ca
+- server
+- curtisc
+- john
+- radwanullah
+- aleksey
+- ohseast
+- banana
