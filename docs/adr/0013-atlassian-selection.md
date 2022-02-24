@@ -82,7 +82,7 @@ Chosen option: "Option 1", because it offers an integrated solution out of the b
 Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 
 * Good, because several teams already use Atlassian products so there should be less of a learning curve
-* Good, because it can in theory address all the identified needs
+* Good, because it can in theory address all the identified problems
 * Bad, because it makes us act as IT administrators
 * Bad, because it makes some teams use new systems
 
@@ -91,7 +91,7 @@ Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 Integrate existing systems and develop a way to present consolidated view to OHS
 
 * Good, because it doesn't require teams to use new systems
-* Good, because it could still address the needs
+* Good, because it could still address the identified problems
 * Bad, because it requires engineering effort to provide the consolidated view
 * Bad, because it is harder to establish baseline standards for processes
 
@@ -101,7 +101,7 @@ The different teams still use whatever systems they use now, but we work with th
 
 * Good, because it doesn't require teams to use new systems
 * Bad, because it is harder to establish baseline standards for processes
-* Bad, because it doesn't address all the needs: specifically, a consolidated view of teams for OHS
+* Bad, because it doesn't address all the identified problems: specifically, a consolidated view of teams for OHS
 
 ## Links <!-- optional -->
 
