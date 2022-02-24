@@ -1,5 +1,7 @@
 # infrastructure
 
+![Build](https://github.com/OHS-Hosting-Infrastructure/infrastructure/actions/workflows/pre_commit.yaml/badge.svg)
+
 A place to begin.
 
 **Looking for an on-call engineer? [CLICK HERE](docs/how-we-work/pagerduty-email.md)**
