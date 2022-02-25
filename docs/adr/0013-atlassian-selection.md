@@ -9,7 +9,7 @@ Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers)
@@ -23,9 +23,8 @@ Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
   * [Process](#process)
 * [Links](#links-)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 
