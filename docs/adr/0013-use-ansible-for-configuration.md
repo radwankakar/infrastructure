@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
 - [Use Ansible For Host Configuration](#use-ansible-for-host-configuration)
   - [Table of Contents](#table-of-contents)
@@ -19,9 +19,7 @@
     - [Building pre-packed AMIs to manage system deployments](#building-pre-packed-amis-to-manage-system-deployments)
     - [Continue manually managing systems](#continue-manually-managing-systems)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
-
-<!-- tocstop -->
+<!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 
