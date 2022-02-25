@@ -1,28 +1,32 @@
 # Provide Atlassian suite for OHS IT teams
+
 <!-- Source: https://raw.githubusercontent.com/adr/madr/master/template/template.md -->
 
-* Status: proposed
-* Deciders: Hosting team, client system owner, OHS app team reps
-* Date: 2022-02-22
+- Status: proposed
+- Deciders: Hosting team, client system owner, OHS app team reps
+- Date: 2022-02-22
 
 Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
 
 ## Table of Contents
 
-<!-- mdformat-toc start --slug=github --no-anchors -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
-* [Context and Problem Statement](#context-and-problem-statement)
-* [Decision Drivers](#decision-drivers)
-* [Considered Options](#considered-options)
-* [Decision Outcome](#decision-outcome)
-  * [Positive Consequences](#positive-consequences-)
-  * [Negative Consequences](#negative-consequences-)
-* [Pros and Cons of the Options](#pros-and-cons-of-the-options-)
-  * [Atlassian](#atlassian)
-  * [Integrations](#integrations)
-  * [Process](#process)
-* [Links](#links-)
-
+- [Provide Atlassian suite for OHS IT teams](#provide-atlassian-suite-for-ohs-it-teams)
+  - [Table of Contents](#table-of-contents)
+  - [Context and Problem Statement](#context-and-problem-statement)
+    - [Background](#background)
+    - [Problems](#problems)
+  - [Decision Drivers](#decision-drivers)
+  - [Considered Options](#considered-options)
+  - [Decision Outcome](#decision-outcome)
+    - [Positive Consequences](#positive-consequences)
+    - [Negative Consequences](#negative-consequences)
+  - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
+    - [Atlassian](#atlassian)
+    - [Integrations](#integrations)
+    - [Process](#process)
+  - [Links](#links)
 
 <!-- mdformat-toc end -->
 
@@ -30,7 +34,7 @@ Technical Story: [OHSH-469](https://ocio-jira.acf.hhs.gov/browse/OHSH-469)
 
 ### Background
 
-The Office of Head Start (OHS) currently has several systems and applications being maintained and developed by different teams, both OHS and vendor teams. These include Early Childhood Learning & Knowledge Center (ECLKC), Head Start Coaching Companion (HS CC), Individualized Professional Development (iPD) Portfolio, Early Educator Central (EEC), TTA Hub, and several mobile apps. 
+The Office of Head Start (OHS) currently has several systems and applications being maintained and developed by different teams, both OHS and vendor teams. These include Early Childhood Learning & Knowledge Center (ECLKC), Head Start Coaching Companion (HS CC), Individualized Professional Development (iPD) Portfolio, Early Educator Central (EEC), TTA Hub, and several mobile apps.
 
 All these teams use different tools for their development processes, including task management, development, automated test, build and deploy, documentation, and support notifications. For example, the hosting team uses ACF Jira for task management, GitHub for code and documentation, and PagerDuty for support notifications, the HSICC team uses their own Jira for task management, GitHub for code, Jenkins for build and deploy, the Paradiso team uses Service Desk for task management, GitHub for code, etc.
 
@@ -40,6 +44,7 @@ OHS has oversight responsibilities over all the systems that these teams build a
 As part of our project scope, we are tasked with helping facilitate collaboration and communication across OHS IT teams and moving OHS IT teams to more DevSecOps practices. We have made a start with providing a Slack workspace and introducing a cross-team sprint review. However, teams still use separate tools and processes for development and deployment. And there is still not a coordinated planning activity across OHS so teams are still identifying dependencies too late.
 
 ### Problems
+
 1. OHS is not able to view program status across OHS IT so that they can monitor for issues and take action if needed.
 1. OHS cannot view and/or manage the software code of all the OHS IT systems in production so that they can own the systems in truth.
 1. OHS IT teams cannot collaboratively plan their work so that the teams can ensure success of their different work items while aligning with OHS program priorities.
@@ -66,13 +71,13 @@ Chosen option: "Option 1", because it offers an integrated solution out of the b
 
 ### Positive Consequences <!-- optional -->
 
-* Flexible enough to support baseline standards while providing teams autonomy
-* As a SaaS app, it doesn't require engineering effort to deploy or manage
-* Within project budget
+- Flexible enough to support baseline standards while providing teams autonomy
+- As a SaaS app, it doesn't require engineering effort to deploy or manage
+- Within project budget
 
 ### Negative Consequences <!-- optional -->
 
-* Hosting team may become tools administrators (IT Dept)
+- Hosting team may become tools administrators (IT Dept)
 
 ## Pros and Cons of the Options <!-- optional -->
 
@@ -80,28 +85,28 @@ Chosen option: "Option 1", because it offers an integrated solution out of the b
 
 Bitbucket, Jira, Confluence, and Opsgenie from Atlassian
 
-* Good, because several teams already use Atlassian products so there should be less of a learning curve
-* Good, because it can in theory address all the identified problems
-* Bad, because it makes us act as IT administrators
-* Bad, because it makes some teams use new systems
+- Good, because several teams already use Atlassian products so there should be less of a learning curve
+- Good, because it can in theory address all the identified problems
+- Bad, because it makes us act as IT administrators
+- Bad, because it makes some teams use new systems
 
 ### Integrations
 
 Integrate existing systems and develop a way to present consolidated view to OHS
 
-* Good, because it doesn't require teams to use new systems
-* Good, because it could still address the identified problems
-* Bad, because it requires engineering effort to provide the consolidated view
-* Bad, because it is harder to establish baseline standards for processes
+- Good, because it doesn't require teams to use new systems
+- Good, because it could still address the identified problems
+- Bad, because it requires engineering effort to provide the consolidated view
+- Bad, because it is harder to establish baseline standards for processes
 
 ### Process
 
 The different teams still use whatever systems they use now, but we work with them to establish communication processes between the teams and also OHS as well so that coordination and oversight can happen, and also work with them to establish a CI pipeline with their existing systems.
 
-* Good, because it doesn't require teams to use new systems
-* Bad, because it is harder to establish baseline standards for processes
-* Bad, because it doesn't address all the identified problems: specifically, a consolidated view of teams for OHS
+- Good, because it doesn't require teams to use new systems
+- Bad, because it is harder to establish baseline standards for processes
+- Bad, because it doesn't address all the identified problems: specifically, a consolidated view of teams for OHS
 
 ## Links <!-- optional -->
 
-* [Atlassian OpenDevOps](https://www.atlassian.com/solutions/devops/features)
+- [Atlassian OpenDevOps](https://www.atlassian.com/solutions/devops/features)

@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-<!-- mdformat-toc start --slug=github --no-anchors -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
 - [Use Ansible For Host Configuration](#use-ansible-for-host-configuration)
   - [Table of Contents](#table-of-contents)
@@ -18,7 +18,6 @@
     - [Use Ansible to manage machine configuration](#use-ansible-to-manage-machine-configuration)
     - [Building pre-packed AMIs to manage system deployments](#building-pre-packed-amis-to-manage-system-deployments)
     - [Continue manually managing systems](#continue-manually-managing-systems)
-
 
 <!-- mdformat-toc end -->
 
