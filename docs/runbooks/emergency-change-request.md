@@ -30,8 +30,8 @@ __Please notify Hosting team as soon as possible this will give us time to write
 __Note:__ The Development team should have access to make changes in staging but may require the assistance of the Headstart Hosting team.
 
 1. Make required changes in staging.
-    * If the Dev team requires assistance from the Hosting team, please let us know and we will schedule a video chat/screenshare within 2 hours.
-    * Please try to use documented operations defined in Step 1 as it will be more repeatable in Step 5.
+   - If the Dev team requires assistance from the Hosting team, please let us know and we will schedule a video chat/screenshare within 2 hours.
+   - Please try to use documented operations defined in Step 1 as it will be more repeatable in Step 5.
 1. Have QA/Testers/Dev/Product validate changes in staging environment.
 1. Adjust step-by-step operation plan.
 
@@ -45,13 +45,13 @@ TODOS: Add links to forms to use and any notes or clarifications.
 
 1. Hosting team evaluates the submitted form for security or performance risks and makes adjustments to operation plan.
 1. Headstart hosting team will submit the emergency change request form to Elizabeth and Alana for approval. CC the dev/affected teams.
-    * If one of the CORs is out of office, approval of just one will suffice.
-    * If the emergency change is related to a security fix/incident, CC our ACF OCIO ISSO.
+   - If one of the CORs is out of office, approval of just one will suffice.
+   - If the emergency change is related to a security fix/incident, CC our ACF OCIO ISSO.
 1. Save a copy of the form to the ECLKC Box folder.
 
 ## Step 5: Apply changes to production
 
 1. Hosting team will apply changes using documented and outlined steps shared with teams involved.
-    * Development team will be on standby to assist in validation of application of changes.
+   - Development team will be on standby to assist in validation of application of changes.
 1. Once operations are complete, Developmeent team validates application of changes to production.
 1. Development team validates application of changes to production, the Hosting team will send notice to stakeholders.

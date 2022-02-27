@@ -8,32 +8,40 @@ Here's what's happening during the Drupal ECLKC deploy.
 ## Development
 
 1. Code that is "In Progress" are not yet checked into the develop branch in GitHub.
-Code that is "In Review" will have been checked into the develop branch.
-The develop branch is the HSICC team equivalent to master or main branch.
+   Code that is "In Review" will have been checked into the develop branch.
+   The develop branch is the HSICC team equivalent to master or main branch.
 1. Once code is merged to the Develop branch, the [Github drupal composer project](https://jenkins.eclkc.info/view/Drupal/job/GitHub-drupal-composer-project/) job is run automatically in Jenkins. Sam says this deploys to the dev env from the Develop branch.
 
 ## Staging
 
 1. Sam syncs the environments and files via Jenkins jobs in order to have the staging env as close to the production env as possible before deploying. First he runs [Drupal Stage File Sync](https://jenkins.eclkc.info/job/Drupal%20Stage%20File%20Sync/), which identifies the files that are different between the nightly SFTP server sync from stage and what is currently in stage. This creates a backup of the production DB and stores it on the SFTP server.
+
 1. Sam then runs [Drupal Production to Stage DB Sync](https://jenkins.eclkc.info/job/Drupal%20Production%20to%20Stage%20DB%20Sync/), which downloads that file from the SFTP server and restores the database from production on staging.
+
 1. Sam then runs `drush cr` on the stage1 machine to clear the Drupal cache.
+
 1. Once that is complete, Sam runs the deployment job ([GitHub Stage Branch Switch](https://jenkins.eclkc.info/job/Github%20Stage%20Branch%20Switch/configure)), which runs on both Stage1 and Stage2. This job:
 
-    * Pulls the code from the repo to both staging servers
-    * Runs composer install (to install any new modules/dependencies)
-    * Refreshes cache
-    * Imports new config from repo to update db
-    * If the modules contain updates or scripts that may affect the db, those scripts are run to update db
-    * Flushes Drupal cache again
-    * Restarts Varnish
+   - Pulls the code from the repo to both staging servers
+   - Runs composer install (to install any new modules/dependencies)
+   - Refreshes cache
+   - Imports new config from repo to update db
+   - If the modules contain updates or scripts that may affect the db, those scripts are run to update db
+   - Flushes Drupal cache again
+   - Restarts Varnish
 
-    Sam specifies which branch it runs on (usually specifies the develop branch). This is a feature they want to keep.
+   Sam specifies which branch it runs on (usually specifies the develop branch). This is a feature they want to keep.
 
 1. Sam takes a look at the Jenkins console for the job to verify that there are no warnings.
+
 1. Everything is now deployed into Stage with a production copy of the database.
+
 1. Sam does a sweep of the staging site [stage.eclkc.info](https://stage.eclkc.info). He makes sure there are no major, obvious issue. When he's done, he alerts Bhuvan and one of them set the status of the issue to "Testing".
+
 1. Bhuvan tests each of the issues in the the Fix Version queue in the "Testing" state. He will also complete regression testing.
+
 1. The team will do User Acceptance Testing for the issues that require it. This is relatively infrequent, and are typically UI-related. Usually this UAT looks like a demo or training rather than formal UAT. If there is a large functional change, they may have stakeholders validate against a list of requirements.
+
 1. If there are additional updates, they can run them at any time in staging.
 
 Depending on whether they want to install or remove a module, they have to complete various certain steps in a certain order. If they are removing, they first disable the module, uninstall and then remove the code. If they are installing, they pull the code and then install the module with its config.

@@ -19,9 +19,9 @@ In general, if us-east is having networking issues, you should be switching over
 1. Click `Build`.
 1. Confirm a successful build.
 1. To check the host that is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
-    * If you’re on Varnish, you’ll have that name
-    * If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
-    * If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
+   - If you’re on Varnish, you’ll have that name
+   - If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
+   - If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
 
 ## How to switch to ECLKC-Prod
 
@@ -30,6 +30,6 @@ In general, if us-east is having networking issues, you should be switching over
 1. From the menu bar, select `Build Now`.
 1. Confirm a successful build.
 1. To check the host that is being routed to, go to eclkc.ohs.acf.hhs.gov/gethostname.php.
-    * If you’re on Varnish, you’ll have that name
-    * If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
-    * If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
+   - If you’re on Varnish, you’ll have that name
+   - If you’re on Lifeboat for maintenance, you’ll have `lifeboat.east.eclkc`
+   - If you’re on Lifeboat for failover, you’ll have `lifeboat.west.eclkc`
