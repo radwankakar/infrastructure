@@ -5,7 +5,7 @@ This allows the OHS hosting team to run high quality security scans against the 
 
 ## Adding a new user to Qualys
 
-1. Login to the [Qualys Web portal](https://qualysguard.qg3.apps.qualys.com/portal-front/).
+1. Login to the [Qualys Web portal][1].
 1. From the "Modules" drop down menu, select "Utilities: Administration".
 1. Click the dropdown button labelled "Create User" and select "Create Manager User".
 1. This opens a popup where you'll enter in their name and email address. The other fields can be changed by the user later. Click "Save". The user should receive an email with a sign up link. Note the url in the email is only good for 24 hours.
@@ -15,11 +15,11 @@ This allows the OHS hosting team to run high quality security scans against the 
 
 There are two types of scans that are typically run from Qualys, an OS scan that checks the actual machines and an application scan that runs against the actual websites.
 
-1. Login to the [Qualys Web portal](https://qualysguard.qg3.apps.qualys.com/portal-front/).
+1. Login to the [Qualys Web portal][1].
 
 ### For OS scans
 
-1. Click on "Vulnerability Management"
+1. Click on "VMDR".
 1. Click on "Scans" from the tabs at the top
 1. If there has already been a scan run that targets the machines you need scanned, select that from the list and choose Relaunch from the Quick Action dropdown next to the scan name
 1. If you would like to configure and launch a new scan:
@@ -49,3 +49,5 @@ There are two types of scans that are typically run from Qualys, an OS scan that
    1. Leave other options unchanged and click Continue
    1. Click Finish in next screen
 1. You should receive an email once the scan is completed
+
+[1]: https://qualysguard.qg3.apps.qualys.com/portal-front/
