@@ -243,7 +243,7 @@ Before replacing the php version, save backups of `/etc/php.ini` and`/etc/php-fp
 
    `sudo tail -f /var/log/nginx/error.log`
 
-1. If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
+1. If you have an issue where you're seeing something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`, it's an issue with the socket. [Debug using our documentation](debugging-outages.md).
 
 1. You may need to also update the memory_limit in the /etc/php.ini file as well to 1024M for deployment jobs to complete successfully.
 
