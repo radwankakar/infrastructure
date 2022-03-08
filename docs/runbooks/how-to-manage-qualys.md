@@ -1,3 +1,13 @@
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
+
+- [How to manage Qualys](#how-to-manage-qualys)
+  - [Adding a new user to Qualys](#adding-a-new-user-to-qualys)
+  - [Running a Qualys scan](#running-a-qualys-scan)
+    - [How to run an OS scan](#how-to-run-an-os-scan)
+    - [How to run an application scan](#how-to-run-an-application-scan)
+
+<!-- mdformat-toc end -->
+
 # How to manage Qualys
 
 Qualys is a 3rd party website scanning tool.
