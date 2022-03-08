@@ -5,6 +5,9 @@
   - [Running a Qualys scan](#running-a-qualys-scan)
     - [How to run an OS scan](#how-to-run-an-os-scan)
     - [How to run an application scan](#how-to-run-an-application-scan)
+  - [Retrieving scan results](#retrieving-scan-results)
+    - [Archive OS scan results](#archive-os-scan-results)
+    - [Archive Web Application scan results](#archive-web-application-scan-results)
 
 <!-- mdformat-toc end -->
 
@@ -68,4 +71,28 @@ If you would like to configure and launch a new scan:
 
 You should receive an email once the scan is completed.
 
+## Retrieving scan results
+
+### Archive OS scan results
+
+1. Login to the [Qualys Web portal][1].
+1. Click on "VMDR".
+1. Click on the "Scans" tab.
+1. Click on "Manage Vulnerability Scans".
+1. Find the scan you want on the list. Hover the cursor over it and press the button to activate the context menu. Click on "Download" and choose PDF format.
+1. Upload the PDF to the [Scan Results folder][2] on Box.
+1. Name the file according to the scheme `Vuln_Scan_Results_YYYYMMDD.pdf`.
+
+### Archive Web Application scan results
+
+1. Login to the [Qualys Web portal][1].
+1. Click on "Web Application Scanning".
+1. Click on the "Scans" tab.
+1. Find the scan you want on the list. Click on the blue "View Report" button.
+1. Click on the "Download" button and choose PDF format. Click "Save".
+1. Go make a cup of coffee. The progress bar is a lie.
+1. Upload the PDF to the [Scan Results folder][2] on Box.
+1. Name the file according to the scheme `ECLKC_Scan_Report_YYYYMMDD.pdf`.
+
 [1]: https://qualysguard.qg3.apps.qualys.com/portal-front/
+[2]: https://app.box.com/folder/143269631989
