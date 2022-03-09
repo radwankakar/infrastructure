@@ -3,13 +3,13 @@
 
 * Status: proposed by Mondo
 * Deciders: ????
-* Date: 2022-23-2022
+* date: 02-22-2022
 
 Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
 
 ## Table of Contents
 
-<!-- toc -->
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
 * [Context and Problem Statement](#context-and-problem-statement)
 * [Decision Drivers](#decision-drivers-)
@@ -24,18 +24,17 @@ Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
 
 <!-- Regenerate with "pre-commit run -a markdown-toc" -->
 
-<!-- tocstop -->
 
 ## Context and Problem Statement
 
 We currently are using OpenVPN for the VPN for OHS. We believe it's the community edition, which is free, but they also offer Access Server which costs money per concurrently connected user. Additionally, AWS offers a VPN we could potentially deploy and use instead as well.
 
-We suspect we want to stick with a flavor of OpenVPN, but it's worth researching and documenting why that and not AWS's VPN option.
+Additionally we are trying to find ways to lessen toil and make it easier for the hosting team to manage users.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
-* implementation  
-* user provisioning
+* Cost
+* user provisioning, Adding and managing users
 
 ## Considered Options
 
@@ -45,27 +44,27 @@ We suspect we want to stick with a flavor of OpenVPN, but it's worth researching
 
 ## Decision Outcome
 
-Chosen option:
+Chosen option: OpenVPN Access Server, Would be our best option going forward. the GUI will allow the hosting team manage users easily. Switching to Access Serve will have the least amount of down time to deploy and depending on what model is chosen changing the instance or image will result in little downtime.
 
 ### Positive Consequences
 
-*
-*
+* Little to no downtime in switching.
+* we can still use the config file from the VPN we currently use
 
 ### Negative Consequences
 
-*
+* depending on the model type redeploying will require contacting OpenVPN to get a new key
 *
 
 ## Pros and Cons of the Options
 
 ### OpenVPN CE
 
-This Is the free and open source version under the OpenVPN Items. All Configuring requires knowledge of Linux and ansible for deployments. Virtually Identical to the paid Access Server version but during a pairing session we discovered that there is no LDAP access. There is a compare sheet provided here (What Are The Main Differences Between OpenVPN Open Source And OpenVPN Access Server? | OpenVPN)
+This is the free and open source version under the OpenVPN Items. All configuring requires knowledge of Linux and Ansible for deployments. Virtually identical to the paid Access Server version but during a pairing session we discovered that there is no LDAP access. There is a compare sheet provided here [What Are The Main Differences Between OpenVPN Open Source And OpenVPN Access Server? | OpenVPN](https://openvpn.net/faq/what-are-the-main-differences-between-openvpn-open-source-and-openvpn-access-server/)
 
 * Good, once configurations are complete deploying can be easy
-* Bad, Having to keep a deploy script up-to-Date
-* Bad, With a lack of documentation confusion can accrue
+* Bad, because we must maintain deploy scripts
+* Bad, there is no Support from OpenVPN directly, there are a few HOWTO guides to starting but most troubleshooting is through Wiki
 
 ### OpenVPN Access Server
 
@@ -80,4 +79,4 @@ Additionally there is a BYOL (bring your own license) model. This will be the ch
 
 ### AWS VPN
 
-there are two version of AWS VP site to site and client VPN. We would be using client VPN to connect. AWS VPN does use an OpenVPN protocol.
+From my initial research This VPN option seems confusing. It would take the hosting team to learn a new VPN system. Additionally all Users will need to be re-added and download a new VPN client software.
