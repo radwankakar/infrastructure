@@ -92,7 +92,7 @@ You should receive an email once the scan is completed.
 1. Click on the "Download" button and choose PDF format. Click "Save".
 1. Go make a cup of coffee. The progress bar is a lie.
 1. Upload the PDF to the [Scan Results folder][2] on Box.
-1. Name the file according to the scheme `ECLKC_Scan_Report_YYYYMMDD.pdf`.
+1. Name the file according to the scheme `ECLKC_Scan_Report_YYYYMMDD.pdf` using the date the scan was run.
 
 [1]: https://qualysguard.qg3.apps.qualys.com/portal-front/
 [2]: https://app.box.com/folder/143269631989
