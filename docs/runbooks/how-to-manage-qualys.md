@@ -81,7 +81,7 @@ You should receive an email once the scan is completed.
 1. Click on "Manage Vulnerability Scans".
 1. Find the scan you want on the list. Hover the cursor over it and press the button to activate the context menu. Click on "Download" and choose PDF format.
 1. Upload the PDF to the [Scan Results folder][2] on Box.
-1. Name the file according to the scheme `Vuln_Scan_Results_YYYYMMDD.pdf`.
+1. Name the file according to the scheme `Vuln_Scan_Results_YYYYMMDD.pdf` using the date the scan was run.
 
 ### Archive Web Application scan results
 
