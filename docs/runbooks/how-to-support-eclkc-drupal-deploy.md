@@ -23,8 +23,6 @@ Lifeboat is now up to date with production.
 
 ### Route traffic to Lifeboat only for Drupal
 
-<!-- markdownlint-disable MD029 -->
-
 1. Update the Varnish configuration on Varnish1 to point Drupal traffic to Lifeboat.
 
    1. On the Varnish1 server open the file `/etc/varnish/default.vcl` for editing with the command: `sudo vim /etc/varnish/default.vcl`.
