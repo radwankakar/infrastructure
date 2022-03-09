@@ -51,10 +51,10 @@ Lifeboat is now up to date with production.
 1. Cycle the Varnish servers in the production loadbalancer target group.
 
    1. Log into the AWS console.
-   1. Deregister Varnish1 from the [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf) to drain the connections.
+   1. Deregister Varnish1 from the [production loadbalancer target group][1] to drain the connections.
    1. SSH to Varnish1 and restart the Varnish service with the following command: `sudo systemctl restart varnish`.
-   1. Register the Varnish1 target back to the [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf). Wait until the status is `Healthy`. If the status doesn't come up as `Healthy`, there may be an issue you can debug using our [maintenance](maintenance.md) or [debugging outages](debugging-outages.md) docs.
-   1. Wait for Varnish1 to be healthy and deregister Varnish2 from the [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf). _Note: We do not change the Varnish2 configuration because HSICC uses it to verify their deployment._
+   1. Register the Varnish1 target back to the [production loadbalancer target group][1]. Wait until the status is `Healthy`. If the status doesn't come up as `Healthy`, there may be an issue you can debug using our [maintenance](maintenance.md) or [debugging outages](debugging-outages.md) docs.
+   1. Wait for Varnish1 to be healthy and deregister Varnish2 from the [production loadbalancer target group][1]. _Note: We do not change the Varnish2 configuration because HSICC uses it to verify their deployment._
 
 1. Verify that users are directed to Lifeboat by checking the active server hostname [here](https://eclkc.ohs.acf.hhs.gov/gethostname.php).
 
@@ -72,9 +72,9 @@ Once the HSICC team confirms their deployment was successful reroute traffic to 
 
 ### Reroute Varnish traffic back to production
 
-1. Register Varnish2 back to [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf). Wait until the status is `Healthy`.
+1. Register Varnish2 back to [production loadbalancer target group][1]. Wait until the status is `Healthy`.
 
-1. Deregister Varnish1 from the [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf) to drain the connections.
+1. Deregister Varnish1 from the [production loadbalancer target group][1] to drain the connections.
 
 1. Revert the Varnish configuration on Varnish1.
 
@@ -103,8 +103,10 @@ Once the HSICC team confirms their deployment was successful reroute traffic to 
 
 1. SSH to Varnish1 and restart the Varnish service with the following command: `sudo systemctl restart varnish`.
 
-1. Reregister Varnish1 back to the [production loadbalancer target group](https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf). Wait until the status is `Healthy`.
+1. Reregister Varnish1 back to the [production loadbalancer target group][1]. Wait until the status is `Healthy`.
 
 1. Notify HSICC that traffic is routed to production.
 
 1. Trigger an update to 404.html pages on Varnish1 and Varnish2 by ssh'ing into each server and running the script in /etc/varnish/update-404.sh on those machines.
+
+[1]: https://console.aws.amazon.com/ec2/home?region=us-east-1#TargetGroup:targetGroupArn=arn:aws:elasticloadbalancing:us-east-1:802093990117:targetgroup/ECLKC-Reader-HTTPS/203a044ad376dddf
