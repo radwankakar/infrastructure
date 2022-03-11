@@ -2,7 +2,6 @@
 
 <!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
-
 ## Table of Contents
 
 <!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
