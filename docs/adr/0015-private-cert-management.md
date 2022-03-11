@@ -12,12 +12,10 @@
   - [Decision Drivers](#decision-drivers)
   - [Considered Options](#considered-options)
   - [Decision Outcome](#decision-outcome)
-    - [Positive Consequences](#positive-consequences)
-    - [Negative Consequences](#negative-consequences)
   - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
     - [Continue manually managing private certs](#continue-manually-managing-private-certs)
-    - [Use SSLMate for generating and managing private certs](#use-SSLMate-for-generating-and-managing-private-certs)
-    - [Use private cert management through AWS](#use-private-cert-management-through-AWS)
+    - [Use SSLMate for generating and managing private certs](#use-sslmate-for-generating-and-managing-private-certs)
+    - [Use private cert management through AWS](#use-private-cert-management-through-aws)
   - [Links](#links)
 
 <!-- mdformat-toc end -->
