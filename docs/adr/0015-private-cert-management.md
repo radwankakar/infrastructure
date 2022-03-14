@@ -43,7 +43,7 @@ Use SSLMate for generating and managing private certificates. It provides automa
 
 ### Continue manually managing private certs
 
-- Good, because it seems to be the current way of operating. Which provides a certain kind of ease/consistency.
+- Good, because it is the current way of operating. Which provides a certain kind of ease/consistency.
 - Bad, because it quickly becomes difficult to track when certs are set to expire.
 - Bad, because it's difficult to track which certs each app is using and for what at any given time.
 - Bad, because maintaining our own CA, or even multiple CAs, isn't advisable.
