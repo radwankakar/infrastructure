@@ -15,5 +15,5 @@ You are here because the EC2 instance in question is being retired. That might b
 - Check to see if there are any snapshots being taken of the attached volume. If so be sure to archive the most recent snapshot. You'll cherish those memories later.
 - Find and take note of any relevant bits of terraform. If any exist.
 - At this point run your findings by someone else with knowledge of the system.
-- Once you have the go ahead, go about retiring the EC2 instance and the previously gathered associated resources and terraform.
+- Once you have the go ahead, go about retiring the EC2 instance and the previously gathered associated resources either by running the terraform with the resources in question deleted or by manually removing them. You may have to delete things in a certain order due to dependencies.
 - Breathe. You got through it, and we're proud of you.
