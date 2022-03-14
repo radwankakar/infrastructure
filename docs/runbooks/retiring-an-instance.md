@@ -10,7 +10,7 @@ You are here because the EC2 instance in question is being retired. That might b
 
 1. Breathe, you'll get through this.
 1. Check the metrics of the instance on AWS console for any indications of life. It's best to compare to an instance that you're sure is still in use.
-1. Use the IP address of the retiring instance to search the logs of any other instances that may interact with this one to ensure it's not in active use.
+1. Use the IP address of the retiring instance to search the logs of any other instances, that may interact with this one to ensure it's not in active use. i.e. grep-ing through logs on the associated server itself, looking through Cloudfront logs, etc.
 1. Make a note of any resources that may be associated with and are **not used** by the retiring instance. i.e. security groups, volumes, subnets, AMIs, snapshots, etc.
 1. If there are associated resources that are not specific to the retiring instance but have components that are, make note of those components (i.e. a security group used for a bunch of instances that has a rule specific to your retiring instance).
 1. Check that the instance is not a part of an autoscaling group. If it is and you delete it, it will just pop back up.
