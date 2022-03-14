@@ -29,6 +29,8 @@ While working to renew an expired certificate on the iRedMail server, it was hig
 - We need a standardized way to be alerted when new private certs need to be generated.
 - We need a standardized way for generating new certs when needed.
 - Being our own CA, as is the current set up on at least one server, isn't advisable from a availability/security perspective. Such a practice could leave our apps/services open to man in the middle attacks and users could receive warnings when trying to access one of the apps/services all due to us not being considered an trusted CA.
+- The solution has to be affordable and provide a reliable way to track/manage our private certificates.
+- Preferably the solution will have a low learning curve.
 
 ## Considered Options
 
