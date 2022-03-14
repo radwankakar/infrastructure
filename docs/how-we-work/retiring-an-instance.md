@@ -15,7 +15,7 @@ You are here because the EC2 instance in question is being retired. That might b
 - If there are associated resources that are not specific to the retiring instance but have components that are, make note of those components (i.e. a security group used for a bunch of instances that has a rule specific to your retiring instance).
 - Check that the instance is not a part of an autoscaling group. If it is and you delete it, it will just pop back up.
 - Check to see if there are any snapshots being taken of the attached volume. If so be sure to archive the most recent snapshot. You'll cherish those memories later.
-- Find and take note of any relevant bits of terraform. If any exist.
+- Find and take note of any relevant bits of terraform if any exist.
 - At this point run your findings by someone else with knowledge of the system.
 - Once you have the go ahead, go about retiring the EC2 instance and the previously gathered associated resources either by running the terraform with the resources in question deleted or by manually removing them. You may have to delete things in a certain order due to dependencies.
 - Breathe. You got through it, and we're proud of you.
