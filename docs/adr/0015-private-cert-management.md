@@ -37,7 +37,7 @@ While working to renew an expired certificate on the iRedMail server, it was hig
 
 ## Decision Outcome
 
-Using SSLMate for generating and managing private certificates seems to be the best option. It provides automation, alerts, and a web interface. SSLMate has also been previously vetted for use on the MilMove project.
+Use SSLMate for generating and managing private certificates. It provides automation, alerts, and a web interface. SSLMate has also been previously vetted for use on the MilMove project.
 
 ## Pros and Cons of the Options
 
