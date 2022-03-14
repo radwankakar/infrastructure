@@ -55,7 +55,7 @@ Use SSLMate for generating and managing private certificates. It provides automa
 - Good, because it can automatically renew and install new certificates on to servers.
 - Good, because it can automate the entire process of private cert generation.
 - Good, because it provides a central location for tracking and managing every private cert we would need.
-- Good, because the cost scales by year. Rather by month.
+- Good, because the cost scales by year, rather by month.
 - Bad, because it's another tool to add to learn and implement into our process.
 
 ### Use private cert management through AWS
