@@ -10,7 +10,7 @@ You are here because the EC2 instance in question is being retired. That might b
 
 - Breathe, you'll get through this.
 - Check the metrics of the instance on AWS console for any indications of life. It's best to compare to an instance that you're sure is still in use.
-- Use the IP address of the retiring instance to search the logs of any other instances that may interact with this one. To ensure it's not in active use.
+- Use the IP address of the retiring instance to search the logs of any other instances that may interact with this one to ensure it's not in active use.
 - Track down and make a note of any resources that may be associated with and are **specific** to the retiring instance. i.e. security groups, volumes, etc.
 - Check to see if there are any snapshots being taken of the attached volume. If so be sure to archive the most recent snapshot. You'll cherish those memories later.
 - Find and take note of any relevant bits of terraform. If any exist.
