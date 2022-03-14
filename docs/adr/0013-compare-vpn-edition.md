@@ -2,7 +2,7 @@
 <!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
 * Status: proposed by Mondo
-* Deciders: ????
+* Deciders: Reid, Rebecca, Ryan
 * date: 02-22-2022
 
 Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
@@ -53,7 +53,7 @@ Chosen option: OpenVPN Access Server, Would be our best option going forward. th
 
 ### Negative Consequences
 
-* depending on the model type redeploying will require contacting OpenVPN to get a new key
+* depending on the model type redeploying will require contacting OpenVPN to get a new access key
 *
 
 ## Pros and Cons of the Options
@@ -64,7 +64,7 @@ This is the free and open source version under the OpenVPN Items. All configurin
 
 * Good, once configurations are complete deploying can be easy
 * Bad, because we must maintain deploy scripts
-* Bad, there is no Support from OpenVPN directly, there are a few HOWTO guides to starting but most troubleshooting is through Wiki
+* Bad, there is no Support from OpenVPN directly, there are a few HOWTO guides to get started but most troubleshooting is through Wiki
 
 ### OpenVPN Access Server
 
@@ -79,4 +79,8 @@ Additionally there is a BYOL (bring your own license) model. This will be the ch
 
 ### AWS VPN
 
-From my initial research This VPN option seems confusing. It would take the hosting team to learn a new VPN system. Additionally all Users will need to be re-added and download a new VPN client software.
+From my initial research This VPN option seems confusing. It would take the hosting team some time to learn a new VPN system. All Users will need to be re-added and download a new VPN client software. A factor that I have found is AWS VPN is not FIPS compliant and knowing this is government work that might have an impact on what we can do.
+
+* good, everything stays within AWS
+* Bad, Having to learn a new VPN
+* bad, adding and managing new users
