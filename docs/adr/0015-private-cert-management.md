@@ -55,11 +55,15 @@ Use SSLMate for generating and managing private certificates. It provides automa
 - Good, because it can automatically renew and install new certificates on to servers.
 - Good, because it can automate the entire process of private cert generation.
 - Good, because it provides a central location for tracking and managing every private cert we would need.
-- Good, because the cost scales by year, rather by month.
+- Good, because the cost scales by year, rather by month. Starting at $15.95 a year for a single hostname, and $149.95 a year for a wildcard hostname.
 - Bad, because it's another tool to add to learn and implement into our process.
 
 ### Use private cert management through AWS
 
+- Good, because it provides alerting for certificate expiration.
+- Good, because it provides alerting if something goes wrong during the renewal process
+- Good, because it can automatically renew and install new certificates on to servers.
+- Good, because it can automate the entire process of private cert generation.
 - Good, because we would be remaining in the AWS ecosystem of products.
 - Good, because private cert management would live in the same place we already manage our public certs.
 - Bad, because starting at $400 a month for each private CA required to generate new private certs is fairly prohibitive.
