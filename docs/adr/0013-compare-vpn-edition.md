@@ -22,7 +22,7 @@ Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
   * [OpenVPN Access Server](#OpenVPN-Access-Server)
   * [AWS VPN](#AWS-VPN)
 
-<!-- Regenerate with "pre-commit run -a markdown-toc" -->
+<!-- mdformat-toc end -->
 
 
 ## Context and Problem Statement
