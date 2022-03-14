@@ -4,7 +4,7 @@ One day you will die. Your presence on this plane shall cease. And eventually al
 
 ## **BEFORE MOVING FORWARD**
 
-You are here because the EC2 instance in question is being retired. That might be because you suspect it's no longer in use, or you're spinning up a new one to correct the mistakes of the old one, or the hardware it lives on is being shutdown. **No matter the reason, reach out to any teams that you suspect would possibly be using the instance before doing anything else.** This'll inform how you should, or shouldn't, move forward, as well as give any affected parties the time to grieve.
+You are here because the EC2 instance in question is being retired. That might be because you suspect it's no longer in use, or you're spinning up a new one to correct the mistakes of the old one, or the hardware it lives on is being shutdown. **No matter the reason, reach out to any teams/users that you suspect would possibly be using the instance before doing anything else.** This'll inform how you should, or shouldn't, move forward, as well as give any affected parties the time to grieve.
 
 ## Steps to Retiring
 
