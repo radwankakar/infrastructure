@@ -1,5 +1,25 @@
 # Debugging Outages
 
+## Table of Contents
+
+<!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
+
+- [Debugging Outages](#debugging-outages)
+  - [Table of Contents](#table-of-contents)
+  - [Context](#context)
+  - [Intermittent outages](#intermittent-outages)
+    - [MariaDB is struggling under load](#mariadb-is-struggling-under-load)
+    - [Nginx errors related to PHP-FPM library](#nginx-errors-related-to-php-fpm-library)
+  - [Common Nagios Alerts](#common-nagios-alerts)
+    - [Many alerts from same server](#many-alerts-from-same-server)
+  - [VPN debugging](#vpn-debugging)
+    - [Expired CRL](#expired-crl)
+    - [SSH VPN server](#ssh-vpn-server)
+
+<!-- mdformat-toc end -->
+
+## Context
+
 The following are a few good steps to take when debugging an outage. Be sure to keep notes of the process in a Slack thread as you're walking through it. It's also advisable to pull another engineer into the party, something about hands and work.
 
 - Take a look at the ECLKC-Reader-HTTPS target group to see if the Varnish servers that are under the ECLKC-Reader load balancer are marked as healthy. If a particular Varnish server is marked as unhealthy, the next step would be to ssh into that particular server.
@@ -39,6 +59,14 @@ To fix:
 1. Attempt to restart the MariaDB service with `sudo systemctl restart mariadb`.
 1. Check the status of the service `sudo systemctl status mariadb`.
    - If there's an error, work on it from there. Get help if you need it.
+
+### Nginx errors related to PHP-FPM library
+
+You may encounter issues with the [php-fpm](https://php-fpm.org/) library. Usually you'll discover them when you go to the nginx logs (usually under `/var/log/nginx/error.log`)  and see something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`. This indicates an issue with the socket which can usually be resolved by altering the `www.conf` config.
+
+[This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
+
+Alternatively, you can copy a functional `www.conf` file from another server (such as `Varnish1`) to the server you're having issues with to try to fix the issue.
 
 ## Common Nagios Alerts
 
