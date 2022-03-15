@@ -40,7 +40,7 @@ While working to renew an expired certificate on the iRedMail server, it was hig
 
 ## Decision Outcome
 
-Use AWS to generate and manage a single root CA, from which we can generate the needed private certificates. Seeing as our current setup of using non-qualified hostnames limits our options among third-party options.
+Use AWS to generate and manage a single root CA, from which we can generate the needed private certificates. Our use of non-qualified domain names limits third-party options, as they do not support this.
 
 ## Pros and Cons of the Options
 
