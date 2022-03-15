@@ -62,7 +62,7 @@ To fix:
 
 ### Nginx errors related to PHP-FPM library
 
-You may encounter issues with the php-fpm library. Usually you'll discover them when you go to the nginx logs (usually under `/var/log/nginx/error.log`)  and see something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`. This indicates an issue with the socket which can usually be resolved by altering the `www.conf` config.
+You may encounter issues with the [php-fpm](https://php-fpm.org/) library. Usually you'll discover them when you go to the nginx logs (usually under `/var/log/nginx/error.log`)  and see something like `unix:/run/php-fpm/www.sock failed (2: No such file or directory) while connecting to upstream` or `unix:/run/php-fpm/www.sock failed (13: Permission denied) while connecting to upstream`. This indicates an issue with the socket which can usually be resolved by altering the `www.conf` config.
 
 [This is a helpful debugging thread](https://stackoverflow.com/questions/17570658/how-to-find-my-php-fpm-sock?answertab=votes#tab-top).
 
