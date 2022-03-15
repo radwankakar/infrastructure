@@ -40,7 +40,7 @@ While working to renew an expired certificate on the iRedMail server, it was hig
 
 ## Decision Outcome
 
-Use SSLMate for generating and managing private certificates. It provides automation, alerts, and a web interface. SSLMate has also been previously vetted for use on the MilMove project.
+Use AWS to generate and manage a single root CA, from which we can generate the needed private certificates. Seeing as our current setup of using non-qualified hostnames limits our options among third-party options.
 
 ## Pros and Cons of the Options
 
@@ -60,6 +60,7 @@ Use SSLMate for generating and managing private certificates. It provides automa
 - Good, because it provides a central location for tracking and managing every private cert we would need.
 - Good, because the cost scales by year, rather by month. Starting at $15.95 a year for a single hostname, and $149.95 a year for a wildcard hostname.
 - Bad, because it's another tool to add to learn and implement into our process.
+- Bad, because we can't use non-qualified hostnames to generate certs.
 
 ### Use private cert management through AWS
 
@@ -69,6 +70,7 @@ Use SSLMate for generating and managing private certificates. It provides automa
 - Good, because it can automate the entire process of private cert generation.
 - Good, because we would be remaining in the AWS ecosystem of products.
 - Good, because private cert management would live in the same place we already manage our public certs.
+- Good, because we can continue to use our current set of internal hostnames.
 - Bad, because starting at $400 a month for each private CA required to generate new private certs is fairly prohibitive.
 
 ## Links
