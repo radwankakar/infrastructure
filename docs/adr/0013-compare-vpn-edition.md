@@ -27,14 +27,19 @@ Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
 
 ## Context and Problem Statement
 
-We currently are using OpenVPN for the VPN for OHS. We believe it's the community edition, which is free, but they also offer Access Server which costs money per concurrently connected user. Additionally, AWS offers a VPN we could potentially deploy and use instead as well.
+We don't have a thorough understanding of our current VPN deployment (which we believe is OpenVPN CE), we do not have any of the configuration in code for easy redeployability, and provisioning of users is a very manual task and lacks MFA for additional security. We are planning to improve this, but want to evaluate in this process if OpenVPN CE still makes the most sense for this project before we invest more time. Specifically we want to evaluate OpenVPN CE, OpenVPN AS, and AWS VPN.
 
-Additionally we are trying to find ways to lessen toil and make it easier for the hosting team to manage users.
+Ultimately we are trying to find ways to lessen toil and make it easier for the hosting team to manage the VPN.
 
 ## Decision Drivers
 
 * Cost
-* user provisioning, Adding and managing users
+* User provisioning, adding and managing users
+* Security authorization
+* Official vendor support
+* Maintenance burden
+* Automation ability
+
 
 ## Considered Options
 
@@ -44,17 +49,17 @@ Additionally we are trying to find ways to lessen toil and make it easier for th
 
 ## Decision Outcome
 
-Chosen option: OpenVPN Access Server, Would be our best option going forward. the GUI will allow the hosting team manage users easily. Switching to Access Serve will have the least amount of down time to deploy and depending on what model is chosen changing the instance or image will result in little downtime.
+Chosen option: OpenVPN Access Server, Would be our best option going forward. the GUI will allow the hosting team manage users easily. Switching to Access Server will have the least amount of down time to deploy and depending on what model is chosen changing the instance or image will result in little downtime.
 
 ### Positive Consequences
 
 * Little to no downtime in switching.
-* we can still use the config file from the VPN we currently use
+* We can still use the config file from the VPN we currently use
 
 ### Negative Consequences
 
-* depending on the model type redeploying will require contacting OpenVPN to get a new access key
-*
+* Depending on the model type redeploying will require contacting OpenVPN to get a new access key
+
 
 ## Pros and Cons of the Options
 
@@ -64,23 +69,34 @@ This is the free and open source version under the OpenVPN Items. All configurin
 
 * Good, once configurations are complete deploying can be easy
 * Bad, because we must maintain deploy scripts
-* Bad, there is no Support from OpenVPN directly, there are a few HOWTO guides to get started but most troubleshooting is through Wiki
+* Bad, because there is no support from OpenVPN directly. There are a few HOWTO guides to get started, but most troubleshooting is through a wiki
 
 ### OpenVPN Access Server
 
 This is the paid version of OpenVPN. The biggest difference between this versus the free version is the use of a GUI. Using Ansible to make the configurations can still be used but creating users, Turning on MFA is easier. Through AWSMarketplace all billing will be done through AWS. With 10 Connected devices at a time it is estimated to cost roughly $700 per year.
 
-Additionally there is a BYOL (bring your own license) model. This will be the cheaper option of the two but making changes to the instance like imaging and relaunching it, or changing the instance type, or enabling auto-scaling, will result in the license key becoming invalid, requiring you to contact us for support on this. The price for this will be $720 per year for the licenses and the cost of the EC2 instance
+Additionally there is a BYOL (bring your own license) model. This will be the cheaper option of the two but making changes to the instance like imaging and relaunching it, or changing the instance type, or enabling auto-scaling, will result in the license key becoming invalid, requiring us to contact support on this. The price for this will be $720 per year for the licenses and the cost of the EC2 instance
 
-* Good, because GUI will allow adding users easily
-* Good, Configurations can be down Via CLI or GUI interface
+* Good, because user management is simplified with additional security authorization
+* Good, because billing stays within AWS
+  * This is dependent on model type
+* Good, Backups can be created allowing for minimal downtime 
+* Good, Configurations can be done Via CLI or GUI interface
 * Bad, because depending on the model we choose can limit how much we can automate without interruptions.
 
 
 ### AWS VPN
 
-From my initial research This VPN option seems confusing. It would take the hosting team some time to learn a new VPN system. All Users will need to be re-added and download a new VPN client software. A factor that I have found is AWS VPN is not FIPS compliant and knowing this is government work that might have an impact on what we can do.
+From my initial research this VPN option seems confusing. it is unclear on how complex this can be. It would take the hosting team some time to learn a new VPN system. All users will need to be re-added and download a new VPN client software. A factor that I have found is AWS VPN is not FIPS compliant and knowing this is government work that might have an impact on what we can do.
 
-* good, everything stays within AWS
-* Bad, Having to learn a new VPN
-* bad, adding and managing new users
+* Good, because everything stays within AWS
+* Good, because it can integrate with Active Directory or Federated Auth / SAML
+* Good, because it offers MFA option
+* Bad, more complex user management
+  * [note] can we use existing "LDAP" server? Would we need to spin up new Active Directory in AWS?
+  * [note] follow-up with Rebecca / Dodger to try to get more info on existing LDAP server
+  * [note] unclear if we used Active Directory / LDAP if all users would then have to exist in those systems for access (likely yes). does it make sense to require everyone in LDAP to allow access to the VPN? would this then require users to first have LDAP access before VPN access, and is that compatible with the current process (i.e. everyone with VPN access already has LDAP?)
+* Bad, because the hosting team is unfamiliar and would have to learn the new system
+* Bad, because more complex migration for users and different connection model adds user burden
+* Bad, because AWS VPN is not FIPS compliant, which could impact our ATO
+* Bad, because it has a complex pricing model based entirely on per hour usage
