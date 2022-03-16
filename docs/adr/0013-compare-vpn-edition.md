@@ -27,7 +27,7 @@ Technical Story: [OHSH-473](https://ocio-jira.acf.hhs.gov/browse/OHSH-473)
 
 ## Context and Problem Statement
 
-We don't have a thorough understanding of our current VPN deployment (which we believe is OpenVPN CE), we do not have any of the configuration in code for easy redeployability, and provisioning of users is a very manual task and lacks MFA for additional security. We are planning to improve this, but want to evaluate in this process if OpenVPN CE still makes the most sense for this project before we invest more time. Specifically we want to evaluate OpenVPN CE, OpenVPN AS, and AWS VPN.
+We don't have a thorough understanding of our current VPN deployment (which we believe is OpenVPN CE), we do not have any of the configuration in code for easy redeployment, and provisioning of users is a very manual task and lacks MFA for additional security. We are planning to improve this, but want to evaluate in this process if OpenVPN CE still makes the most sense for this project before we invest more time. Specifically we want to evaluate OpenVPN CE, OpenVPN AS, and AWS VPN.
 
 Ultimately we are trying to find ways to lessen toil and make it easier for the hosting team to manage the VPN.
 
@@ -36,8 +36,8 @@ Ultimately we are trying to find ways to lessen toil and make it easier for the 
 * Cost
 * User provisioning, adding and managing users
 * Security authorization
-* Official vendor support
-* Maintenance burden
+* Official vendors support
+* Maintenance burdens
 * Automation ability
 
 
@@ -80,7 +80,7 @@ Additionally there is a BYOL (bring your own license) model. This will be the ch
 * Good, because user management is simplified with additional security authorization
 * Good, because billing stays within AWS
   * This is dependent on model type
-* Good, Backups can be created allowing for minimal downtime 
+* Good, Backups can be created allowing for minimal downtime
 * Good, Configurations can be done Via CLI or GUI interface
 * Bad, because depending on the model we choose can limit how much we can automate without interruptions.
 
