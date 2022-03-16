@@ -71,7 +71,7 @@ Use AWS to generate and manage a single root CA, from which we can generate the 
 - Good, because we would be remaining in the AWS ecosystem of products.
 - Good, because private cert management would live in the same place we already manage our public certs.
 - Good, because we can continue to use our current set of internal hostnames.
-- Bad, because starting at $400 a month for each private CA required to generate new private certs is fairly prohibitive.
+- Bad, because starting at $400 a month for each private CA required could become an issue if we grow our use of private CAs.
 
 ## Links
 
