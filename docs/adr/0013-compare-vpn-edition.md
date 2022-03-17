@@ -50,7 +50,7 @@ Ultimately we are trying to find ways to lessen toil and make it easier for the 
 
 ## Decision Outcome
 
-Chosen option: OpenVPN Access Server through AWSMarketplace, Would be our best option going forward. this will allow us to make changes and redeploy without have to contanct support for new access keys. The GUI will also allow the hosting team manage users easily. Switching to Access Server will have the least amount of down time to deploy and depending on what model is chosen changing the instance or image will result in little downtime.
+Chosen option: OpenVPN Access Server through [AWSMarketplace](https://aws.amazon.com/marketplace/pp/prodview-oci66vvwyhu3i?sr=0-10&ref_=beagle&applicationId=AWSMPContessa), Would be our best option going forward. this will allow us to make changes and redeploy without have to contanct support for new access keys. The GUI will also allow the hosting team manage users easily. Switching to Access Server will have the least amount of down time to deploy and depending on what model is chosen changing the instance or image will result in little downtime.
 
 ### Positive Consequences
 
