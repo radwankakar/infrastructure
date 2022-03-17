@@ -87,15 +87,14 @@ Additionally there is a BYOL (bring your own license) model. This will be the ch
 
 ### AWS VPN
 
-From my initial research this VPN option seems confusing. it is unclear on how complex this can be. It would take the hosting team some time to learn a new VPN system. All users will need to be re-added and download a new VPN client software. A factor that I have found is AWS VPN is not FIPS compliant and knowing this is government work that might have an impact on what we can do.
+From my initial research this VPN option seems confusing. it is unclear on how complex this can be. It would take the hosting team some time to learn a new VPN system. All users will need to migrated to a new Active dfirectory through AWS. This will give the hosting team more systems to create and maintain in addtion to the VPN services. Another factor that I have found is AWS VPN is not FIPS compliant which can have an effect on the ATO in the future. When it comes to pricing it becomes complex that is based on per hour usage. 
+
 
 * Good, because everything stays within AWS
 * Good, because it can integrate with Active Directory or Federated Auth / SAML
 * Good, because it offers MFA option
 * Bad, more complex user management
-  * [note] can we use existing "LDAP" server? Would we need to spin up new Active Directory in AWS?
-  * [note] follow-up with Rebecca / Dodger to try to get more info on existing LDAP server
-  * [note] unclear if we used Active Directory / LDAP if all users would then have to exist in those systems for access (likely yes). does it make sense to require everyone in LDAP to allow access to the VPN? would this then require users to first have LDAP access before VPN access, and is that compatible with the current process (i.e. everyone with VPN access already has LDAP?)
+  * Will need to create and maintain an active directory through AWS
 * Bad, because the hosting team is unfamiliar and would have to learn the new system
 * Bad, because more complex migration for users and different connection model adds user burden
 * Bad, because AWS VPN is not FIPS compliant, which could impact our ATO
