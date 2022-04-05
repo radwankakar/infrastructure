@@ -1,12 +1,46 @@
-# Saying Goodbye To an EC2 Instance
+# How to Manage EC2 Degradation
+
+## Context
+
+From time to time, we've gotten alerts from AWS informing us that a instance is going to be retired due to hardware degradation. The email will look something like this:
+
+```
+    Hello,
+
+    EC2 has detected degradation of the underlying hardware hosting your Amazon EC2 instance (instance-ID: i-XXXXXXXXX) associated with your AWS account (AWS Account ID: 802093990117) in the us-xxxx-1 region. Due to this degradation your instance could already be unreachable. We will stop your instance after YYYY-MM-DD HH:MM:SS UTC. Please take appropriate action before this time.
+
+    The affected instances are listed below:
+
+    i-XXXXXXXXX
+```
+
+You can login to the [AWS Health Dashboard](https://phd.aws.amazon.com/phd/home?region=us-east-1#/dashboard/scheduled-changes?eventID=arn:aws:health:us-west-1::event/EC2/AWS_EC2_PERSISTENT_INSTANCE_RETIREMENT_SCHEDULED/AWS_EC2_PERSISTENT_INSTANCE_RETIREMENT_SCHEDULED_dc5ec221-3dcc-4a15-b3e2-825dd5be6abe&eventTab=details) to examine the events in the Scheduled changes tab.
+
+There are two options:
+
+- [Migrate to Keep the Instance](#migrate-to-keep-the-instance)
+- [Retire the Instance](#retire-the-instance) -- in the case the instance is no longer in use.
+
+## Migrate to Keep the Instance
+
+In the case that you've decided you want to keep the instance, you will have to migrate the instance to a new host.
+
+1. Reach out to all teams that will be affected to schedule downtime for the instance. Make sure that all affected teams have agreed to the downtime window. The whole process should take just a few minutes, but best to schedule some buffer time within the downtime window.
+1. Once you have team confirmation, take a snapshot of the attached EBS volume.
+1. Once you have a new snapshot, [stop and start the instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html). Stopping and starting will automatically migrate your instance to a new, healthy host while retaining the EBS volume attachment, private IPv4 addresses and any IPv6 addresses, associated Elastic IP addresses, and any data stored in the RAM or the instance store volumes of the host computer.
+1. Once you've stopped and started the instance, check you can SSH into the instance as expected.
+1. Confirm services are running by `systemctl list-units --type=service`.
+1. Check with the app teams that were using the server to confirm that they have the same functionality.
+
+## Retire the Instance
 
 One day you will die. Your presence on this plane shall cease. And eventually all memory of you, fond or otherwise, will go with it. But do not despair, the same is true of all things. Including EC2 instances, and here you'll learn how to at least navigate through that inevitable loss.
 
-## **BEFORE MOVING FORWARD**
+### **BEFORE MOVING FORWARD**
 
 You are here because the EC2 instance in question is being retired. That might be because you suspect it's no longer in use, or you're spinning up a new one to correct the mistakes of the old one, or the hardware it lives on is being shutdown. **No matter the reason, reach out to any teams/users that you suspect would possibly be using the instance before doing anything else.** This'll inform how you should, or shouldn't, move forward, as well as give any affected parties the time to grieve.
 
-## Steps to Retiring
+### Steps to Retiring
 
 1. Breathe, you'll get through this.
 1. Once again, get in touch with any teams/users that may be affected by the retirement. And be sure to work in coordination with them.
