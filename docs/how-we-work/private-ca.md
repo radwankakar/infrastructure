@@ -1,10 +1,10 @@
 ## Private Certificate Authority (CA) Background and Creation
 
-Details about the OHS Private CA can be found in the the ACM Portion of the AWS Console. The private CA was created using the [acmpca certificate authority](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acmpca_certificate_authority) terraform module. Note that as stated in the terraform module, a the manual step of installing the root CA certificate from the console is required to change the status of the CA from pending to active.
+The OHS private CA was created using the [acmpca certificate authority](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acmpca_certificate_authority) terraform module. Note that as stated in the terraform module, a the manual step of installing the root CA certificate from the console is required to change the status of the CA from pending to active. This is a one time action that only has to be done when creating a new Private CA.
 
 ## Creating Certificate With Private CA
 
-Certificates can be created manually via the ACM console but the preference is via terraform. An example of a certificate created with our private CA via terraform is below:
+Certificates can be created manually via the ACM console but the preference is to create certificates via terraform when possible. An example of a certificate created with our private CA via terraform is below:
 
 ```
 resource "aws_acm_certificate" "cert_name" {
@@ -38,7 +38,7 @@ certificate_arn   = aws_acm_certificate.cert_name.arn
 
 ## Resolving Cert Errors
 
-Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by our Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine, and "trust" it. The root CA certificate can be found on AWS in the ACM console.
+Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by the OHS Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine, and "trust" it. The root CA certificate can be found on AWS in the ACM console.
 
 For Mac OS run the following:
 
