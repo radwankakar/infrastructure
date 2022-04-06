@@ -1,0 +1,52 @@
+## Private Certificate Authority (CA) Background and Creation
+
+Details about the OHS Private CA can be found in the the ACM Portion of the AWS Console. The private CA was created using the [acmpca certificate authority](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acmpca_certificate_authority) terraform module. Note that as stated in the terraform module, a the manual step of installing the root CA certificate from the console is required to change the status of the CA from pending to active.
+
+## Creating Certificate With Private CA 
+
+Certificates can be created manually via the ACM console but the preference is via terraform. An example of a certificate created with our private CA via terraform is below:
+
+```
+resource "aws_acm_certificate" "cert_name" {
+  domain_name               = "example.domain.com"
+  certificate_authority_arn = aws_acmpca_certificate_authority.private_ca.arn
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+```
+## Importing Private CA For Use in Terraform
+
+Terraform supports importing a aws_acmpca_certificate_authority resource as a datatype by it's arn. An example of this is below:
+
+```
+data "aws_acmpca_certificate_authority" "example" {
+  arn = "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority12345678-012"
+}
+```
+More information about importing a private CA via terraform can be found [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/acmpca_certificate_authority)
+
+## Using a Private CA Cert
+A certificate can be referenced / used with it's arn:
+
+```
+certificate_arn   = aws_acm_certificate.cert_name.arn
+```                                 
+
+## Resolving Cert Errors
+
+Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by our Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine, and "trust" it. The root CA certificate can be found on AWS in the ACM console. 
+
+For Mac OS run the following:
+```
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/new-root-certificate.crt
+```
+
+For Windows:
+```
+certutil -addstore -f "ROOT" new-root-certificate.crt
+```
+
+For more information about resolving cert errors view the following resources and documentation: 
+- [add-trusted-cert man page](https://www.unix.com/man-page/mojave/1/security)
+- [certutil documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil)
