@@ -26,7 +26,7 @@ data "aws_acmpca_certificate_authority" "example" {
 }
 ```
 
-More information about importing a private CA via terraform can be found [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/acmpca_certificate_authority)
+More information about importing a private CA via terraform can be found [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/acmpca_certificate_authority).
 
 ## Using a Private CA Cert
 
