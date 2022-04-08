@@ -18,7 +18,7 @@ resource "aws_acm_certificate" "cert_name" {
 
 ## Importing Private CA For Use in Terraform
 
-Terraform supports importing a aws_acmpca_certificate_authority resource as a datatype by it's arn. An example of this is below:
+Terraform supports importing a aws_acmpca_certificate_authority resource as a datatype by its arn. An example of this is below:
 
 ```
 data "aws_acmpca_certificate_authority" "example" {
