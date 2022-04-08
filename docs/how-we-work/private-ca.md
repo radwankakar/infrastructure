@@ -18,7 +18,7 @@ resource "aws_acm_certificate" "cert_name" {
 
 ## Importing Private CA For Use in Terraform
 
-Terraform supports importing a aws_acmpca_certificate_authority resource as a datatype by its arn. An example of this is below:
+Terraform supports importing a aws_acmpca_certificate_authority resource as a datatype by its arn, if needed to be used in a different terraform stack. An example of this is below:
 
 ```
 data "aws_acmpca_certificate_authority" "example" {
@@ -38,15 +38,15 @@ certificate_arn   = aws_acm_certificate.cert_name.arn
 
 ## Resolving Cert Errors
 
-Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by the OHS Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine, and "trust" it. The root CA certificate can be found on AWS in the ACM console.
+Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by the OHS Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine in your home directory as  `ohs-private-ca-cert.pem`, and "trust" it. The root CA certificate can be found on AWS in the ACM console. 
 
-For Mac OS run the following:
+For Mac OS navigate to your home directory and run the following:
 
 ```
-sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/new-root-certificate.crt
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/ohs-private-ca-cert.pem
 ```
 
-For Windows:
+For Windows navigate to your home directory and run the following:
 
 ```
 certutil -addstore -f "ROOT" new-root-certificate.crt
