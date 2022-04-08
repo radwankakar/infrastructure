@@ -1,6 +1,6 @@
 ## Private Certificate Authority (CA) Background and Creation
 
-The OHS private CA was created using the [ACM Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) Terraform [module](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acmpca_certificate_authority). Note that as stated in the Terraform module, a the manual step of installing the root CA certificate from the console is required to change the status of the CA from pending to active. This is a one time action that only has to be done when creating a new Private CA.
+The OHS private CA was created using the [ACM Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) Terraform [module](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acmpca_certificate_authority). Note that as stated in the Terraform module, the manual step of installing the root CA certificate from the console is required to change the status of the CA from pending to active. This is a one time action that only has to be done when creating a new Private CA.
 
 ## Creating Certificate With Private CA
 
