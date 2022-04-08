@@ -38,7 +38,7 @@ certificate_arn   = aws_acm_certificate.cert_name.arn
 
 ## Resolving Cert Errors
 
-Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by the OHS Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine in your home directory as  `ohs-private-ca-cert.pem`, and "trust" it. The root CA certificate can be found on AWS in the ACM console. 
+Without any modifications to your local machine "trust" settings, navigating to a website that uses a certificate signed by the OHS Private CA will result in certificate errors. To resolve these, you must download and save a copy of the root CA cert on your local machine in your home directory as  `ohs-private-ca-cert.pem`, and "trust" it. The root CA certificate can be found on AWS in the ACM console.
 
 For Mac OS navigate to your home directory and run the following:
 
