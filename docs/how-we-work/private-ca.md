@@ -43,7 +43,7 @@ Without any modifications to your local machine "trust" settings, navigating to 
 For Mac OS navigate to your home directory and run the following:
 
 ```
-sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/ohs-private-ca-cert.pem
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ohs-private-ca-cert.pem
 ```
 
 For Windows navigate to your home directory and run the following:
