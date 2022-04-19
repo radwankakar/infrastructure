@@ -3,7 +3,7 @@
 - [How to manage Qualys](#how-to-manage-qualys)
   - [Technical deployment of Qualys](#technical-deployment-of-qualys)
   - [Adding a new user to Qualys](#adding-a-new-user-to-qualys)
-  - [Running a Qualys scan](#running-a-qualys-scan)
+  - [Manually running a Qualys scan](#manually-running-a-qualys-scan)
     - [How to run an OS scan](#how-to-run-an-os-scan)
     - [How to run an application scan](#how-to-run-an-application-scan)
   - [Retrieving scan results](#retrieving-scan-results)
