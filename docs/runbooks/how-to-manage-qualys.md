@@ -129,10 +129,10 @@ While the [Qualys Web portal][1] can be used to view and examine findings, it is
 
 These are general recommendations for helping assess and triage the results.
 
-* Depending on the number of results, it is worth sorting vulnerabilities by _CVE_, _Title_, _Severity_, and/or _Asset Name_ to help assess how the vulnerabilities should be managed in Jira tickets.
-* It's worth looking for patterns for CVEs/findings, such as groups of systems that share a CVE (some may apply to a number of systems or even all systems) or if a specific system has a number of CVEs/findings that might be interrelated.
-  * It may make sense to group some results together rather than create specific tickets for each result -- this is a judgement that should be made during this initial triage/analysis.
-* The _QID_ is the Qualys ID and for results that don't have a specific CVE tied to them, it can be helpful in looking up the scan results on Qualys itself.
+- Depending on the number of results, it is worth sorting vulnerabilities by _CVE_, _Title_, _Severity_, and/or _Asset Name_ to help assess how the vulnerabilities should be managed in Jira tickets.
+- It's worth looking for patterns for CVEs/findings, such as groups of systems that share a CVE (some may apply to a number of systems or even all systems) or if a specific system has a number of CVEs/findings that might be interrelated.
+  - It may make sense to group some results together rather than create specific tickets for each result -- this is a judgement that should be made during this initial triage/analysis.
+- The _QID_ is the Qualys ID and for results that don't have a specific CVE tied to them, it can be helpful in looking up the scan results on Qualys itself.
 
 ### Creating Jira tickets
 
