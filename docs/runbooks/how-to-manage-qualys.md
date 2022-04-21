@@ -137,7 +137,7 @@ These are general recommendations for helping assess and triage the results.
 ### Creating Jira tickets
 
 1. Create an epic every month for the Qualys scan results
-  1. Example: 2022-03 - Qualys Scan Results
+  1. Example: "2022-03 - Qualys Scan Results"
 1. Create a Jira ticket within the appropriate epic
   1. Prefix all ticket summaries with one of the following:
     1. CVE-# - Example: "CVE-2021-44832 Update Jenkins for log4j"
