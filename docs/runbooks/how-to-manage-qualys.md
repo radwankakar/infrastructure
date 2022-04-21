@@ -112,7 +112,7 @@ You should receive an email once the scan is completed.
 1. Login to the [Qualys Web portal][1].
 1. Click on "VMDR".
 1. Click on the "Vulnerabilities" tab.
-1. Click on the download icon on the far right of the screen
+1. Click on the "Download" icon on the far right of the screen
 1. Select the fields you want or leave all fields checked. The only download format available should be CSV. Click on "Download".
 
 ## Triaging scan results
