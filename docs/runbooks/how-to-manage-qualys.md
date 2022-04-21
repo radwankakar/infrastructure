@@ -25,7 +25,7 @@ This allows the OHS hosting team to run high quality security scans against the 
 
 ## Technical deployment of Qualys
 
-There is an ec2 instance in the OHS AWS account that hosts the Qualys virtual scanner and connects the [Qualys Web portal][1] with systems in the AWS environment.
+There is an EC2 instance in the OHS AWS account that hosts the Qualys virtual scanner and connects the [Qualys Web portal][1] with systems in the AWS environment.
 
 The virtual scanner uses ssh to reach and scan hosts for vulnerabilities. This is all configured through the [Qualys Web portal][1] (see Scans/Appliances and Scans/Authentication in the web portal).
 
