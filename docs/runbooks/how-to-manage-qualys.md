@@ -147,7 +147,15 @@ These are general recommendations for helping assess and triage the results.
 1. EOL
    - Example: "EOL Migrate Server X from Ubuntu16 to Ubuntu18"
 1. Add a label called "qualys"
-1. Update the priority on the ticket to match the _Severity_ of the finding in Qualys - for example, severity of 5 would be the highest priority.
+1. Update the priority on the ticket to match the _Severity_ of the finding in Qualys, as shown on the table below. For example, a vulnerability in Qualys with Severity of 5 would have its corresponding Jira issue priority set to "Highest":
+
+| Qualys Vuln Severity | Jira Issue Priority |
+| -------------------- | ------------------- |
+| 1                    | Lowest              |
+| 2                    | Low                 |
+| 3                    | Medium              |
+| 4                    | High                |
+| 5                    | Highest             |
 
 [1]: https://qualysguard.qg3.apps.qualys.com/portal-front/
 [2]: https://app.box.com/folder/143269631989
