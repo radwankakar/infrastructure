@@ -137,23 +137,15 @@ These are general recommendations for helping assess and triage the results.
 ### Creating Jira tickets
 
 1. Create an epic every month for the Qualys scan results
-
-- Example: "2022-03 - Qualys Scan Results"
-
+   - Example: "2022-03 - Qualys Scan Results"
 1. Create a Jira ticket within the appropriate epic
 1. Prefix all ticket summaries with one of the following:
 1. CVE-#
-
-- Example: "CVE-2021-44832 Update Jenkins for log4j"
-
+   - Example: "CVE-2021-44832 Update Jenkins for log4j"
 1. Sometimes a collection of CVEs for a specific server may be all interrelated, and it doesn’t necessarily make sense to have a separate ticket for each CVE for that system. For example, a cluster of Kernel Advisories for a specific system where the old kernels need to simply be cleaned from the system. In cases like this, consider prefixing the ticket with "CVE-\*".
-
-- Example: "CVE-\* Kernel Security Advisories for ZTT-NAT"
-
+   - Example: "CVE-\* Kernel Security Advisories for ZTT-NAT"
 1. EOL
-
-- Example: "EOL Migrate Server X from Ubuntu16 to Ubuntu18"
-
+   - Example: "EOL Migrate Server X from Ubuntu16 to Ubuntu18"
 1. Add a label called "qualys"
 1. Update the priority on the ticket to match the _Severity_ of the finding in Qualys - for example, severity of 5 would be the highest priority.
 
