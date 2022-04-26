@@ -6,7 +6,8 @@ The hosting team does not have necessary background on how the VPN is configured
 
 ### OpenVPN
 
-After going over the configuration, the __server.conf__ is nearly Identical to the __sample-server.conf__ that is provided by OpenVPN CE. That being said there are some key difference.
+After going over the configuration, the __server.conf__ is virtually Identical to the __sample-server.conf__ that is provided by OpenVPN CE. The differences being what subnets are open and where Certs are located at.
+
 If the hosting team wants to follow a HOWTO guide that can be found here: [OpenVPN HOWTO](https://community.openvpn.net/openvpn/wiki/HOWTO)
 
 #### Version
@@ -15,7 +16,7 @@ The current Version is __"openVPN2.4.11"__ which was released April 21, 2021 and
 
 #### Logging
 
-Logs are being stored `/var/log/openvpn.log`. The log Structure follows a FIFO model. Logs will be grouped into 7 days. They will then be kept for 4 weeks and well delete itself after.
+Logs are being stored `/var/log/openvpn.log`. The log structure follows a FIFO model. Logs are grouped into 7 days. They are kept for 4 weeks and are deleted automatically after 4 weeks have passed.
 
 #### Routing & ports
 
@@ -50,33 +51,37 @@ The table below shows all subnets and what servers are connected to those subnet
 
 #### CA Keys and Cert Structure
 
-Creating a root Cert (CA) is made by using [easy-rsa](https://github.com/OpenVPN/easy-rsa) repo and is kept `/etc/openvpn,easy-rsa/keys`. The hosting team should be able to copy all the keys and certs over to a new server with little effort. although some testing may be needed before deployment.
+Root Cert (CA) are made by using [easy-rsa](https://github.com/OpenVPN/easy-rsa) repo and are kept `/etc/openvpn,easy-rsa/keys`.
+This creates a Piblic Key Infrastructure (PKI) allowing clients to connect to the server to access OpenVPN.
+The hosting team should be able to copy all the keys and certs over to a new server with little effort, although some testing may be needed before deployment.
 
 ##### Diffie Hellman
 
-crypto was generated using Diffle Hellman Command
+crypto was generated using Diffie Hellman Command
 `openssl dhparam -out dh2048.pem 2048`
 
 ##### CRL ( Certificate Revocation list)
 
-Located `/etc/openvpn/easy-rsa-keys-crl.pem`. This is where users should be pleased once they no longer need access to the VPN.
+Located `/etc/openvpn/easy-rsa-keys-crl.pem`. This is where users should be added once they no longer need access to the VPN.
 
 #### VPN Requesting
 
 Requesting and giving access methods can be found here: [VPN Access Policies](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/vpn-access-requests.md)
 
-Following the request, Requestors would need SSH Access and those steps can be found here: [how to get SSH Access](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-get-ssh-access.md)
+Following the request, Requesters would need SSH Access and those steps can be found here: [how to get SSH Access](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/runbooks/how-to-get-ssh-access.md)
 
 ### AWS Configuration
 
 #### VPC
 
-OpenVPN is located in the Shared-VPC and can communicate to dev and prod because of __server.conf__ it is allowing those IPs trough.
+OpenVPN is on the __VPN__ server, which is in the Shared VPC. The VPN can communicate to servers on Dev and Prod VPCs because of the __server.conf__ set up described in the [Routing & ports](#Routing-&-ports) section of this doc.
 
-shared VPC is peered with the other VPCs. This allows communication and that security groups are leveraged at individual EC2 level.
+OpenVPN is located in the Shared VPC and can communicate to dev and prod because of __server.conf__ it is allowing those IPs through.
+
+The shared VPC is peered with the Dev and Prod VPCs. This allows VPN server to communicate to the other services and leverages security groups and the individual EC2 level.
 
 ##### Security Groups / ports
 
-As with the OpenVPN Server Port 1194 UDP needs to be open and allowed traffic.
+As with the OpenVPN __Server.conf__ file, the main SG attached to the VPN instance, must have Port 1194 (UDP) open and allow traffic.
 
-The main SG attached to the VPN and all SGs must have an inbound rule to allow SSH from VPN.
+All SGs, including the main SG attached to the VPN, must have an inbound rule to allow SSH from VPN.
