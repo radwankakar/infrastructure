@@ -8,7 +8,6 @@ The hosting team does not have necessary background on how the VPN is configured
 
 After going over the configuration, the __server.conf__ is virtually identical to the __sample-server.conf__ that is provided by OpenVPN CE. The differences being what subnets are open and where certs are located.
 
-
 If the hosting team wants to follow a HOWTO guide that can be found here: [OpenVPN HOWTO](https://community.openvpn.net/openvpn/wiki/HOWTO)
 
 #### Version
@@ -40,7 +39,7 @@ The table below shows all subnets and what servers are connected to those subnet
 | 10.0.7.0/24  |                                                                                   Solr                                                                                   |
 | 10.1.0.0/24  |                                                  ECLKCDev, Stage, DrupalDemo1, DrupalDemo2, DrupalDemo3, Stage1, Stage2                                                  |
 | 10.1.1.0/24  |                                                                                 Solr-Dev                                                                                 |
-| 10.1.2.0/24  |                                                                           Coachingcompanion-dev                                                                            |
+| 10.1.2.0/24  |                                                                          Coachingcompanion-dev                                                                           |
 | 10.1.4.0/24  |                                                                                                                                                                          |
 | 10.1.6.0/24  |                                                                            injuryillness-dev                                                                             |
 | 10.1.8.0/24  |                                                        ZTT-APPS-DEV, <br> ZTT-notification-DEV, <br> ZTT-NAT-DEV                                                         |
