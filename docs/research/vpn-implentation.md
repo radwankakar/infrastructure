@@ -52,7 +52,7 @@ The table below shows all subnets and what servers are connected to those subnet
 #### CA Keys and Cert Structure
 
 Root Cert (CA) are made by using [easy-rsa](https://github.com/OpenVPN/easy-rsa) repo and are kept `/etc/openvpn,easy-rsa/keys`.
-This creates a Public Key Infrastructure (PKI) allowing clients to connect to the server to access OpenVPN.
+Easy-RSA creates a Public Key Infrastructure (PKI), allowing clients to connect to the server to access OpenVPN.
 The hosting team should be able to copy all the keys and certs over to a new server with little effort, although some testing may be needed before deployment.
 
 ##### Diffie Hellman
