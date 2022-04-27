@@ -1,4 +1,4 @@
-# Balancing Both and Ops and Implementation Work
+# Balancing Both Ops and New Implementation Work
 
 ## Background
 
