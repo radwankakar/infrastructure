@@ -7,6 +7,9 @@
 - [Debugging Outages](#debugging-outages)
   - [Table of Contents](#table-of-contents)
   - [Context](#context)
+  - [DDoS](#ddos)
+    - [Identifying DDoS](#identifying-ddos)
+    - [Debugging DDoS](#debugging-ddos)
   - [Intermittent outages](#intermittent-outages)
     - [MariaDB is struggling under load](#mariadb-is-struggling-under-load)
     - [Nginx errors related to PHP-FPM library](#nginx-errors-related-to-php-fpm-library)
@@ -35,6 +38,25 @@ The following are a few good steps to take when debugging an outage. Be sure to 
       - `sudo systemctl restart [service].service`: restarts the specified service. **note: restarting php will most likely drop any open connections.**
 - If the errors found in the Varnish servers point to a database issue, or if for some reason it proves to be a dead end, SSH into the mariadb server, and cd into `/var/lib/mysql` where the logs for the database live.
   - there you will find `mariadb-error.log`. Using the `less` command you can take a look through. Looking for anything particularly odd. Such as repeated failed attempts to accomplish a job, the same job called many times in succession, an aborted connection to a particular host, among other things.
+
+## DDoS
+
+### Identifying DDoS
+
+Believe it or not, OHS has been subject to more than one DDoS attack. Here are some telltale signs:
+
+- Consistent high target response times (will alert to `alb-eclkc-us-east-1-target-response-time`)
+- Frequent 5XX errors (will alert to `alb-eclkc-us-east-1-target-5xx-limit`)
+- Varnish servers have high CPU usages (60-99%), typically higher than periodic spikes (you can compare over a week to see)
+- MariaDB server may also have high CPU usage, typically higher than periodic spikes (you can compare over a week to see)
+
+### Debugging DDoS
+
+1. Visit our WAF web ACL for [Production](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production/fc493d3c-ad51-4212-a9aa-0c2e3b35828f/overview?region=us-east-1) (in `us-east-1` region) and the web ACL [`Production-Cloudfront`](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production-Cloudfront/0923644a-f2be-4d39-bbc8-b6cabbed761b/overview?region=global).
+1. Check for peaks in Blocked requests.
+1. Review the `Sampled Requests` for anything that looks unusual. For example, if many of the recent requests are coming from one specific foreign country, that is unusual activity. In that case, create a rule to rate limit based on country origin based off the current `StrictRateLimitChinaRussiaIndia` rule.
+1. Follow up with an incident report to PM/client.
+1. If you have discovered something suspicious like this more than 3 hours after it's completed, you will not be able to view the sampled requests for the period. HOWEVER, you can go to S3 and look at the `aws-waf-logs-eclkc` bucket. Select the relevant date and time (UTC), and download the logs. You'll be able to read via a `less` or `vi` command, despite the `gz` file extension. That will help you gather evidence around what happened.
 
 ## Intermittent outages
 
