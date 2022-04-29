@@ -1,19 +1,14 @@
-# \[short title of solved problem and solution\]
+# Using AWS Managed WAF Rules
 
 <!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
-- Status: \[proposed | rejected | accepted | deprecated | … | superseded by
-  [ADR-0005](0005-example.md)\] <!-- optional -->
-- Deciders: \[list everyone involved in the decision\] <!-- optional -->
-- Date: \[YYYY-MM-DD when the decision was last updated\] <!-- optional -->
-
-Technical Story: \[description | ticket/issue URL\] <!-- optional -->
+Technical Story: [OHSH-587](https://ocio-jira.acf.hhs.gov/browse/OHSH-587)
 
 ## Table of Contents
 
 <!-- mdformat-toc start --slug=github --no-anchors --maxlevel=6 --minlevel=1 -->
 
-- [[short title of solved problem and solution]](#short-title-of-solved-problem-and-solution)
+- [Using AWS Managed WAF Rules](#using-aws-managed-waf-rules)
   - [Table of Contents](#table-of-contents)
   - [Context and Problem Statement](#context-and-problem-statement)
   - [Decision Drivers](#decision-drivers)
@@ -21,80 +16,37 @@ Technical Story: \[description | ticket/issue URL\] <!-- optional -->
   - [Decision Outcome](#decision-outcome)
     - [Positive Consequences](#positive-consequences)
     - [Negative Consequences](#negative-consequences)
-  - [Pros and Cons of the Options](#pros-and-cons-of-the-options)
-    - [[option 1]](#option-1)
-    - [[option 2]](#option-2)
-    - [[option 3]](#option-3)
   - [Links](#links)
 
 <!-- mdformat-toc end -->
 
 ## Context and Problem Statement
 
-\[Describe the context and problem statement, e.g., in free form using two to
-three sentences. You may want to articulate the problem in form of a question.\]
+Due to some recent attacks, including a DDoS attack and a possible SQL injection attack, the Hosting team has decided to beef up our use of WAF rules. By taking advantage of the managed rules offered by AWS.
 
 ## Decision Drivers <!-- optional -->
 
-- \[driver 1, e.g., a force, facing concern, …\]
-- \[driver 2, e.g., a force, facing concern, …\]
-- … <!-- numbers of drivers can vary -->
+- A series of recent attacks on the ECLKC system.
+- We currently only have a single rule on our global Cloudfront WAF ACL, Production-Cloudfront.
 
 ## Considered Options
 
-- \[option 1\]
-- \[option 2\]
-- \[option 3\]
-- … <!-- numbers of options can vary -->
+1. Using AWS managed WAF rules, along with the rules the Hosting team already implemented.
+1. Continuing only using Hosting team created and managed WAF rules
 
 ## Decision Outcome
 
-Chosen option: "\[option 1\]", because \[justification. e.g., only option, which
-meets k.o. criterion decision driver | which resolves force force | … | comes
-out best (see below)\].
+Use a combination of AWS managed WAF rules and existing Hosting team managed rules to add more layers of security.
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
-- \[e.g., improvement of quality attribute satisfaction, follow-up decisions
-  required, …\]
-- …
+- The AWS managed WAF rules can provide a wider net and better stay up to date with threats than the Hosting team have the resources to do.
+- Whereas AWS can provide broad protections we can still create and manage rules that are more particular for our use case.
 
 ### Negative Consequences <!-- optional -->
 
-- \[e.g., compromising quality attribute, follow-up decisions required, …\]
-- …
-
-## Pros and Cons of the Options <!-- optional -->
-
-### \[option 1\]
-
-\[example | description | pointer to more information | …\] <!-- optional -->
-
-- Good, because \[argument a\]
-- Good, because \[argument b\]
-- Bad, because \[argument c\]
-- … <!-- numbers of pros and cons can vary -->
-
-### \[option 2\]
-
-\[example | description | pointer to more information | …\] <!-- optional -->
-
-- Good, because \[argument a\]
-- Good, because \[argument b\]
-- Bad, because \[argument c\]
-- … <!-- numbers of pros and cons can vary -->
-
-### \[option 3\]
-
-\[example | description | pointer to more information | …\] <!-- optional -->
-
-- Good, because \[argument a\]
-- Good, because \[argument b\]
-- Bad, because \[argument c\]
-- … <!-- numbers of pros and cons can vary -->
+- None
 
 ## Links <!-- optional -->
 
-- \[Link type\] \[Link to ADR\] \<!-- example:
-- Refined by [ADR-0005](0005-example.md) -->
-- … <!-- numbers of links can vary -->
+- [AWS Manage Rules Docs](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups.html)
