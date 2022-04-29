@@ -8,6 +8,8 @@
   - [Table of Contents](#table-of-contents)
   - [Context](#context)
   - [DDoS](#ddos)
+    - [Identifying DDoS](#identifying-ddos)
+    - [Debugging DDoS](#debugging-ddos)
   - [Intermittent outages](#intermittent-outages)
     - [MariaDB is struggling under load](#mariadb-is-struggling-under-load)
     - [Nginx errors related to PHP-FPM library](#nginx-errors-related-to-php-fpm-library)
@@ -39,13 +41,16 @@ The following are a few good steps to take when debugging an outage. Be sure to 
 
 ## DDoS
 
+### Identifying DDoS
+
 Believe it or not, OHS has been subject to more than one DDoS attack. Here are some telltale signs:
 
 - Consistent high target response times (will alert to `alb-eclkc-us-east-1-target-response-time`)
 - Frequent 5XX errors (will alert to `alb-eclkc-us-east-1-target-5xx-limit`)
-  COMBINED WITH:
 - Varnish servers have high CPU usages (60-99%), typically higher than periodic spikes (you can compare over a week to see)
 - MariaDB server may also have high CPU usage, typically higher than periodic spikes (you can compare over a week to see)
+
+### Debugging DDoS
 
 1. Visit our WAF web ACL for [Production](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production/fc493d3c-ad51-4212-a9aa-0c2e3b35828f/overview?region=us-east-1) (in `us-east-1` region) and the web ACL [`Production-Cloudfront`](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production-Cloudfront/0923644a-f2be-4d39-bbc8-b6cabbed761b/overview?region=global).
 1. Check for peaks in Blocked requests.
