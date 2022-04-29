@@ -43,7 +43,6 @@ Believe it or not, OHS has been subject to more than one DDoS attack. Here are s
 
 - Consistent high target response times (will alert to `alb-eclkc-us-east-1-target-response-time`)
 - Frequent 5XX errors (will alert to `alb-eclkc-us-east-1-target-5xx-limit`)
-  COMBINED WITH:
 - Varnish servers have high CPU usages (60-99%), typically higher than periodic spikes (you can compare over a week to see)
 - MariaDB server may also have high CPU usage, typically higher than periodic spikes (you can compare over a week to see)
 
