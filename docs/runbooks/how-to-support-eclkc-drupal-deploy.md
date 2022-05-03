@@ -24,8 +24,8 @@ Lifeboat is now up to date with production.
 ### Schedule a Pagerduty Override
 
 1. Log into Pagerduty
-2. Go to the [Pagerduty schedules](https://headstarthosting.pagerduty.com/schedules) page and select the Gear on the Infrasec - Primary schedule.
-3. Select "Schedule an Override" and enter in your information for the period of the Drupal Deploy.
+1. Go to the [Pagerduty schedules](https://headstarthosting.pagerduty.com/schedules) page and select the Gear icon on the "Infrasec - Primary" schedule.
+1. Select "Schedule an Override" and enter in your information for the period of the Drupal Deploy.
 
 ### Route traffic to Lifeboat only for Drupal
 
