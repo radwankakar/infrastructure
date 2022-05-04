@@ -52,6 +52,8 @@ For Windows navigate to your home directory and run the following:
 certutil -addstore -f "ROOT" new-root-certificate.crt
 ```
 
+If desired, after running these commands, you can remove the certificate from your local machine.
+
 For more information about resolving cert errors view the following resources and documentation:
 
 - [add-trusted-cert man page](https://www.unix.com/man-page/mojave/1/security)
