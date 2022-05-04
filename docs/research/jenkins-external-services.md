@@ -1,19 +1,20 @@
 # Jenkins External Services Documentation
 
-Two main services that need access to Jenkins will need to be accounted for when moving it behind the VPN: Bitbucket and Box. HSICC is looking to move away from using Github so we've been told that we don't need to consider it in our plans. A brief description of each service and how it interacts with Jenkins is below. 
+Two main services that need access to Jenkins will need to be accounted for when moving it behind the VPN: Bitbucket and Box. HSICC is looking to move away from using Github so we've been told that we don't need to consider it in our plans. A brief description of each service and how it interacts with Jenkins is below.
 
 ## Bitbucket
 
-Jenkins makes a request to clone / download code from Bitbucket, however certain jobs are also triggered by Bitbucket. In these cases, Bitbucket sends a request via webhook to Jenkins, to trigger a job. 
+Jenkins makes a request to clone / download code from Bitbucket, however certain jobs are also triggered by Bitbucket. In these cases, Bitbucket sends a request via webhook to Jenkins, to trigger a job.
 
 The following job is triggered by Bitbucket (there may be more, but this is the one sent to us by HSICC):
+
 - BitBucket-drupal-composer-project
 
-  
 ## Box
 
-There are two similar jobs, one for Development and one for Production, that are triggered when files are added to a specific folder in Box for the HSICC team. Box sends a request via webhook to Jenkins, and this triggers the job. 
+There are two similar jobs, one for Development and one for Production, that are triggered when files are added to a specific folder in Box for the HSICC team. Box sends a request via webhook to Jenkins, and this triggers the job.
 
 Jobs that are triggered via Box are listed below:
+
 - Production - Learning Modules Security Check
 - Development - Learning Modules Security Check
