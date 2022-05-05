@@ -53,10 +53,34 @@ Believe it or not, OHS has been subject to more than one DDoS attack. Here are s
 ### Debugging DDoS
 
 1. Visit our WAF web ACL for [Production](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production/fc493d3c-ad51-4212-a9aa-0c2e3b35828f/overview?region=us-east-1) (in `us-east-1` region) and the web ACL [`Production-Cloudfront`](https://us-east-1.console.aws.amazon.com/wafv2/homev2/web-acl/Production-Cloudfront/0923644a-f2be-4d39-bbc8-b6cabbed761b/overview?region=global).
+
 1. Check for peaks in Blocked requests.
+
 1. Review the `Sampled Requests` for anything that looks unusual. For example, if many of the recent requests are coming from one specific foreign country, that is unusual activity. In that case, create a rule to rate limit based on country origin based off the current `StrictRateLimitChinaRussiaIndia` rule.
+
 1. Follow up with an incident report to PM/client.
+
 1. If you have discovered something suspicious like this more than 3 hours after it's completed, you will not be able to view the sampled requests for the period. HOWEVER, you can go to S3 and look at the `aws-waf-logs-eclkc` bucket. Select the relevant date and time (UTC), and download the logs. You'll be able to read via a `less` or `vi` command, despite the `gz` file extension. That will help you gather evidence around what happened.
+
+1. To figure out who is responsible, you can do some digging on the IP addresses that appear in the `Sampled Requests`. This is a snippet from a log from the S3 bucket mentioned above:
+
+   ```
+   [...]
+   "httpRequest":{"clientIp":"64.252.99.47","country":"IN",
+   [...]
+   {"name":"X-Forwarded-For","value":"2400:8904::f03c:93ff:fea1:10a8"}
+   [...]
+   ```
+
+   The fields of interest are "clientIp" (in this case `64.252.99.47`) and the "value" of "X-Forwarded-For" (in this case `2400:8904::f03c:93ff:fea1:10a8`).
+
+1. Perform a `whois` on the clientIp and x-forwarded-for value. This will tell you the apparent malfeasant is, and will help you determine report the issue to.
+
+1. You can report the incident to [ec2-abuse@amazon.com](https://aws.amazon.com/premiumsupport/knowledge-center/report-aws-abuse/). There are a couple of pieces of key information that will be useful for you described in the [report request](https://support.aws.amazon.com/#/contacts/report-abuse). AWS can typically tell you what kind of activity is occurring, but they may not be able to help you combat it.
+
+1. Seek AWS support by submitting a support ticket as well describing the incident. Support will offer suggestions as to how to avoid something similar in the future.
+
+1. Update ACF/OHS.
 
 ## Intermittent outages
 
