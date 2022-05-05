@@ -61,10 +61,10 @@ For more information about resolving cert errors view the following resources an
 
 ## Note for Firefox users
 
-There is one more necessary step to access sites with certificates from our private CA without certificate errors for Mozilla Firefox users. The following [article](https://support.mozilla.org/en-US/kb/setting-certificate-authorities-firefox) has more information. 
+There is one more necessary step to access sites with certificates from our private CA without certificate errors for Mozilla Firefox users. The following [article](https://support.mozilla.org/en-US/kb/setting-certificate-authorities-firefox) has more information.
 
 Specifically, the below steps will be need to be completed:
 
-1) Enter “about:config” in the address bar and continue to the list of preferences. 
-2) Set the preference "security.enterprise_roots.enabled" to true. 
-3) Restart Firefox.
+1. Enter “about:config” in the address bar and continue to the list of preferences.
+1. Set the preference "security.enterprise_roots.enabled" to true.
+1. Restart Firefox.
