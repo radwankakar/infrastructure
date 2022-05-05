@@ -1,6 +1,5 @@
 # Jenkins External Services Documentation
 
-
 ## Background
 
 Research on which external services need access to Jenkins is necessary in the process of moving Jenkins behind the VPN. The [design doc](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/design-docs/moving-jenkins-behind-vpn.md) for this provides additional information.
