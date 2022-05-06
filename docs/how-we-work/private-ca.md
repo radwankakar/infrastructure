@@ -58,3 +58,13 @@ For more information about resolving cert errors view the following resources an
 
 - [add-trusted-cert man page](https://www.unix.com/man-page/mojave/1/security)
 - [certutil documentation](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/certutil)
+
+## Note for Firefox users
+
+There is one more necessary step to access sites with certificates from our private CA without certificate errors for Mozilla Firefox users. The following [article](https://support.mozilla.org/en-US/kb/setting-certificate-authorities-firefox) has more information.
+
+Specifically, the below steps will be need to be completed:
+
+1. Enter “about:config” in the address bar and continue to the list of preferences.
+1. Set the preference "security.enterprise_roots.enabled" to true.
+1. Restart Firefox.
