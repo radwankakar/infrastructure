@@ -80,7 +80,7 @@ Believe it or not, OHS has been subject to more than one DDoS attack. Here are s
 
 1. Seek AWS support by submitting a support ticket as well describing the incident. Support will offer suggestions as to how to avoid something similar in the future.
 
-1. Update ACF/OHS.
+1. Inform your PM of updates and have them email [ACF](acf_irt@acf.hhs.gov) and OHS (Alana) with the information you've gleaned.
 
 ## Intermittent outages
 
