@@ -34,6 +34,7 @@ Due to some recent attacks, including a DDoS attack and a possible SQL injection
 
 1. Using AWS managed WAF rules, along with the rules the Hosting team already implemented.
 1. Continuing only using Hosting team created and managed WAF rules
+1. Use a combination of AWS managed WAF rules and existing Hosting team managed rules to add more layers of security.
 
 ## Decision Outcome
 
@@ -42,7 +43,7 @@ Use a combination of AWS managed WAF rules and existing Hosting team managed rul
 ### Positive Consequences
 
 - The AWS managed WAF rules can provide a wider net and better stay up to date with threats than the Hosting team have the resources to do.
-- Whereas AWS can provide broad protections we can still create and manage rules that are more particular for our use case.
+- Whereas AWS can provide broad protections, we can still create and manage rules that are more particular for our use case.
 
 ### Negative Consequences <!-- optional -->
 
