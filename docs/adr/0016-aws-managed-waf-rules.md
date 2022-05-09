@@ -22,12 +22,13 @@ Technical Story: [OHSH-587](https://ocio-jira.acf.hhs.gov/browse/OHSH-587)
 
 ## Context and Problem Statement
 
-Due to some recent attacks, including a DDoS attack and a possible SQL injection attack, the Hosting team has decided to beef up our use of WAF rules. By taking advantage of the managed rules offered by AWS.
+Due to some recent attacks, including a DDoS attack and a possible SQL injection attack, the Hosting team has decided to beef up our use of WAF rules.
 
 ## Decision Drivers <!-- optional -->
 
 - A series of recent attacks on the ECLKC system.
 - We currently only have a single rule on our global Cloudfront WAF ACL, Production-Cloudfront.
+- Our current rules on the Production WAF ACL are more reactive, and not a cover for attacks that we haven't already encountered.
 
 ## Considered Options
 
