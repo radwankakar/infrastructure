@@ -2,8 +2,8 @@
 
 <!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
-- Status: proposed
-- Deciders: Ryan Delaney, TBD
+- Status: Accepted
+- Deciders: Ryan Delaney, Rebecca Kilberg, Armando Martinez, Reid Lewis
 - Date: 2022-05-05
 
 Technical Story: [OHSH-578](https://ocio-jira.acf.hhs.gov/browse/OHSH-578)
