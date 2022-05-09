@@ -33,6 +33,7 @@ Due to some recent attacks, including a DDoS attack and a possible SQL injection
 
 1. Using AWS managed WAF rules, along with the rules the Hosting team already implemented.
 1. Continuing only using Hosting team created and managed WAF rules
+1. Use a combination of AWS managed WAF rules and existing Hosting team managed rules to add more layers of security.
 
 ## Decision Outcome
 
