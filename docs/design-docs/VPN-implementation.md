@@ -72,45 +72,32 @@ We will be deploying:
 
 1. Initial deployment will be tested / developed in sandbox account due to access restrictions.
 1. Development of Terraform configuration matching architecture
-
-- evaluate if the TF should be turned into a module
-- testing
-- documentation
-
+  - evaluate if the TF should be turned into a module
+  - testing
+  - documentation
 1. Development of server configuration
 1. Development of Ansible role for server configuration
-
-- testing
-- documentation
-
+  - testing
+  - documentation
 1. Development of user configuration (including 2FA)
-
-- evaluate migrating existing user certs vs. clean-slate migration
-
+  - evaluate migrating existing user certs vs. clean-slate migration
 1. Development of Ansible role for user configuration
-
-- testing
-- documentation
-
+  - testing
+  - documentation
 1. End-to-end deployment test (testing TF, Ansible, and any manual config steps documented)
 1. Development of disaster recovery plan
-
-- testing
-- documentation
-
+  - testing
+  - documentation
 1. Port work to OHS accounts (TF and Ansible code)
 1. Deploy new VPN to OHS AWS account
 1. Update SecurityGroups to allow new VPN
-
-- do not remove/edit existing VPN rule (since both will run in parallel)
-
+  - do not remove/edit existing VPN rule (since both will run in parallel)
 1. Testing by Hosting team
 1. User migration
 1. Decommissioning old VPN
-
-- shutdown ec2 instance
-- clean-up old VPN SG rule
-- remove ec2, eip, and route53 resources in AWS
+  - shutdown ec2 instance
+  - clean-up old VPN SG rule
+  - remove ec2, eip, and route53 resources in AWS
 
 ## Reference
 
