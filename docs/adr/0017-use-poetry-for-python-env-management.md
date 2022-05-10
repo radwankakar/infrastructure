@@ -30,7 +30,8 @@ Technical Story: [OHSH-578](https://ocio-jira.acf.hhs.gov/browse/OHSH-578)
 
 In [ADR-0016](./0016-use-python-for-shell-scripting.md) we decided to focus on python
 for shell scripting. Python has many strengths that drove that decision, but
-virtual environment management in python is not a great user story.
+virtual environment management in python is not a great user story. We want to settle on
+a flow for working with virtual environments that works for us and everyone can follow.
 
 ## Decision Drivers
 
