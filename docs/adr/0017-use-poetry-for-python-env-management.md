@@ -23,6 +23,7 @@ Technical Story: [OHSH-578](https://ocio-jira.acf.hhs.gov/browse/OHSH-578)
     - [pipenv](#pipenv)
     - [flit](#flit)
     - [poetry](#poetry)
+  - [Links](#links)
 
 <!-- mdformat-toc end -->
 
@@ -231,6 +232,10 @@ $ exit
   poetry will find it. If there is no solution, a useful error explaining why is provided.
 - Good, because it also supports build packaging and even publishing to [pypi](https://pypi.org).
 - Good, because all configuration is stored in the PEP-approved [`pyproject.toml`][pyproject.toml] file.
+
+## Links
+
+- [PEP 405 - Python Virtual Environments](https://peps.python.org/pep-0405/).
 
 [pipfile]: https://github.com/pypa/pipfile
 [pyproject.toml]: https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
