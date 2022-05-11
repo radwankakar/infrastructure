@@ -82,6 +82,8 @@ $ pip3 install --user -r requirements.txt
 
 ### python's `venv`
 
+The python standard library includes a module for initializing virtual environments.
+
 ```
 # Create a virtual environment:
 $ python3 -m venv .venv
@@ -133,6 +135,9 @@ $ pip3 install -r requirements.txt
   that must be kept in sync manually as well.
 
 ### pipenv
+
+pipenv is a third-party shell utility that assists with development environment setup
+and dependency locking, enabling deterministic builds.
 
 ```
 # Install pipenv
