@@ -1,7 +1,5 @@
 # Use poetry for python virtual environment managment
 
-_See also: [ADR-0016 Use python for shell scripting](./0016-use-python-for-shell-scripting.md)._
-
 <!-- Source: https://raw.githubusercontent.com/adr/madr/main/template/adr-template.md -->
 
 - Status: proposed
@@ -235,7 +233,8 @@ $ exit
 
 ## Links
 
-- [PEP 405 - Python Virtual Environments](https://peps.python.org/pep-0405/).
+- [ADR-0016 Use python for shell scripting](./0016-use-python-for-shell-scripting.md)
+- [PEP 405 - Python Virtual Environments](https://peps.python.org/pep-0405/)
 
 [pipfile]: https://github.com/pypa/pipfile
 [pyproject.toml]: https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
