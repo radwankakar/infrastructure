@@ -83,7 +83,7 @@ $ pip3 install --user -r requirements.txt
 
 ### python's `venv`
 
-```console
+```
 # Create a virtual environment:
 $ python3 -m venv .venv
 # Activate it:
@@ -97,7 +97,7 @@ $ source .venv/bin/deactivate
 `venv` doesn't have any way to lock dependencies, so we have to
 rely on pip to get reproducible builds:
 
-```console
+```
 # Lock the dependencies and add to source control:
 $ pip3 freeze > requirements.txt
 $ git add requirements.txt && git commit -m "Add requirements.txt"
@@ -108,7 +108,7 @@ $ source .venv/bin/deactivate
 Now, after someone else clones the project, they would do this
 to install the dependencies:
 
-```console
+```
 # Clone a repository and cd into it
 $ git clone url://to/myproject.git && cd myproject
 # Create a virtual environment:
@@ -135,7 +135,7 @@ $ pip3 install -r requirements.txt
 
 ### pipenv
 
-```console
+```
 # Install pipenv
 $ brew install pipenv
 # Install some dependencies for a project
@@ -146,7 +146,7 @@ $ git add Pipfile && git add Pipfile.lock && git commit -m "Add pipenv configura
 
 Now, the next engineer can activate the environment like this:
 
-```console
+```
 # Clone a repository and cd into it
 $ git clone url://to/myproject.git && cd myproject
 # Start a new shell with the virtual environment and dependencies installed
@@ -169,7 +169,7 @@ $ exit
 does a great job. However, it does not tackle the virtual environment management
 that we need to enable best practices during development.
 
-```console
+```
 # Install flit
 $ brew install flit
 # Set up a new project
@@ -195,7 +195,7 @@ $ flit publish
 `poetry` is the holy marriage of pipenv, setuptools, and twine. It is a one-stop shop for python
 app development.
 
-```console
+```
 # Install poetry
 $ brew install poetry
 # Set up a new project
