@@ -183,7 +183,7 @@ $ flit publish
 - Good, because user-friendliness is a high priority. It is arguably the easiest
   of the tools considered.
 - Good, because it understands the difference between runtime vs dev dependencies.
-- Good, because it supports build packaging and even publishing to \[pypi\]\[https://pypi.org\].
+- Good, because it supports build packaging and even publishing to [pypi](https://pypi.org).
 - Good, because all configuration is stored in the PEP-approved [`pyproject.toml`][pyproject.toml] file.
 - Bad, because it doesn't provide its own support for lock files.
 - Bad, because it doesn't manage virtual environments.
@@ -229,7 +229,7 @@ $ exit
 - Good, because it supports build packaging from the same dependency list.
 - Good, because it automatically resolves dependencies; if a solution exists,
   poetry will find it. If there is no solution, a useful error explaining why is provided.
-- Good, because it also supports build packaging and even publishing to \[pypi\]\[https://pypi.org\].
+- Good, because it also supports build packaging and even publishing to [pypi](https://pypi.org).
 - Good, because all configuration is stored in the PEP-approved [`pyproject.toml`][pyproject.toml] file.
 
 [pipfile]: https://github.com/pypa/pipfile
