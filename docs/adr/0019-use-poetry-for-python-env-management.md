@@ -27,7 +27,7 @@ Technical Story: [OHSH-578](https://ocio-jira.acf.hhs.gov/browse/OHSH-578)
 
 ## Context and Problem Statement
 
-In [ADR-0016](./0016-use-python-for-shell-scripting.md) we decided to focus on python
+In [ADR-0018](./0018-use-python-for-shell-scripting.md) we decided to focus on python
 for shell scripting. Python has many strengths that drove that decision, but
 virtual environment management in python is not a great user story. We want to settle on
 a flow for working with virtual environments that works for us and everyone can follow.
@@ -238,7 +238,7 @@ $ exit
 
 ## Links
 
-- [ADR-0016 Use python for shell scripting](./0016-use-python-for-shell-scripting.md)
+- [ADR-0018 Use python for shell scripting](./0018-use-python-for-shell-scripting.md)
 - [PEP 405 - Python Virtual Environments](https://peps.python.org/pep-0405/)
 
 [pipfile]: https://github.com/pypa/pipfile

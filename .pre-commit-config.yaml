@@ -25,3 +25,19 @@ repos:
     rev: 1.0.5
     hooks:
       - id: shell-lint
+
+  - repo: local
+    hooks:
+      - id: adr-extensions
+        name: ADRs must be md
+        entry: ADR filenames must end in .md
+        stages: [commit]
+        language: fail
+        files: 'docs/adr/.*(?<!\.md)$'
+
+      - id: adr-indexes
+        name: check ADR indexes
+        stages: [commit]
+        language: system
+        entry: python3 ./scripts/check_adr_indexes.py
+        files: 'docs/adr/.*'
