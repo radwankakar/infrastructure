@@ -85,6 +85,9 @@ We will be deploying:
    - testing
    - documentation
 1. End-to-end deployment test (testing TF, Ansible, and any manual config steps documented)
+1. Development of disaster recovery plan
+   - testing
+   - documentation
 1. Port work to OHS accounts (TF and Ansible code)
 1. Deploy new VPN to OHS AWS account
 1. Update SecurityGroups to allow new VPN
