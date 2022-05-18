@@ -14,7 +14,7 @@ We plan to implement infrastructure and configuration as code with our standard 
 
 We plan to migrate from OpenVPN Community Edition to OpenVPN Access Server. See [ADR](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/adr/0013-compare-vpn-edition.md) for details.
 
-When we deploy the new VPN, we want to keep the old one up in parallel while we are migrating to the new VPN. (find a better place for this comment?)
+When we deploy the new VPN, we want to keep the old one up in parallel while we are migrating.
 
 ### Core Functionality Requirements
 
@@ -85,9 +85,6 @@ We will be deploying:
    - testing
    - documentation
 1. End-to-end deployment test (testing TF, Ansible, and any manual config steps documented)
-1. Development of disaster recovery plan
-   - testing
-   - documentation
 1. Port work to OHS accounts (TF and Ansible code)
 1. Deploy new VPN to OHS AWS account
 1. Update SecurityGroups to allow new VPN
