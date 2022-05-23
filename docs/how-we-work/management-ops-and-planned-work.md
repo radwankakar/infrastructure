@@ -19,10 +19,12 @@ Operating on a bi-sprint basis allows minimal context switching for developers.
 ### Scope
 The person who is on-call for the two-sprint cycle will handle the following work:
 
-- High-priority, ad hoc requests from the app teams that have been prioritized and confirmed as such by the Product Manager
-- Monthly Drupal maintenance windows
-- Monthly maintenance windows
-
+- Unplanned (prior to sprint) critical security vulnerability remediations
+- Planned security vulnerability remediations
+- Qualys scan reviews (once all parties have access--as of May 23, 2022 folks without access are doing this)
+- Outages
+- Managing AWS resource actions like instance reboots or retirement
+- Critical app requests that do not belong to an epic
 
 ### Example
 
