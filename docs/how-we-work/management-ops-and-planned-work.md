@@ -17,6 +17,7 @@ This is similar to the on-call rotation we are currently using.
 Operating on a bi-sprint basis allows minimal context switching for developers.
 
 ### Scope
+
 The person who is on-call for the two-sprint cycle will handle the following work:
 
 - Unplanned (prior to sprint) critical security vulnerability remediations
@@ -27,6 +28,7 @@ The person who is on-call for the two-sprint cycle will handle the following wor
 - Critical app requests that do not belong to an epic
 
 ### Example
+
 - Sprint 1 & 2: Person A
 - Sprint 3 & 4: Person B
 - Sprint 5 & 6: Person C
