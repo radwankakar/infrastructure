@@ -25,7 +25,7 @@ Jobs that are triggered via Box are listed below:
 
 ## Github
 
-There are a few jobs associated with Coaching Companion that are triggered when code is pushed to a specific Github repository.
+At last one job associated with Coaching Companion is triggered when code is pushed to a specific Github repository.
 
 The following job is triggered by Github (there may be more, but this is the one sent to us by CC):
 
