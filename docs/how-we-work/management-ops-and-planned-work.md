@@ -12,9 +12,9 @@ This document addresses the steps we will take to balance our commitments to ope
 
 We have established that we will proceed with a system of rotation to identify who would be responsible for operations and maintenance focused work every two sprints.
 
-This is similar to the on-call rotation we are currently using. 
+This is similar to the on-call rotation we are currently using.
 
-Operating on a bi-sprint basis allows minimal context switching for developers. 
+Operating on a bi-sprint basis allows minimal context switching for developers.
 
 ### Scope
 The person who is on-call for the two-sprint cycle will handle the following work:
