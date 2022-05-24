@@ -4,7 +4,7 @@
 
 Research on which external services need access to Jenkins is necessary in the process of moving Jenkins behind the VPN. The [design doc](https://github.com/OHS-Hosting-Infrastructure/infrastructure/blob/main/docs/design-docs/moving-jenkins-behind-vpn.md) for this provides additional information.
 
-Two main services that need access to Jenkins will need to be accounted for: Bitbucket and Box. HSICC is looking to move away from using Github so we've been told that we don't need to consider it in our plans. A brief description of each service and how it interacts with Jenkins is below.
+Three main services that need access to Jenkins will need to be accounted for: Bitbucket, Box, and Github. A brief description of each service and how it interacts with Jenkins is below.
 
 ## Bitbucket
 
@@ -22,3 +22,11 @@ Jobs that are triggered via Box are listed below:
 
 - Production - Learning Modules Security Check
 - Development - Learning Modules Security Check
+
+## Github
+
+At last one job associated with Coaching Companion is triggered when code is pushed to a specific Github repository.
+
+The following job is triggered by Github (there may be more, but this is the one sent to us by CC):
+
+- GitHub-OHSCC
